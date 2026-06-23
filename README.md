@@ -16,4 +16,4 @@ corpus/
   active/            tcpclv4:active
 ```
 
-The `main` branch holds the corpus; CFLite publishes fuzzer coverage reports to the `gh-pages` branch (`coverage/`). Both are managed automatically by the `cflite-cron.yml` workflow in the hardy repo once the `PERSONAL_ACCESS_TOKEN` secret is configured. The initial corpus here was seeded from local fuzzing; CFLite's `prune` mode minimises it over time.
+The `main` branch holds the corpus; CFLite publishes fuzzer coverage reports to the `gh-pages` branch (`coverage/`). Both are managed automatically by the `cflite-cron.yml` workflow in the hardy repo. The initial corpus here was seeded from local fuzzing; CFLite's `prune` mode minimises it over time.
