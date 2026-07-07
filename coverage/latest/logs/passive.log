@@ -2,17 +2,17 @@ WARNING: Failed to find function "__sanitizer_acquire_crash_state".
 WARNING: Failed to find function "__sanitizer_print_stack_trace".
 WARNING: Failed to find function "__sanitizer_set_death_callback".
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 2818466541
-MERGE-OUTER: 420 files, 0 in the initial corpus, 0 processed earlier
+INFO: Seed: 2359779633
+MERGE-OUTER: 423 files, 0 in the initial corpus, 0 processed earlier
 MERGE-OUTER: attempt 1
 WARNING: Failed to find function "__sanitizer_acquire_crash_state".
 WARNING: Failed to find function "__sanitizer_print_stack_trace".
 WARNING: Failed to find function "__sanitizer_set_death_callback".
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 2818474488
+INFO: Seed: 2359789593
 INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 1048576 bytes
-MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge587.txt'
-MERGE-INNER: 420 total files; 0 processed earlier; will process 420 files now
+MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge586.txt'
+MERGE-INNER: 423 total files; 0 processed earlier; will process 423 files now
 #1	pulse  exec/s: 0 rss: 30Mb
 #2	pulse  exec/s: 0 rss: 30Mb
 #4	pulse  exec/s: 0 rss: 30Mb
@@ -21,40 +21,9 @@ MERGE-INNER: 420 total files; 0 processed earlier; will process 420 files now
 #32	pulse  exec/s: 0 rss: 30Mb
 #64	pulse  exec/s: 0 rss: 30Mb
 #128	pulse  exec/s: 0 rss: 30Mb
-
-thread '<unnamed>' (590) panicked at /src/hardy/tcpclv4/fuzz/fuzz_targets/passive.rs:55:25:
-failed to connect to listener after retries
-note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-==590== ERROR: libFuzzer: deadly signal
-NOTE: libFuzzer has rudimentary signal handlers.
-      Combine libFuzzer with AddressSanitizer or similar for better crash reports.
-SUMMARY: libFuzzer: deadly signal
-MS: 0 ; base unit: 0000000000000000000000000000000000000000
-0x64,0x74,0x6e,0x21,0x4,0x22,0x4,0x7,0x1,0xff,0xfb,0xff,0x1,0x40,0x74,0x27,0x3b,0xff,0xa1,0x6e,0x74,0x6e,0xa,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x3,0x5,0xa,0x0,0x5,0x5,
-dtn!\004\"\004\007\001\377\373\377\001@t';\377\241ntn\012\000\000\000\000\000\000\000\000\003\005\012\000\005\005
-artifact_prefix='./'; Test unit written to ./crash-137e83e863521d18f26dd07f7730495c590a9175
-Base64: ZHRuIQQiBAcB//v/AUB0Jzv/oW50bgoAAAAAAAAAAAMFCgAFBQ==
-MERGE-OUTER: attempt 2
-WARNING: Failed to find function "__sanitizer_acquire_crash_state".
-WARNING: Failed to find function "__sanitizer_print_stack_trace".
-WARNING: Failed to find function "__sanitizer_set_death_callback".
-INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3479751802
-INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 1048576 bytes
-MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge587.txt'
-MERGE-INNER: '/github/workspace/cifuzz-corpus/passive/137e83e863521d18f26dd07f7730495c590a9175' caused a failure at the previous merge step
-MERGE-INNER: 420 total files; 134 processed earlier; will process 286 files now
-#1	pulse  exec/s: 0 rss: 30Mb
-#2	pulse  exec/s: 0 rss: 30Mb
-#4	pulse  exec/s: 0 rss: 30Mb
-#8	pulse  exec/s: 0 rss: 30Mb
-#16	pulse  exec/s: 0 rss: 30Mb
-#32	pulse  exec/s: 0 rss: 30Mb
-#64	pulse  exec/s: 0 rss: 30Mb
-#128	pulse  exec/s: 128 rss: 30Mb
-#256	pulse  exec/s: 85 rss: 30Mb
-#286	DONE   exec/s: 71 rss: 30Mb
-MERGE-OUTER: successful in 2 attempt(s)
-MERGE-OUTER: the control file has 46438 bytes
+#256	pulse  exec/s: 0 rss: 30Mb
+#423	DONE   exec/s: 0 rss: 30Mb
+MERGE-OUTER: successful in 1 attempt(s)
+MERGE-OUTER: the control file has 46789 bytes
 MERGE-OUTER: consumed 0Mb (27Mb rss) to parse the control file
 MERGE-OUTER: 0 new files with 0 new features added; 0 new coverage edges
