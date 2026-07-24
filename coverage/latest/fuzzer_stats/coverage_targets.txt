@@ -1,8 +1,8 @@
-eid_pattern_str
-active
-passive
 bpa
 eid_cbor
+active
+passive
+eid_pattern_str
 decode
 random_bundles
 eid_str
