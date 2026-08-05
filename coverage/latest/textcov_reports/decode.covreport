@@ -1,30 +1,30 @@
-_RNvMNtCs2mOpsYdpDes_4half8binary16NtB2_3f1613from_be_bytesCs1Y3mH2MRRlp_10hardy_cbor:
+_RNvMNtCsban8hJYjr0c_4half8binary16NtB2_3f1613from_be_bytesCs5zRv9L7EKOy_10hardy_cbor:
   205|  1.76k|    pub const fn from_be_bytes(bytes: [u8; 2]) -> f16 {
   206|  1.76k|        f16::from_bits(u16::from_be_bytes(bytes))
   207|  1.76k|    }
-_RNvMNtCs2mOpsYdpDes_4half8binary16NtB2_3f166to_f32Cs1Y3mH2MRRlp_10hardy_cbor:
-  238|  2.78k|    pub fn to_f32(self) -> f32 {
-  239|  2.78k|        arch::f16_to_f32(self.0)
-  240|  2.78k|    }
-_RNvMNtCs2mOpsYdpDes_4half8binary16NtB2_3f166to_f64Cs1Y3mH2MRRlp_10hardy_cbor:
+_RNvMNtCsban8hJYjr0c_4half8binary16NtB2_3f166to_f32Cs5zRv9L7EKOy_10hardy_cbor:
+  238|  2.77k|    pub fn to_f32(self) -> f32 {
+  239|  2.77k|        arch::f16_to_f32(self.0)
+  240|  2.77k|    }
+_RNvMNtCsban8hJYjr0c_4half8binary16NtB2_3f166to_f64Cs5zRv9L7EKOy_10hardy_cbor:
   262|  1.76k|    pub fn to_f64(self) -> f64 {
   263|  1.76k|        arch::f16_to_f64(self.0)
   264|  1.76k|    }
-_RNvMNtCs2mOpsYdpDes_4half8binary16NtB2_3f168from_f32Cs1Y3mH2MRRlp_10hardy_cbor:
-   65|  2.78k|    pub fn from_f32(value: f32) -> f16 {
-   66|  2.78k|        f16(arch::f32_to_f16(value))
-   67|  2.78k|    }
-_RNvMNtCs2mOpsYdpDes_4half8binary16NtB2_3f169from_bitsCs1Y3mH2MRRlp_10hardy_cbor:
+_RNvMNtCsban8hJYjr0c_4half8binary16NtB2_3f168from_f32Cs5zRv9L7EKOy_10hardy_cbor:
+   65|  2.77k|    pub fn from_f32(value: f32) -> f16 {
+   66|  2.77k|        f16(arch::f32_to_f16(value))
+   67|  2.77k|    }
+_RNvMNtCsban8hJYjr0c_4half8binary16NtB2_3f169from_bitsCs5zRv9L7EKOy_10hardy_cbor:
    52|  1.76k|    pub const fn from_bits(bits: u16) -> f16 {
    53|  1.76k|        f16(bits)
    54|  1.76k|    }
-_RNvXs0_NtCs2mOpsYdpDes_4half8binary16dINtNtCscPQnZwwd9T3_4core7convert4FromNtB5_3f16E4fromCs1Y3mH2MRRlp_10hardy_cbor:
+_RNvXs0_NtCsban8hJYjr0c_4half8binary16dINtNtCsiGG3KM8TBTT_4core7convert4FromNtB5_3f16E4fromCs5zRv9L7EKOy_10hardy_cbor:
   808|  1.76k|    fn from(x: f16) -> f64 {
   809|  1.76k|        x.to_f64()
   810|  1.76k|    }
 
-_RNvNtNtCs2mOpsYdpDes_4half8binary164arch10f16_to_f32Cs1Y3mH2MRRlp_10hardy_cbor:
-  116|  2.78k|pub(crate) fn f16_to_f32(i: u16) -> f32 {
+_RNvNtNtCsban8hJYjr0c_4half8binary164arch10f16_to_f32Cs5zRv9L7EKOy_10hardy_cbor:
+  116|  2.77k|pub(crate) fn f16_to_f32(i: u16) -> f32 {
   117|       |    convert_fn! {
   118|       |        if x86_feature("f16c") {
   119|       |            unsafe { x86::f16_to_f32_x86_f16c(i) }
@@ -33,11 +33,11 @@ _RNvNtNtCs2mOpsYdpDes_4half8binary164arch10f16_to_f32Cs1Y3mH2MRRlp_10hardy_cbor:
   122|       |        } else if loongarch64_feature("lsx") {
   123|       |            unsafe { loongarch64::f16_to_f32_lsx(i) }
   124|       |        } else {
-  125|  2.78k|            f16_to_f32_fallback(i)
+  125|  2.77k|            f16_to_f32_fallback(i)
   126|       |        }
   127|       |    }
-  128|  2.78k|}
-_RNvNtNtCs2mOpsYdpDes_4half8binary164arch10f16_to_f64Cs1Y3mH2MRRlp_10hardy_cbor:
+  128|  2.77k|}
+_RNvNtNtCsban8hJYjr0c_4half8binary164arch10f16_to_f64Cs5zRv9L7EKOy_10hardy_cbor:
   131|  1.76k|pub(crate) fn f16_to_f64(i: u16) -> f64 {
   132|       |    convert_fn! {
   133|       |        if x86_feature("f16c") {
@@ -51,8 +51,8 @@ _RNvNtNtCs2mOpsYdpDes_4half8binary164arch10f16_to_f64Cs1Y3mH2MRRlp_10hardy_cbor:
   141|       |        }
   142|       |    }
   143|  1.76k|}
-_RNvNtNtCs2mOpsYdpDes_4half8binary164arch10f32_to_f16Cs1Y3mH2MRRlp_10hardy_cbor:
-   86|  2.78k|pub(crate) fn f32_to_f16(f: f32) -> u16 {
+_RNvNtNtCsban8hJYjr0c_4half8binary164arch10f32_to_f16Cs5zRv9L7EKOy_10hardy_cbor:
+   86|  2.77k|pub(crate) fn f32_to_f16(f: f32) -> u16 {
    87|       |    convert_fn! {
    88|       |        if x86_feature("f16c") {
    89|       |            unsafe { x86::f32_to_f16_x86_f16c(f) }
@@ -61,70 +61,70 @@ _RNvNtNtCs2mOpsYdpDes_4half8binary164arch10f32_to_f16Cs1Y3mH2MRRlp_10hardy_cbor:
    92|       |        } else if loongarch64_feature("lsx") {
    93|       |            unsafe { loongarch64::f32_to_f16_lsx(f) }
    94|       |        } else {
-   95|  2.78k|            f32_to_f16_fallback(f)
+   95|  2.77k|            f32_to_f16_fallback(f)
    96|       |        }
    97|       |    }
-   98|  2.78k|}
-_RNvNtNtCs2mOpsYdpDes_4half8binary164arch19f16_to_f32_fallbackCs1Y3mH2MRRlp_10hardy_cbor:
-  685|  2.78k|pub(crate) const fn f16_to_f32_fallback(i: u16) -> f32 {
+   98|  2.77k|}
+_RNvNtNtCsban8hJYjr0c_4half8binary164arch19f16_to_f32_fallbackCs5zRv9L7EKOy_10hardy_cbor:
+  685|  2.77k|pub(crate) const fn f16_to_f32_fallback(i: u16) -> f32 {
   686|       |    // Check for signed zero
   687|       |    // TODO: Replace mem::transmute with from_bits() once from_bits is const-stabilized
-  688|  2.78k|    if i & 0x7FFFu16 == 0 {
-  689|    855|        return unsafe { mem::transmute::<u32, f32>((i as u32) << 16) };
-  690|  1.93k|    }
+  688|  2.77k|    if i & 0x7FFFu16 == 0 {
+  689|    849|        return unsafe { mem::transmute::<u32, f32>((i as u32) << 16) };
+  690|  1.92k|    }
   691|       |
-  692|  1.93k|    let half_sign = (i & 0x8000u16) as u32;
-  693|  1.93k|    let half_exp = (i & 0x7C00u16) as u32;
-  694|  1.93k|    let half_man = (i & 0x03FFu16) as u32;
+  692|  1.92k|    let half_sign = (i & 0x8000u16) as u32;
+  693|  1.92k|    let half_exp = (i & 0x7C00u16) as u32;
+  694|  1.92k|    let half_man = (i & 0x03FFu16) as u32;
   695|       |
   696|       |    // Check for an infinity or NaN when all exponent bits set
-  697|  1.93k|    if half_exp == 0x7C00u32 {
+  697|  1.92k|    if half_exp == 0x7C00u32 {
   698|       |        // Check for signed infinity if mantissa is zero
-  699|    266|        if half_man == 0 {
-  700|    266|            return unsafe { mem::transmute::<u32, f32>((half_sign << 16) | 0x7F80_0000u32) };
+  699|    267|        if half_man == 0 {
+  700|    267|            return unsafe { mem::transmute::<u32, f32>((half_sign << 16) | 0x7F80_0000u32) };
   701|       |        } else {
   702|       |            // NaN, keep current mantissa but also set most significiant mantissa bit
   703|       |            return unsafe {
   704|      0|                mem::transmute::<u32, f32>((half_sign << 16) | 0x7FC0_0000u32 | (half_man << 13))
   705|       |            };
   706|       |        }
-  707|  1.66k|    }
+  707|  1.65k|    }
   708|       |
   709|       |    // Calculate single-precision components with adjusted exponent
-  710|  1.66k|    let sign = half_sign << 16;
+  710|  1.65k|    let sign = half_sign << 16;
   711|       |    // Unbias exponent
-  712|  1.66k|    let unbiased_exp = ((half_exp as i32) >> 10) - 15;
+  712|  1.65k|    let unbiased_exp = ((half_exp as i32) >> 10) - 15;
   713|       |
   714|       |    // Check for subnormals, which will be normalized by adjusting exponent
-  715|  1.66k|    if half_exp == 0 {
+  715|  1.65k|    if half_exp == 0 {
   716|       |        // Calculate how much to adjust the exponent by
-  717|    879|        let e = leading_zeros_u16(half_man as u16) - 6;
+  717|    870|        let e = leading_zeros_u16(half_man as u16) - 6;
   718|       |
   719|       |        // Rebias and adjust exponent
-  720|    879|        let exp = (127 - 15 - e) << 23;
-  721|    879|        let man = (half_man << (14 + e)) & 0x7F_FF_FFu32;
-  722|    879|        return unsafe { mem::transmute::<u32, f32>(sign | exp | man) };
-  723|    788|    }
+  720|    870|        let exp = (127 - 15 - e) << 23;
+  721|    870|        let man = (half_man << (14 + e)) & 0x7F_FF_FFu32;
+  722|    870|        return unsafe { mem::transmute::<u32, f32>(sign | exp | man) };
+  723|    784|    }
   724|       |
   725|       |    // Rebias exponent for a normalized normal
-  726|    788|    let exp = ((unbiased_exp + 127) as u32) << 23;
-  727|    788|    let man = (half_man & 0x03FFu32) << 13;
-  728|    788|    unsafe { mem::transmute::<u32, f32>(sign | exp | man) }
-  729|  2.78k|}
-_RNvNtNtCs2mOpsYdpDes_4half8binary164arch19f16_to_f64_fallbackCs1Y3mH2MRRlp_10hardy_cbor:
+  726|    784|    let exp = ((unbiased_exp + 127) as u32) << 23;
+  727|    784|    let man = (half_man & 0x03FFu32) << 13;
+  728|    784|    unsafe { mem::transmute::<u32, f32>(sign | exp | man) }
+  729|  2.77k|}
+_RNvNtNtCsban8hJYjr0c_4half8binary164arch19f16_to_f64_fallbackCs5zRv9L7EKOy_10hardy_cbor:
   732|  1.76k|pub(crate) const fn f16_to_f64_fallback(i: u16) -> f64 {
   733|       |    // Check for signed zero
   734|       |    // TODO: Replace mem::transmute with from_bits() once from_bits is const-stabilized
   735|  1.76k|    if i & 0x7FFFu16 == 0 {
-  736|    218|        return unsafe { mem::transmute::<u64, f64>((i as u64) << 48) };
-  737|  1.55k|    }
+  736|    216|        return unsafe { mem::transmute::<u64, f64>((i as u64) << 48) };
+  737|  1.54k|    }
   738|       |
-  739|  1.55k|    let half_sign = (i & 0x8000u16) as u64;
-  740|  1.55k|    let half_exp = (i & 0x7C00u16) as u64;
-  741|  1.55k|    let half_man = (i & 0x03FFu16) as u64;
+  739|  1.54k|    let half_sign = (i & 0x8000u16) as u64;
+  740|  1.54k|    let half_exp = (i & 0x7C00u16) as u64;
+  741|  1.54k|    let half_man = (i & 0x03FFu16) as u64;
   742|       |
   743|       |    // Check for an infinity or NaN when all exponent bits set
-  744|  1.55k|    if half_exp == 0x7C00u64 {
+  744|  1.54k|    if half_exp == 0x7C00u64 {
   745|       |        // Check for signed infinity if mantissa is zero
   746|    150|        if half_man == 0 {
   747|       |            return unsafe {
@@ -138,15 +138,15 @@ _RNvNtNtCs2mOpsYdpDes_4half8binary164arch19f16_to_f64_fallbackCs1Y3mH2MRRlp_10ha
   755|       |                )
   756|       |            };
   757|       |        }
-  758|  1.40k|    }
+  758|  1.39k|    }
   759|       |
   760|       |    // Calculate double-precision components with adjusted exponent
-  761|  1.40k|    let sign = half_sign << 48;
+  761|  1.39k|    let sign = half_sign << 48;
   762|       |    // Unbias exponent
-  763|  1.40k|    let unbiased_exp = ((half_exp as i64) >> 10) - 15;
+  763|  1.39k|    let unbiased_exp = ((half_exp as i64) >> 10) - 15;
   764|       |
   765|       |    // Check for subnormals, which will be normalized by adjusting exponent
-  766|  1.40k|    if half_exp == 0 {
+  766|  1.39k|    if half_exp == 0 {
   767|       |        // Calculate how much to adjust the exponent by
   768|    216|        let e = leading_zeros_u16(half_man as u16) - 6;
   769|       |
@@ -161,80 +161,80 @@ _RNvNtNtCs2mOpsYdpDes_4half8binary164arch19f16_to_f64_fallbackCs1Y3mH2MRRlp_10ha
   778|  1.18k|    let man = (half_man & 0x03FFu64) << 42;
   779|  1.18k|    unsafe { mem::transmute::<u64, f64>(sign | exp | man) }
   780|  1.76k|}
-_RNvNtNtCs2mOpsYdpDes_4half8binary164arch19f32_to_f16_fallbackCs1Y3mH2MRRlp_10hardy_cbor:
-  556|  2.78k|pub(crate) const fn f32_to_f16_fallback(value: f32) -> u16 {
+_RNvNtNtCsban8hJYjr0c_4half8binary164arch19f32_to_f16_fallbackCs5zRv9L7EKOy_10hardy_cbor:
+  556|  2.77k|pub(crate) const fn f32_to_f16_fallback(value: f32) -> u16 {
   557|       |    // TODO: Replace mem::transmute with to_bits() once to_bits is const-stabilized
   558|       |    // Convert to raw bytes
-  559|  2.78k|    let x: u32 = unsafe { mem::transmute::<f32, u32>(value) };
+  559|  2.77k|    let x: u32 = unsafe { mem::transmute::<f32, u32>(value) };
   560|       |
   561|       |    // Extract IEEE754 components
-  562|  2.78k|    let sign = x & 0x8000_0000u32;
-  563|  2.78k|    let exp = x & 0x7F80_0000u32;
-  564|  2.78k|    let man = x & 0x007F_FFFFu32;
+  562|  2.77k|    let sign = x & 0x8000_0000u32;
+  563|  2.77k|    let exp = x & 0x7F80_0000u32;
+  564|  2.77k|    let man = x & 0x007F_FFFFu32;
   565|       |
   566|       |    // Check for all exponent bits being set, which is Infinity or NaN
-  567|  2.78k|    if exp == 0x7F80_0000u32 {
+  567|  2.77k|    if exp == 0x7F80_0000u32 {
   568|       |        // Set mantissa MSB for NaN (and also keep shifted mantissa bits)
   569|      0|        let nan_bit = if man == 0 { 0 } else { 0x0200u32 };
   570|      0|        return ((sign >> 16) | 0x7C00u32 | nan_bit | (man >> 13)) as u16;
-  571|  2.78k|    }
+  571|  2.77k|    }
   572|       |
   573|       |    // The number is normalized, start assembling half precision version
-  574|  2.78k|    let half_sign = sign >> 16;
+  574|  2.77k|    let half_sign = sign >> 16;
   575|       |    // Unbias the exponent, then bias for half precision
-  576|  2.78k|    let unbiased_exp = ((exp >> 23) as i32) - 127;
-  577|  2.78k|    let half_exp = unbiased_exp + 15;
+  576|  2.77k|    let unbiased_exp = ((exp >> 23) as i32) - 127;
+  577|  2.77k|    let half_exp = unbiased_exp + 15;
   578|       |
   579|       |    // Check for exponent overflow, return +infinity
-  580|  2.78k|    if half_exp >= 0x1F {
-  581|    266|        return (half_sign | 0x7C00u32) as u16;
-  582|  2.52k|    }
+  580|  2.77k|    if half_exp >= 0x1F {
+  581|    267|        return (half_sign | 0x7C00u32) as u16;
+  582|  2.50k|    }
   583|       |
   584|       |    // Check for underflow
-  585|  2.52k|    if half_exp <= 0 {
+  585|  2.50k|    if half_exp <= 0 {
   586|       |        // Check mantissa for what we can do
-  587|  1.73k|        if 14 - half_exp > 24 {
+  587|  1.71k|        if 14 - half_exp > 24 {
   588|       |            // No rounding possibility, so this is a full underflow, return signed zero
-  589|    853|            return half_sign as u16;
-  590|    881|        }
+  589|    847|            return half_sign as u16;
+  590|    872|        }
   591|       |        // Don't forget about hidden leading mantissa bit when assembling mantissa
-  592|    881|        let man = man | 0x0080_0000u32;
-  593|    881|        let mut half_man = man >> (14 - half_exp);
+  592|    872|        let man = man | 0x0080_0000u32;
+  593|    872|        let mut half_man = man >> (14 - half_exp);
   594|       |        // Check for rounding (see comment above functions)
-  595|    881|        let round_bit = 1 << (13 - half_exp);
-  596|    881|        if (man & round_bit) != 0 && (man & (3 * round_bit - 1)) != 0 {
-  597|    239|            half_man += 1;
-  598|    642|        }
+  595|    872|        let round_bit = 1 << (13 - half_exp);
+  596|    872|        if (man & round_bit) != 0 && (man & (3 * round_bit - 1)) != 0 {
+  597|    238|            half_man += 1;
+  598|    634|        }
   599|       |        // No exponent for subnormals
-  600|    881|        return (half_sign | half_man) as u16;
-  601|    788|    }
+  600|    872|        return (half_sign | half_man) as u16;
+  601|    784|    }
   602|       |
   603|       |    // Rebias the exponent
-  604|    788|    let half_exp = (half_exp as u32) << 10;
-  605|    788|    let half_man = man >> 13;
+  604|    784|    let half_exp = (half_exp as u32) << 10;
+  605|    784|    let half_man = man >> 13;
   606|       |    // Check for rounding (see comment above functions)
-  607|    788|    let round_bit = 0x0000_1000u32;
-  608|    788|    if (man & round_bit) != 0 && (man & (3 * round_bit - 1)) != 0 {
+  607|    784|    let round_bit = 0x0000_1000u32;
+  608|    784|    if (man & round_bit) != 0 && (man & (3 * round_bit - 1)) != 0 {
   609|       |        // Round it
-  610|    415|        ((half_sign | half_exp | half_man) + 1) as u16
+  610|    413|        ((half_sign | half_exp | half_man) + 1) as u16
   611|       |    } else {
-  612|    373|        (half_sign | half_exp | half_man) as u16
+  612|    371|        (half_sign | half_exp | half_man) as u16
   613|       |    }
-  614|  2.78k|}
+  614|  2.77k|}
 
-_RNvNtCs2mOpsYdpDes_4half13leading_zeros17leading_zeros_u16Cs1Y3mH2MRRlp_10hardy_cbor:
-   11|  1.09k|pub(crate) const fn leading_zeros_u16(x: u16) -> u32 {
-   12|  1.09k|    x.leading_zeros()
-   13|  1.09k|}
+_RNvNtCsban8hJYjr0c_4half13leading_zeros17leading_zeros_u16Cs5zRv9L7EKOy_10hardy_cbor:
+   11|  1.08k|pub(crate) const fn leading_zeros_u16(x: u16) -> u32 {
+   12|  1.08k|    x.leading_zeros()
+   13|  1.08k|}
 
-_RNvXNtCs2mOpsYdpDes_4half10num_traitsNtNtB4_8binary163f16NtNtCseqC38ofO0Mi_10num_traits4cast11ToPrimitive6to_f32Cs1Y3mH2MRRlp_10hardy_cbor:
-   43|  2.78k|    fn to_f32(&self) -> Option<f32> {
-   44|  2.78k|        Some(Self::to_f32(*self))
-   45|  2.78k|    }
-_RNvXs_NtCs2mOpsYdpDes_4half10num_traitsNtNtB6_8binary163f16NtNtCseqC38ofO0Mi_10num_traits4cast13FromPrimitive8from_f32Cs1Y3mH2MRRlp_10hardy_cbor:
-   86|  2.78k|    fn from_f32(n: f32) -> Option<Self> {
-   87|  2.78k|        n.to_f32().map(Self::from_f32)
-   88|  2.78k|    }
+_RNvXNtCsban8hJYjr0c_4half10num_traitsNtNtB4_8binary163f16NtNtCs7THtEvEwAgX_10num_traits4cast11ToPrimitive6to_f32Cs5zRv9L7EKOy_10hardy_cbor:
+   43|  2.77k|    fn to_f32(&self) -> Option<f32> {
+   44|  2.77k|        Some(Self::to_f32(*self))
+   45|  2.77k|    }
+_RNvXs_NtCsban8hJYjr0c_4half10num_traitsNtNtB6_8binary163f16NtNtCs7THtEvEwAgX_10num_traits4cast13FromPrimitive8from_f32Cs5zRv9L7EKOy_10hardy_cbor:
+   86|  2.77k|    fn from_f32(n: f32) -> Option<Self> {
+   87|  2.77k|        n.to_f32().map(Self::from_f32)
+   88|  2.77k|    }
 
 LLVMFuzzerInitialize:
   252|      2|            pub extern "C" fn LLVMFuzzerInitialize(_argc: *const isize, _argv: *const *const *const u8) -> isize {
@@ -244,7 +244,7 @@ LLVMFuzzerInitialize:
   256|       |                $init;
   257|      2|                0
   258|      2|            }
-_RNvNvCs2vcoHZVlbbE_6decode1__19___libfuzzer_sys_run:
+_RNvNvCsb2OpNaVy73Y_6decode1__19___libfuzzer_sys_run:
   293|  1.23k|            fn __libfuzzer_sys_run($bytes: &[u8]) -> $rty {
   294|       |                $body
   295|  1.23k|            }
@@ -283,14 +283,14 @@ LLVMFuzzerTestOneInput:
    71|       |        }
    72|       |    }
    73|  1.23k|}
-_RNCNvCs9dK1veY7V9V_13libfuzzer_sys15test_input_wrap0B3_:
+_RNCNvCs53eguvtPkmf_13libfuzzer_sys15test_input_wrap0B3_:
    60|  1.23k|    let test_input = ::std::panic::catch_unwind(|| {
    61|  1.23k|        let data_slice = ::std::slice::from_raw_parts(data, size);
    62|  1.23k|        rust_fuzzer_test_input(data_slice)
    63|  1.23k|    });
-_RNCNvCs9dK1veY7V9V_13libfuzzer_sys25rust_libfuzzer_debug_path0B3_:
+_RNCNvCs53eguvtPkmf_13libfuzzer_sys25rust_libfuzzer_debug_path0B3_:
    78|      1|    RUST_LIBFUZZER_DEBUG_PATH.get_or_init(|| std::env::var("RUST_LIBFUZZER_DEBUG_PATH").ok())
-_RNvCs9dK1veY7V9V_13libfuzzer_sys10initialize:
+_RNvCs53eguvtPkmf_13libfuzzer_sys10initialize:
    82|      2|pub fn initialize(_argc: *const isize, _argv: *const *const *const u8) -> isize {
    83|       |    // Registers a panic hook that aborts the process before unwinding.
    84|       |    // It is useful to abort before unwinding so that the fuzzer will then be
@@ -307,127 +307,127 @@ _RNvCs9dK1veY7V9V_13libfuzzer_sys10initialize:
    95|       |    }));
    96|      2|    0
    97|      2|}
-_RNvCs9dK1veY7V9V_13libfuzzer_sys25rust_libfuzzer_debug_path:
+_RNvCs53eguvtPkmf_13libfuzzer_sys25rust_libfuzzer_debug_path:
    76|  1.23k|pub fn rust_libfuzzer_debug_path() -> &'static Option<String> {
    77|       |    static RUST_LIBFUZZER_DEBUG_PATH: OnceLock<Option<String>> = OnceLock::new();
    78|  1.23k|    RUST_LIBFUZZER_DEBUG_PATH.get_or_init(|| std::env::var("RUST_LIBFUZZER_DEBUG_PATH").ok())
    79|  1.23k|}
-_RNvMs_Cs9dK1veY7V9V_13libfuzzer_sysNtB4_6Corpus17to_libfuzzer_code:
+_RNvMs_Cs53eguvtPkmf_13libfuzzer_sysNtB4_6Corpus17to_libfuzzer_code:
    40|  1.23k|    pub fn to_libfuzzer_code(self) -> i32 {
    41|  1.23k|        match self {
    42|  1.23k|            Corpus::Keep => 0,
    43|      0|            Corpus::Reject => -1,
    44|       |        }
    45|  1.23k|    }
-_RNvXCs9dK1veY7V9V_13libfuzzer_sysNtB2_6CorpusINtNtCscPQnZwwd9T3_4core7convert4FromuE4from:
+_RNvXCs53eguvtPkmf_13libfuzzer_sysNtB2_6CorpusINtNtCsiGG3KM8TBTT_4core7convert4FromuE4from:
    30|  1.23k|    fn from(_: ()) -> Self {
    31|  1.23k|        Self::Keep
    32|  1.23k|    }
 
-_RNvXsd_NtCseqC38ofO0Mi_10num_traits4castfNtB5_11ToPrimitive6to_f32Cs1Y3mH2MRRlp_10hardy_cbor:
-  272|  2.78k|        fn $method(&self) -> Option<$DstT> {
+_RNvXsd_NtCs7THtEvEwAgX_10num_traits4castfNtB5_11ToPrimitive6to_f32Cs5zRv9L7EKOy_10hardy_cbor:
+  272|  2.77k|        fn $method(&self) -> Option<$DstT> {
   273|       |            // We can safely cast all values, whether NaN, +-inf, or finite.
   274|       |            // Finite values that are reducing size may saturate to +-inf.
-  275|  2.78k|            Some(*self as $DstT)
-  276|  2.78k|        }
-_RNvXsd_NtCseqC38ofO0Mi_10num_traits4castfNtB5_11ToPrimitive6to_f64Cs1Y3mH2MRRlp_10hardy_cbor:
-  272|  1.81k|        fn $method(&self) -> Option<$DstT> {
+  275|  2.77k|            Some(*self as $DstT)
+  276|  2.77k|        }
+_RNvXsd_NtCs7THtEvEwAgX_10num_traits4castfNtB5_11ToPrimitive6to_f64Cs5zRv9L7EKOy_10hardy_cbor:
+  272|  1.80k|        fn $method(&self) -> Option<$DstT> {
   273|       |            // We can safely cast all values, whether NaN, +-inf, or finite.
   274|       |            // Finite values that are reducing size may saturate to +-inf.
-  275|  1.81k|            Some(*self as $DstT)
-  276|  1.81k|        }
-_RNvXse_NtCseqC38ofO0Mi_10num_traits4castdNtB5_11ToPrimitive6to_f32Cs1Y3mH2MRRlp_10hardy_cbor:
-  272|  1.81k|        fn $method(&self) -> Option<$DstT> {
+  275|  1.80k|            Some(*self as $DstT)
+  276|  1.80k|        }
+_RNvXse_NtCs7THtEvEwAgX_10num_traits4castdNtB5_11ToPrimitive6to_f32Cs5zRv9L7EKOy_10hardy_cbor:
+  272|  1.80k|        fn $method(&self) -> Option<$DstT> {
   273|       |            // We can safely cast all values, whether NaN, +-inf, or finite.
   274|       |            // Finite values that are reducing size may saturate to +-inf.
-  275|  1.81k|            Some(*self as $DstT)
-  276|  1.81k|        }
-_RNvXsr_NtCseqC38ofO0Mi_10num_traits4castfNtB5_13FromPrimitive8from_f64Cs1Y3mH2MRRlp_10hardy_cbor:
-  553|  1.81k|            fn from_f64(n: f64) -> Option<$T> {
-  554|  1.81k|                n.$to_ty()
-  555|  1.81k|            }
+  275|  1.80k|            Some(*self as $DstT)
+  276|  1.80k|        }
+_RNvXsr_NtCs7THtEvEwAgX_10num_traits4castfNtB5_13FromPrimitive8from_f64Cs5zRv9L7EKOy_10hardy_cbor:
+  553|  1.80k|            fn from_f64(n: f64) -> Option<$T> {
+  554|  1.80k|                n.$to_ty()
+  555|  1.80k|            }
 
-_RINvCsk4VEGIowmh_8smallvec10infallibleuECs1Y3mH2MRRlp_10hardy_cbor:
-  322|  14.3k|fn infallible<T>(result: Result<T, CollectionAllocErr>) -> T {
+_RINvCs3vPEose4oqa_8smallvec10infallibleuECs5zRv9L7EKOy_10hardy_cbor:
+  322|  14.2k|fn infallible<T>(result: Result<T, CollectionAllocErr>) -> T {
   323|      0|    match result {
-  324|  14.3k|        Ok(x) => x,
+  324|  14.2k|        Ok(x) => x,
   325|      0|        Err(CollectionAllocErr::CapacityOverflow) => panic!("capacity overflow"),
   326|      0|        Err(CollectionAllocErr::AllocErr { layout }) => alloc::alloc::handle_alloc_error(layout),
   327|       |    }
-  328|  14.3k|}
-_RINvCsk4VEGIowmh_8smallvec12layout_arrayyECs1Y3mH2MRRlp_10hardy_cbor:
-  332|  20.6k|fn layout_array<T>(n: usize) -> Result<Layout, CollectionAllocErr> {
-  333|  20.6k|    let size = mem::size_of::<T>()
-  334|  20.6k|        .checked_mul(n)
-  335|  20.6k|        .ok_or(CollectionAllocErr::CapacityOverflow)?;
-  336|  20.6k|    let align = mem::align_of::<T>();
-  337|  20.6k|    Layout::from_size_align(size, align).map_err(|_| CollectionAllocErr::CapacityOverflow)
-  338|  20.6k|}
-_RNvMsX_Csk4VEGIowmh_8smallvecINtB5_12ConstNonNullyE3newCs1Y3mH2MRRlp_10hardy_cbor:
- 2506|   102k|    fn new(ptr: *const T) -> Option<Self> {
- 2507|   102k|        NonNull::new(ptr as *mut T).map(Self)
- 2508|   102k|    }
-_RNvMsX_Csk4VEGIowmh_8smallvecINtB5_12ConstNonNullyE6as_ptrCs1Y3mH2MRRlp_10hardy_cbor:
- 2510|  96.3k|    fn as_ptr(self) -> *const T {
- 2511|  96.3k|        self.0.as_ptr()
- 2512|  96.3k|    }
-_RNvMsa_Csk4VEGIowmh_8smallvecINtB5_12SmallVecDataAyj1_E10inline_mutCs1Y3mH2MRRlp_10hardy_cbor:
-  719|   123k|    unsafe fn inline_mut(&mut self) -> NonNull<A::Item> {
-  720|   123k|        match self {
-  721|   123k|            SmallVecData::Inline(a) => NonNull::new(a.as_mut_ptr() as *mut A::Item).unwrap(),
+  328|  14.2k|}
+_RINvCs3vPEose4oqa_8smallvec12layout_arrayyECs5zRv9L7EKOy_10hardy_cbor:
+  332|  20.4k|fn layout_array<T>(n: usize) -> Result<Layout, CollectionAllocErr> {
+  333|  20.4k|    let size = mem::size_of::<T>()
+  334|  20.4k|        .checked_mul(n)
+  335|  20.4k|        .ok_or(CollectionAllocErr::CapacityOverflow)?;
+  336|  20.4k|    let align = mem::align_of::<T>();
+  337|  20.4k|    Layout::from_size_align(size, align).map_err(|_| CollectionAllocErr::CapacityOverflow)
+  338|  20.4k|}
+_RNvMsX_Cs3vPEose4oqa_8smallvecINtB5_12ConstNonNullyE3newCs5zRv9L7EKOy_10hardy_cbor:
+ 2506|   101k|    fn new(ptr: *const T) -> Option<Self> {
+ 2507|   101k|        NonNull::new(ptr as *mut T).map(Self)
+ 2508|   101k|    }
+_RNvMsX_Cs3vPEose4oqa_8smallvecINtB5_12ConstNonNullyE6as_ptrCs5zRv9L7EKOy_10hardy_cbor:
+ 2510|  95.6k|    fn as_ptr(self) -> *const T {
+ 2511|  95.6k|        self.0.as_ptr()
+ 2512|  95.6k|    }
+_RNvMsa_Cs3vPEose4oqa_8smallvecINtB5_12SmallVecDataAyj1_E10inline_mutCs5zRv9L7EKOy_10hardy_cbor:
+  719|   122k|    unsafe fn inline_mut(&mut self) -> NonNull<A::Item> {
+  720|   122k|        match self {
+  721|   122k|            SmallVecData::Inline(a) => NonNull::new(a.as_mut_ptr() as *mut A::Item).unwrap(),
   722|      0|            _ => debug_unreachable!(),
   723|       |        }
-  724|   123k|    }
-_RNvMsa_Csk4VEGIowmh_8smallvecINtB5_12SmallVecDataAyj1_E4heapCs1Y3mH2MRRlp_10hardy_cbor:
-  744|  14.2k|    unsafe fn heap(&self) -> (ConstNonNull<A::Item>, usize) {
-  745|  14.2k|        match self {
-  746|  14.2k|            SmallVecData::Heap { ptr, len } => (ConstNonNull(*ptr), *len),
+  724|   122k|    }
+_RNvMsa_Cs3vPEose4oqa_8smallvecINtB5_12SmallVecDataAyj1_E4heapCs5zRv9L7EKOy_10hardy_cbor:
+  744|  14.1k|    unsafe fn heap(&self) -> (ConstNonNull<A::Item>, usize) {
+  745|  14.1k|        match self {
+  746|  14.1k|            SmallVecData::Heap { ptr, len } => (ConstNonNull(*ptr), *len),
   747|      0|            _ => debug_unreachable!(),
   748|       |        }
-  749|  14.2k|    }
-_RNvMsa_Csk4VEGIowmh_8smallvecINtB5_12SmallVecDataAyj1_E5emptyCs1Y3mH2MRRlp_10hardy_cbor:
-  731|   103k|    fn empty() -> SmallVecData<A> {
+  749|  14.1k|    }
+_RNvMsa_Cs3vPEose4oqa_8smallvecINtB5_12SmallVecDataAyj1_E5emptyCs5zRv9L7EKOy_10hardy_cbor:
+  731|   102k|    fn empty() -> SmallVecData<A> {
   732|       |        // SAFETY: MaybeUninit<A> is valid for any bit pattern including uninitialized bytes,
   733|       |        // so assume_init() on a MaybeUninit of that type is sound.
-  734|   103k|        SmallVecData::Inline(unsafe { MaybeUninit::uninit().assume_init() })
-  735|   103k|    }
-_RNvMsa_Csk4VEGIowmh_8smallvecINtB5_12SmallVecDataAyj1_E6inlineCs1Y3mH2MRRlp_10hardy_cbor:
-  712|   102k|    unsafe fn inline(&self) -> ConstNonNull<A::Item> {
-  713|   102k|        match self {
-  714|   102k|            SmallVecData::Inline(a) => ConstNonNull::new(a.as_ptr() as *const A::Item).unwrap(),
+  734|   102k|        SmallVecData::Inline(unsafe { MaybeUninit::uninit().assume_init() })
+  735|   102k|    }
+_RNvMsa_Cs3vPEose4oqa_8smallvecINtB5_12SmallVecDataAyj1_E6inlineCs5zRv9L7EKOy_10hardy_cbor:
+  712|   101k|    unsafe fn inline(&self) -> ConstNonNull<A::Item> {
+  713|   101k|        match self {
+  714|   101k|            SmallVecData::Inline(a) => ConstNonNull::new(a.as_ptr() as *const A::Item).unwrap(),
   715|      0|            _ => debug_unreachable!(),
   716|       |        }
-  717|   102k|    }
-_RNvMsa_Csk4VEGIowmh_8smallvecINtB5_12SmallVecDataAyj1_E8heap_mutCs1Y3mH2MRRlp_10hardy_cbor:
-  751|  43.7k|    unsafe fn heap_mut(&mut self) -> (NonNull<A::Item>, &mut usize) {
-  752|  43.7k|        match self {
-  753|  43.7k|            SmallVecData::Heap { ptr, len } => (*ptr, len),
+  717|   101k|    }
+_RNvMsa_Cs3vPEose4oqa_8smallvecINtB5_12SmallVecDataAyj1_E8heap_mutCs5zRv9L7EKOy_10hardy_cbor:
+  751|  43.4k|    unsafe fn heap_mut(&mut self) -> (NonNull<A::Item>, &mut usize) {
+  752|  43.4k|        match self {
+  753|  43.4k|            SmallVecData::Heap { ptr, len } => (*ptr, len),
   754|      0|            _ => debug_unreachable!(),
   755|       |        }
-  756|  43.7k|    }
-_RNvMsa_Csk4VEGIowmh_8smallvecINtB5_12SmallVecDataAyj1_E9from_heapCs1Y3mH2MRRlp_10hardy_cbor:
-  758|  14.3k|    fn from_heap(ptr: NonNull<A::Item>, len: usize) -> SmallVecData<A> {
-  759|  14.3k|        SmallVecData::Heap { ptr, len }
-  760|  14.3k|    }
-_RNvMsd_Csk4VEGIowmh_8smallvecINtB5_8SmallVecAyj1_E10triple_mutCs1Y3mH2MRRlp_10hardy_cbor:
- 1008|   144k|    fn triple_mut(&mut self) -> (NonNull<A::Item>, &mut usize, usize) {
+  756|  43.4k|    }
+_RNvMsa_Cs3vPEose4oqa_8smallvecINtB5_12SmallVecDataAyj1_E9from_heapCs5zRv9L7EKOy_10hardy_cbor:
+  758|  14.2k|    fn from_heap(ptr: NonNull<A::Item>, len: usize) -> SmallVecData<A> {
+  759|  14.2k|        SmallVecData::Heap { ptr, len }
+  760|  14.2k|    }
+_RNvMsd_Cs3vPEose4oqa_8smallvecINtB5_8SmallVecAyj1_E10triple_mutCs5zRv9L7EKOy_10hardy_cbor:
+ 1008|   143k|    fn triple_mut(&mut self) -> (NonNull<A::Item>, &mut usize, usize) {
  1009|       |        unsafe {
- 1010|   144k|            if self.spilled() {
- 1011|  21.4k|                let (ptr, len_ptr) = self.data.heap_mut();
- 1012|  21.4k|                (ptr, len_ptr, self.capacity)
+ 1010|   143k|            if self.spilled() {
+ 1011|  21.2k|                let (ptr, len_ptr) = self.data.heap_mut();
+ 1012|  21.2k|                (ptr, len_ptr, self.capacity)
  1013|       |            } else {
- 1014|   123k|                (
- 1015|   123k|                    self.data.inline_mut(),
- 1016|   123k|                    &mut self.capacity,
- 1017|   123k|                    Self::inline_capacity(),
- 1018|   123k|                )
+ 1014|   122k|                (
+ 1015|   122k|                    self.data.inline_mut(),
+ 1016|   122k|                    &mut self.capacity,
+ 1017|   122k|                    Self::inline_capacity(),
+ 1018|   122k|                )
  1019|       |            }
  1020|       |        }
- 1021|   144k|    }
-_RNvMsd_Csk4VEGIowmh_8smallvecINtB5_8SmallVecAyj1_E15inline_capacityCs1Y3mH2MRRlp_10hardy_cbor:
-  950|   619k|    fn inline_capacity() -> usize {
-  951|   619k|        if mem::size_of::<A::Item>() > 0 {
-  952|   619k|            A::size()
+ 1021|   143k|    }
+_RNvMsd_Cs3vPEose4oqa_8smallvecINtB5_8SmallVecAyj1_E15inline_capacityCs5zRv9L7EKOy_10hardy_cbor:
+  950|   614k|    fn inline_capacity() -> usize {
+  951|   614k|        if mem::size_of::<A::Item>() > 0 {
+  952|   614k|            A::size()
   953|       |        } else {
   954|       |            // For zero-size items code like `ptr.add(offset)` always returns the same pointer.
   955|       |            // Therefore all items are at the same address,
@@ -441,73 +441,73 @@ _RNvMsd_Csk4VEGIowmh_8smallvecINtB5_8SmallVecAyj1_E15inline_capacityCs1Y3mH2MRRl
   963|       |            // and we never try to allocate zero bytes which `std::alloc::alloc` disallows.
   964|      0|            core::usize::MAX
   965|       |        }
-  966|   619k|    }
-_RNvMsd_Csk4VEGIowmh_8smallvecINtB5_8SmallVecAyj1_E21reserve_one_uncheckedCs1Y3mH2MRRlp_10hardy_cbor:
- 1249|  14.3k|    fn reserve_one_unchecked(&mut self) {
- 1250|  14.3k|        debug_assert_eq!(self.len(), self.capacity());
- 1251|  14.3k|        let new_cap = self.len()
- 1252|  14.3k|            .checked_add(1)
- 1253|  14.3k|            .and_then(usize::checked_next_power_of_two)
- 1254|  14.3k|            .expect("capacity overflow");
- 1255|  14.3k|        infallible(self.try_grow(new_cap))
- 1256|  14.3k|    }
-_RNvMsd_Csk4VEGIowmh_8smallvecINtB5_8SmallVecAyj1_E3lenCs1Y3mH2MRRlp_10hardy_cbor:
-  976|  20.2k|    pub fn len(&self) -> usize {
-  977|  20.2k|        self.triple().1
-  978|  20.2k|    }
-_RNvMsd_Csk4VEGIowmh_8smallvecINtB5_8SmallVecAyj1_E3newCs1Y3mH2MRRlp_10hardy_cbor:
-  803|   103k|    pub fn new() -> SmallVec<A> {
+  966|   614k|    }
+_RNvMsd_Cs3vPEose4oqa_8smallvecINtB5_8SmallVecAyj1_E21reserve_one_uncheckedCs5zRv9L7EKOy_10hardy_cbor:
+ 1249|  14.2k|    fn reserve_one_unchecked(&mut self) {
+ 1250|  14.2k|        debug_assert_eq!(self.len(), self.capacity());
+ 1251|  14.2k|        let new_cap = self.len()
+ 1252|  14.2k|            .checked_add(1)
+ 1253|  14.2k|            .and_then(usize::checked_next_power_of_two)
+ 1254|  14.2k|            .expect("capacity overflow");
+ 1255|  14.2k|        infallible(self.try_grow(new_cap))
+ 1256|  14.2k|    }
+_RNvMsd_Cs3vPEose4oqa_8smallvecINtB5_8SmallVecAyj1_E3lenCs5zRv9L7EKOy_10hardy_cbor:
+  976|  20.1k|    pub fn len(&self) -> usize {
+  977|  20.1k|        self.triple().1
+  978|  20.1k|    }
+_RNvMsd_Cs3vPEose4oqa_8smallvecINtB5_8SmallVecAyj1_E3newCs5zRv9L7EKOy_10hardy_cbor:
+  803|   102k|    pub fn new() -> SmallVec<A> {
   804|       |        // Try to detect invalid custom implementations of `Array`. Hopefully,
   805|       |        // this check should be optimized away entirely for valid ones.
-  806|   103k|        assert!(
-  807|   103k|            mem::size_of::<A>() == A::size() * mem::size_of::<A::Item>()
-  808|   103k|                && mem::align_of::<A>() >= mem::align_of::<A::Item>()
+  806|   102k|        assert!(
+  807|   102k|            mem::size_of::<A>() == A::size() * mem::size_of::<A::Item>()
+  808|   102k|                && mem::align_of::<A>() >= mem::align_of::<A::Item>()
   809|       |        );
-  810|   103k|        SmallVec {
-  811|   103k|            capacity: 0,
-  812|   103k|            data: SmallVecData::empty(),
-  813|   103k|        }
-  814|   103k|    }
-_RNvMsd_Csk4VEGIowmh_8smallvecINtB5_8SmallVecAyj1_E4pushCs1Y3mH2MRRlp_10hardy_cbor:
- 1138|  35.3k|    pub fn push(&mut self, value: A::Item) {
+  810|   102k|        SmallVec {
+  811|   102k|            capacity: 0,
+  812|   102k|            data: SmallVecData::empty(),
+  813|   102k|        }
+  814|   102k|    }
+_RNvMsd_Cs3vPEose4oqa_8smallvecINtB5_8SmallVecAyj1_E4pushCs5zRv9L7EKOy_10hardy_cbor:
+ 1138|  35.1k|    pub fn push(&mut self, value: A::Item) {
  1139|       |        unsafe {
- 1140|  35.3k|            let (mut ptr, mut len, cap) = self.triple_mut();
- 1141|  35.3k|            if *len == cap {
- 1142|  14.3k|                self.reserve_one_unchecked();
- 1143|  14.3k|                let (heap_ptr, heap_len) = self.data.heap_mut();
- 1144|  14.3k|                ptr = heap_ptr;
- 1145|  14.3k|                len = heap_len;
- 1146|  21.0k|            }
- 1147|  35.3k|            ptr::write(ptr.as_ptr().add(*len), value);
- 1148|  35.3k|            *len += 1;
+ 1140|  35.1k|            let (mut ptr, mut len, cap) = self.triple_mut();
+ 1141|  35.1k|            if *len == cap {
+ 1142|  14.2k|                self.reserve_one_unchecked();
+ 1143|  14.2k|                let (heap_ptr, heap_len) = self.data.heap_mut();
+ 1144|  14.2k|                ptr = heap_ptr;
+ 1145|  14.2k|                len = heap_len;
+ 1146|  20.9k|            }
+ 1147|  35.1k|            ptr::write(ptr.as_ptr().add(*len), value);
+ 1148|  35.1k|            *len += 1;
  1149|       |        }
- 1150|  35.3k|    }
-_RNvMsd_Csk4VEGIowmh_8smallvecINtB5_8SmallVecAyj1_E6tripleCs1Y3mH2MRRlp_10hardy_cbor:
-  995|   116k|    fn triple(&self) -> (ConstNonNull<A::Item>, usize, usize) {
+ 1150|  35.1k|    }
+_RNvMsd_Cs3vPEose4oqa_8smallvecINtB5_8SmallVecAyj1_E6tripleCs5zRv9L7EKOy_10hardy_cbor:
+  995|   115k|    fn triple(&self) -> (ConstNonNull<A::Item>, usize, usize) {
   996|       |        unsafe {
-  997|   116k|            if self.spilled() {
-  998|  14.2k|                let (ptr, len) = self.data.heap();
-  999|  14.2k|                (ptr, len, self.capacity)
+  997|   115k|            if self.spilled() {
+  998|  14.1k|                let (ptr, len) = self.data.heap();
+  999|  14.1k|                (ptr, len, self.capacity)
  1000|       |            } else {
- 1001|   102k|                (self.data.inline(), self.capacity, Self::inline_capacity())
+ 1001|   101k|                (self.data.inline(), self.capacity, Self::inline_capacity())
  1002|       |            }
  1003|       |        }
- 1004|   116k|    }
-_RNvMsd_Csk4VEGIowmh_8smallvecINtB5_8SmallVecAyj1_E7spilledCs1Y3mH2MRRlp_10hardy_cbor:
- 1025|   378k|    pub fn spilled(&self) -> bool {
- 1026|   378k|        self.capacity > Self::inline_capacity()
- 1027|   378k|    }
-_RNvMsd_Csk4VEGIowmh_8smallvecINtB5_8SmallVecAyj1_E8is_emptyCs1Y3mH2MRRlp_10hardy_cbor:
-  982|  5.92k|    pub fn is_empty(&self) -> bool {
-  983|  5.92k|        self.len() == 0
-  984|  5.92k|    }
-_RNvMsd_Csk4VEGIowmh_8smallvecINtB5_8SmallVecAyj1_E8try_growCs1Y3mH2MRRlp_10hardy_cbor:
- 1197|  14.3k|    pub fn try_grow(&mut self, new_cap: usize) -> Result<(), CollectionAllocErr> {
+ 1004|   115k|    }
+_RNvMsd_Cs3vPEose4oqa_8smallvecINtB5_8SmallVecAyj1_E7spilledCs5zRv9L7EKOy_10hardy_cbor:
+ 1025|   376k|    pub fn spilled(&self) -> bool {
+ 1026|   376k|        self.capacity > Self::inline_capacity()
+ 1027|   376k|    }
+_RNvMsd_Cs3vPEose4oqa_8smallvecINtB5_8SmallVecAyj1_E8is_emptyCs5zRv9L7EKOy_10hardy_cbor:
+  982|  5.91k|    pub fn is_empty(&self) -> bool {
+  983|  5.91k|        self.len() == 0
+  984|  5.91k|    }
+_RNvMsd_Cs3vPEose4oqa_8smallvecINtB5_8SmallVecAyj1_E8try_growCs5zRv9L7EKOy_10hardy_cbor:
+ 1197|  14.2k|    pub fn try_grow(&mut self, new_cap: usize) -> Result<(), CollectionAllocErr> {
  1198|       |        unsafe {
- 1199|  14.3k|            let unspilled = !self.spilled();
- 1200|  14.3k|            let (ptr, &mut len, cap) = self.triple_mut();
- 1201|  14.3k|            assert!(new_cap >= len);
- 1202|  14.3k|            if new_cap <= Self::inline_capacity() {
+ 1199|  14.2k|            let unspilled = !self.spilled();
+ 1200|  14.2k|            let (ptr, &mut len, cap) = self.triple_mut();
+ 1201|  14.2k|            assert!(new_cap >= len);
+ 1202|  14.2k|            if new_cap <= Self::inline_capacity() {
  1203|      0|                if unspilled {
  1204|      0|                    return Ok(());
  1205|      0|                }
@@ -515,82 +515,82 @@ _RNvMsd_Csk4VEGIowmh_8smallvecINtB5_8SmallVecAyj1_E8try_growCs1Y3mH2MRRlp_10hard
  1207|      0|                ptr::copy_nonoverlapping(ptr.as_ptr(), self.data.inline_mut().as_ptr(), len);
  1208|      0|                self.capacity = len;
  1209|      0|                deallocate(ptr, cap);
- 1210|  14.3k|            } else if new_cap != cap {
- 1211|  14.3k|                let layout = layout_array::<A::Item>(new_cap)?;
- 1212|  14.3k|                debug_assert!(layout.size() > 0);
+ 1210|  14.2k|            } else if new_cap != cap {
+ 1211|  14.2k|                let layout = layout_array::<A::Item>(new_cap)?;
+ 1212|  14.2k|                debug_assert!(layout.size() > 0);
  1213|       |                let new_alloc;
- 1214|  14.3k|                if unspilled {
- 1215|  8.00k|                    new_alloc = NonNull::new(alloc::alloc::alloc(layout))
- 1216|  8.00k|                        .ok_or(CollectionAllocErr::AllocErr { layout })?
- 1217|  8.00k|                        .cast();
- 1218|  8.00k|                    ptr::copy_nonoverlapping(ptr.as_ptr(), new_alloc.as_ptr(), len);
+ 1214|  14.2k|                if unspilled {
+ 1215|  7.97k|                    new_alloc = NonNull::new(alloc::alloc::alloc(layout))
+ 1216|  7.97k|                        .ok_or(CollectionAllocErr::AllocErr { layout })?
+ 1217|  7.97k|                        .cast();
+ 1218|  7.97k|                    ptr::copy_nonoverlapping(ptr.as_ptr(), new_alloc.as_ptr(), len);
  1219|       |                } else {
  1220|       |                    // This should never fail since the same succeeded
  1221|       |                    // when previously allocating `ptr`.
- 1222|  6.30k|                    let old_layout = layout_array::<A::Item>(cap)?;
+ 1222|  6.25k|                    let old_layout = layout_array::<A::Item>(cap)?;
  1223|       |
- 1224|  6.30k|                    let new_ptr =
- 1225|  6.30k|                        alloc::alloc::realloc(ptr.as_ptr() as *mut u8, old_layout, layout.size());
- 1226|  6.30k|                    new_alloc = NonNull::new(new_ptr)
- 1227|  6.30k|                        .ok_or(CollectionAllocErr::AllocErr { layout })?
- 1228|  6.30k|                        .cast();
+ 1224|  6.25k|                    let new_ptr =
+ 1225|  6.25k|                        alloc::alloc::realloc(ptr.as_ptr() as *mut u8, old_layout, layout.size());
+ 1226|  6.25k|                    new_alloc = NonNull::new(new_ptr)
+ 1227|  6.25k|                        .ok_or(CollectionAllocErr::AllocErr { layout })?
+ 1228|  6.25k|                        .cast();
  1229|       |                }
- 1230|  14.3k|                self.data = SmallVecData::from_heap(new_alloc, len);
- 1231|  14.3k|                self.capacity = new_cap;
+ 1230|  14.2k|                self.data = SmallVecData::from_heap(new_alloc, len);
+ 1231|  14.2k|                self.capacity = new_cap;
  1232|      0|            }
- 1233|  14.3k|            Ok(())
+ 1233|  14.2k|            Ok(())
  1234|       |        }
- 1235|  14.3k|    }
-_RNvXsV_Csk4VEGIowmh_8smallvecAyj1_NtB5_5Array4sizeCs1Y3mH2MRRlp_10hardy_cbor:
- 2459|   722k|    fn size() -> usize {
- 2460|   722k|        N
- 2461|   722k|    }
-_RNvXsg_Csk4VEGIowmh_8smallvecINtB5_8SmallVecAyj1_ENtNtNtCscPQnZwwd9T3_4core3ops5deref5Deref5derefCs1Y3mH2MRRlp_10hardy_cbor:
- 1870|  96.3k|    fn deref(&self) -> &[A::Item] {
+ 1235|  14.2k|    }
+_RNvXsV_Cs3vPEose4oqa_8smallvecAyj1_NtB5_5Array4sizeCs5zRv9L7EKOy_10hardy_cbor:
+ 2459|   717k|    fn size() -> usize {
+ 2460|   717k|        N
+ 2461|   717k|    }
+_RNvXsg_Cs3vPEose4oqa_8smallvecINtB5_8SmallVecAyj1_ENtNtNtCsiGG3KM8TBTT_4core3ops5deref5Deref5derefCs5zRv9L7EKOy_10hardy_cbor:
+ 1870|  95.6k|    fn deref(&self) -> &[A::Item] {
  1871|       |        unsafe {
- 1872|  96.3k|            let (ptr, len, _) = self.triple();
- 1873|  96.3k|            slice::from_raw_parts(ptr.as_ptr(), len)
+ 1872|  95.6k|            let (ptr, len, _) = self.triple();
+ 1873|  95.6k|            slice::from_raw_parts(ptr.as_ptr(), len)
  1874|       |        }
- 1875|  96.3k|    }
-_RNvXsh_Csk4VEGIowmh_8smallvecINtB5_8SmallVecAyj1_ENtNtNtCscPQnZwwd9T3_4core3ops5deref8DerefMut9deref_mutCs1Y3mH2MRRlp_10hardy_cbor:
- 1880|  95.1k|    fn deref_mut(&mut self) -> &mut [A::Item] {
- 1881|  95.1k|        unsafe {
- 1882|  95.1k|            let (ptr, &mut len, _) = self.triple_mut();
- 1883|  95.1k|            slice::from_raw_parts_mut(ptr.as_ptr(), len)
- 1884|  95.1k|        }
- 1885|  95.1k|    }
-_RNvXst_Csk4VEGIowmh_8smallvecINtB5_8SmallVecAyj1_EINtNtNtCscPQnZwwd9T3_4core3ops5index8IndexMutNtNtBR_5range9RangeFullE9index_mutCs1Y3mH2MRRlp_10hardy_cbor:
- 2086|  95.1k|    fn index_mut(&mut self, index: I) -> &mut I::Output {
- 2087|  95.1k|        &mut (&mut **self)[index]
- 2088|  95.1k|    }
-_RNvXsz_Csk4VEGIowmh_8smallvecINtB5_8SmallVecAyj1_ENtNtNtCscPQnZwwd9T3_4core3ops4drop4Drop4dropCs1Y3mH2MRRlp_10hardy_cbor:
- 2168|   103k|    fn drop(&mut self) {
+ 1875|  95.6k|    }
+_RNvXsh_Cs3vPEose4oqa_8smallvecINtB5_8SmallVecAyj1_ENtNtNtCsiGG3KM8TBTT_4core3ops5deref8DerefMut9deref_mutCs5zRv9L7EKOy_10hardy_cbor:
+ 1880|  94.4k|    fn deref_mut(&mut self) -> &mut [A::Item] {
+ 1881|  94.4k|        unsafe {
+ 1882|  94.4k|            let (ptr, &mut len, _) = self.triple_mut();
+ 1883|  94.4k|            slice::from_raw_parts_mut(ptr.as_ptr(), len)
+ 1884|  94.4k|        }
+ 1885|  94.4k|    }
+_RNvXst_Cs3vPEose4oqa_8smallvecINtB5_8SmallVecAyj1_EINtNtNtCsiGG3KM8TBTT_4core3ops5index8IndexMutNtNtBS_5range9RangeFullE9index_mutCs5zRv9L7EKOy_10hardy_cbor:
+ 2086|  94.4k|    fn index_mut(&mut self, index: I) -> &mut I::Output {
+ 2087|  94.4k|        &mut (&mut **self)[index]
+ 2088|  94.4k|    }
+_RNvXsz_Cs3vPEose4oqa_8smallvecINtB5_8SmallVecAyj1_ENtNtNtCsiGG3KM8TBTT_4core3ops4drop4Drop4dropCs5zRv9L7EKOy_10hardy_cbor:
+ 2168|   102k|    fn drop(&mut self) {
  2169|       |        unsafe {
- 2170|   103k|            if self.spilled() {
- 2171|  8.00k|                let (ptr, &mut len) = self.data.heap_mut();
- 2172|  8.00k|                drop(Vec::from_raw_parts(ptr.as_ptr(), len, self.capacity));
- 2173|  95.1k|            } else {
- 2174|  95.1k|                ptr::drop_in_place(&mut self[..]);
- 2175|  95.1k|            }
+ 2170|   102k|            if self.spilled() {
+ 2171|  7.97k|                let (ptr, &mut len) = self.data.heap_mut();
+ 2172|  7.97k|                drop(Vec::from_raw_parts(ptr.as_ptr(), len, self.capacity));
+ 2173|  94.4k|            } else {
+ 2174|  94.4k|                ptr::drop_in_place(&mut self[..]);
+ 2175|  94.4k|            }
  2176|       |        }
- 2177|   103k|    }
+ 2177|   102k|    }
 
-_RNvXNtCsfAAqFIlvIpD_9thiserror7displayRhNtB2_9AsDisplay10as_displayCs1Y3mH2MRRlp_10hardy_cbor:
-   20|     26|    fn as_display(&'a self) -> Self::Target {
-   21|     26|        *self
-   22|     26|    }
-_RNvXNtCsfAAqFIlvIpD_9thiserror7displayRjNtB2_9AsDisplay10as_displayCs1Y3mH2MRRlp_10hardy_cbor:
+_RNvXNtCs1vAoIpz9Ojn_9thiserror7displayRhNtB2_9AsDisplay10as_displayCs5zRv9L7EKOy_10hardy_cbor:
+   20|     25|    fn as_display(&'a self) -> Self::Target {
+   21|     25|        *self
+   22|     25|    }
+_RNvXNtCs1vAoIpz9Ojn_9thiserror7displayRjNtB2_9AsDisplay10as_displayCs5zRv9L7EKOy_10hardy_cbor:
    20|    944|    fn as_display(&'a self) -> Self::Target {
    21|    944|        *self
    22|    944|    }
 
-_RNCNvNvCs2vcoHZVlbbE_6decode1__19___libfuzzer_sys_run0B5_:
+_RNCNvNvCsb2OpNaVy73Y_6decode1__19___libfuzzer_sys_run0B5_:
     6|  1.15k|    _ = hardy_cbor::decode::parse_value(data, |value, _, _| {
     7|  1.15k|        _ = format!("{value:?}");
     8|  1.15k|        Ok::<_, hardy_cbor::decode::Error>(())
     9|  1.15k|    });
 
-_RINvNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode4head8to_arrayKj2_EB6_:
+_RINvNtNtCs5zRv9L7EKOy_10hardy_cbor6decode4head8to_arrayKj2_EB6_:
   388|  1.79k|fn to_array<const N: usize>(data: &[u8]) -> Result<[u8; N], Error> {
   389|  1.79k|    match data.len().cmp(&N) {
   390|     11|        core::cmp::Ordering::Less => Err(Error::NeedMoreData(N - data.len())),
@@ -598,72 +598,72 @@ _RINvNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode4head8to_arrayKj2_EB6_:
   392|  1.74k|        core::cmp::Ordering::Greater => Ok(data[0..N].try_into().unwrap()),
   393|       |    }
   394|  1.79k|}
-_RINvNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode4head8to_arrayKj4_EB6_:
-  388|  4.20k|fn to_array<const N: usize>(data: &[u8]) -> Result<[u8; N], Error> {
-  389|  4.20k|    match data.len().cmp(&N) {
-  390|     25|        core::cmp::Ordering::Less => Err(Error::NeedMoreData(N - data.len())),
+_RINvNtNtCs5zRv9L7EKOy_10hardy_cbor6decode4head8to_arrayKj4_EB6_:
+  388|  4.18k|fn to_array<const N: usize>(data: &[u8]) -> Result<[u8; N], Error> {
+  389|  4.18k|    match data.len().cmp(&N) {
+  390|     24|        core::cmp::Ordering::Less => Err(Error::NeedMoreData(N - data.len())),
   391|     74|        core::cmp::Ordering::Equal => Ok(data.try_into().unwrap()),
-  392|  4.10k|        core::cmp::Ordering::Greater => Ok(data[0..N].try_into().unwrap()),
+  392|  4.08k|        core::cmp::Ordering::Greater => Ok(data[0..N].try_into().unwrap()),
   393|       |    }
-  394|  4.20k|}
-_RINvNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode4head8to_arrayKj8_EB6_:
-  388|  3.17k|fn to_array<const N: usize>(data: &[u8]) -> Result<[u8; N], Error> {
-  389|  3.17k|    match data.len().cmp(&N) {
+  394|  4.18k|}
+_RINvNtNtCs5zRv9L7EKOy_10hardy_cbor6decode4head8to_arrayKj8_EB6_:
+  388|  3.14k|fn to_array<const N: usize>(data: &[u8]) -> Result<[u8; N], Error> {
+  389|  3.14k|    match data.len().cmp(&N) {
   390|     25|        core::cmp::Ordering::Less => Err(Error::NeedMoreData(N - data.len())),
   391|     32|        core::cmp::Ordering::Equal => Ok(data.try_into().unwrap()),
-  392|  3.11k|        core::cmp::Ordering::Greater => Ok(data[0..N].try_into().unwrap()),
+  392|  3.08k|        core::cmp::Ordering::Greater => Ok(data[0..N].try_into().unwrap()),
   393|       |    }
-  394|  3.17k|}
-_RNCNvXs_NtNtCs1Y3mH2MRRlp_10hardy_cbor6decode4headNtB6_4HeadNtB8_8FromCbor9from_cbor0Ba_:
-  222|    599|                .map(|(v, s, len)| (Marker::UnsignedInteger(v), shortest && s, len))?,
-_RNCNvXs_NtNtCs1Y3mH2MRRlp_10hardy_cbor6decode4headNtB6_4HeadNtB8_8FromCbor9from_cbors0_0Ba_:
-  229|    453|                    .map(|(v, s, len)| (Marker::Bytes(Some(v)), shortest && s, len))?
-_RNCNvXs_NtNtCs1Y3mH2MRRlp_10hardy_cbor6decode4headNtB6_4HeadNtB8_8FromCbor9from_cbors1_0Ba_:
-  238|    440|                    .map(|(v, s, len)| (Marker::Text(Some(v)), shortest && s, len))?
-_RNCNvXs_NtNtCs1Y3mH2MRRlp_10hardy_cbor6decode4headNtB6_4HeadNtB8_8FromCbor9from_cbors2_0Ba_:
-  247|    402|                    .map(|(v, s, len)| (Marker::Array(Some(v)), shortest && s, len))?
-_RNCNvXs_NtNtCs1Y3mH2MRRlp_10hardy_cbor6decode4headNtB6_4HeadNtB8_8FromCbor9from_cbors3_0Ba_:
+  394|  3.14k|}
+_RNCNvXs_NtNtCs5zRv9L7EKOy_10hardy_cbor6decode4headNtB6_4HeadNtB8_8FromCbor9from_cbor0Ba_:
+  222|    585|                .map(|(v, s, len)| (Marker::UnsignedInteger(v), shortest && s, len))?,
+_RNCNvXs_NtNtCs5zRv9L7EKOy_10hardy_cbor6decode4headNtB6_4HeadNtB8_8FromCbor9from_cbors0_0Ba_:
+  229|    451|                    .map(|(v, s, len)| (Marker::Bytes(Some(v)), shortest && s, len))?
+_RNCNvXs_NtNtCs5zRv9L7EKOy_10hardy_cbor6decode4headNtB6_4HeadNtB8_8FromCbor9from_cbors1_0Ba_:
+  238|    439|                    .map(|(v, s, len)| (Marker::Text(Some(v)), shortest && s, len))?
+_RNCNvXs_NtNtCs5zRv9L7EKOy_10hardy_cbor6decode4headNtB6_4HeadNtB8_8FromCbor9from_cbors2_0Ba_:
+  247|    403|                    .map(|(v, s, len)| (Marker::Array(Some(v)), shortest && s, len))?
+_RNCNvXs_NtNtCs5zRv9L7EKOy_10hardy_cbor6decode4headNtB6_4HeadNtB8_8FromCbor9from_cbors3_0Ba_:
   256|    555|                    .map(|(v, s, len)| (Marker::Map(Some(v)), shortest && s, len))?
-_RNCNvXs_NtNtCs1Y3mH2MRRlp_10hardy_cbor6decode4headNtB6_4HeadNtB8_8FromCbor9from_cbors_0Ba_:
-  224|    324|                .map(|(v, s, len)| (Marker::NegativeInteger(v), shortest && s, len))?,
-_RNvNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode4head10parse_tags:
-  352|   103k|fn parse_tags(data: &[u8], tags: &mut Tags) -> Result<(bool, usize), Error> {
-  353|   103k|    let mut offset = 0;
-  354|   103k|    let mut shortest = true;
+_RNCNvXs_NtNtCs5zRv9L7EKOy_10hardy_cbor6decode4headNtB6_4HeadNtB8_8FromCbor9from_cbors_0Ba_:
+  224|    322|                .map(|(v, s, len)| (Marker::NegativeInteger(v), shortest && s, len))?,
+_RNvNtNtCs5zRv9L7EKOy_10hardy_cbor6decode4head10parse_tags:
+  352|   102k|fn parse_tags(data: &[u8], tags: &mut Tags) -> Result<(bool, usize), Error> {
+  353|   102k|    let mut offset = 0;
+  354|   102k|    let mut shortest = true;
   355|       |
   356|       |    loop {
-  357|   138k|        if let Some(&[marker, b0, b1, b2, b3, b4, b5, b6, b7]) = data[offset..].first_chunk::<9>() {
-  358|   132k|            match (marker >> 5, marker & 0x1F) {
-  359|  34.4k|                (6, minor) => {
-  360|  34.4k|                    offset += 1;
-  361|  34.4k|                    let (tag, s, o) =
-  362|  34.4k|                        parse_uint_minor_fast(minor, [b0, b1, b2, b3, b4, b5, b6, b7])?;
-  363|  34.4k|                    tags.push(tag);
-  364|  34.4k|                    shortest &= s;
-  365|  34.4k|                    offset = offset.checked_add(o).ok_or(Error::TooBig)?;
+  357|   137k|        if let Some(&[marker, b0, b1, b2, b3, b4, b5, b6, b7]) = data[offset..].first_chunk::<9>() {
+  358|   131k|            match (marker >> 5, marker & 0x1F) {
+  359|  34.1k|                (6, minor) => {
+  360|  34.1k|                    offset += 1;
+  361|  34.1k|                    let (tag, s, o) =
+  362|  34.1k|                        parse_uint_minor_fast(minor, [b0, b1, b2, b3, b4, b5, b6, b7])?;
+  363|  34.1k|                    tags.push(tag);
+  364|  34.1k|                    shortest &= s;
+  365|  34.1k|                    offset = offset.checked_add(o).ok_or(Error::TooBig)?;
   366|       |                }
-  367|  97.9k|                _ => break,
+  367|  97.1k|                _ => break,
   368|       |            }
   369|  6.22k|        } else if let Some(marker) = data.get(offset) {
-  370|  5.67k|            match (marker >> 5, marker & 0x1F) {
-  371|    960|                (6, minor) => {
-  372|    960|                    offset += 1;
-  373|    960|                    let (tag, s, o) = parse_uint_minor(minor, &data[offset..])?;
-  374|    953|                    tags.push(tag);
-  375|    953|                    shortest &= s;
-  376|    953|                    offset = offset.checked_add(o).ok_or(Error::TooBig)?;
+  370|  5.66k|            match (marker >> 5, marker & 0x1F) {
+  371|    972|                (6, minor) => {
+  372|    972|                    offset += 1;
+  373|    972|                    let (tag, s, o) = parse_uint_minor(minor, &data[offset..])?;
+  374|    965|                    tags.push(tag);
+  375|    965|                    shortest &= s;
+  376|    965|                    offset = offset.checked_add(o).ok_or(Error::TooBig)?;
   377|       |                }
-  378|  4.71k|                _ => break,
+  378|  4.69k|                _ => break,
   379|       |            }
   380|       |        } else {
-  381|    555|            break;
+  381|    559|            break;
   382|       |        }
   383|       |    }
-  384|   103k|    Ok((shortest, offset))
-  385|   103k|}
-_RNvNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode4head16parse_uint_minorB5_:
-  397|  3.76k|fn parse_uint_minor(minor: u8, data: &[u8]) -> Result<(u64, bool, usize), Error> {
-  398|  3.65k|    match minor {
+  384|   102k|    Ok((shortest, offset))
+  385|   102k|}
+_RNvNtNtCs5zRv9L7EKOy_10hardy_cbor6decode4head16parse_uint_minorB5_:
+  397|  3.75k|fn parse_uint_minor(minor: u8, data: &[u8]) -> Result<(u64, bool, usize), Error> {
+  398|  3.64k|    match minor {
   399|       |        24 => {
   400|     66|            if let Some(val) = data.first() {
   401|     58|                Ok((*val as u64, *val > 23, 1))
@@ -683,118 +683,118 @@ _RNvNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode4head16parse_uint_minorB5_:
   415|      6|            let v = u64::from_be_bytes(to_array(data)?);
   416|      0|            Ok((v, v > u32::MAX as u64, 8))
   417|       |        }
-  418|  3.65k|        val if val < 24 => Ok((val as u64, true, 0)),
+  418|  3.64k|        val if val < 24 => Ok((val as u64, true, 0)),
   419|     13|        _ => Err(Error::InvalidMinorValue(minor)),
   420|       |    }
-  421|  3.76k|}
-_RNvNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode4head21parse_uint_minor_fastB5_:
+  421|  3.75k|}
+_RNvNtNtCs5zRv9L7EKOy_10hardy_cbor6decode4head21parse_uint_minor_fastB5_:
   424|   102k|fn parse_uint_minor_fast(minor: u8, data: [u8; 8]) -> Result<(u64, bool, usize), Error> {
   425|       |    // All reads below are on a fixed-size array — no bounds checks.
   426|   102k|    match minor {
   427|   102k|        v if v < 24 => Ok((v as u64, true, 0)),
-  428|  1.78k|        24 => Ok((data[0] as u64, data[0] > 23, 1)),
+  428|  1.75k|        24 => Ok((data[0] as u64, data[0] > 23, 1)),
   429|       |        25 => {
   430|  1.37k|            let v = u16::from_be_bytes([data[0], data[1]]);
   431|  1.37k|            Ok((v as u64, v > u8::MAX as u16, 2))
   432|       |        }
   433|       |        26 => {
-  434|  2.25k|            let v = u32::from_be_bytes([data[0], data[1], data[2], data[3]]);
-  435|  2.25k|            Ok((v as u64, v > u16::MAX as u32, 4))
+  434|  2.24k|            let v = u32::from_be_bytes([data[0], data[1], data[2], data[3]]);
+  435|  2.24k|            Ok((v as u64, v > u16::MAX as u32, 4))
   436|       |        }
   437|       |        27 => {
-  438|  1.01k|            let v = u64::from_be_bytes(data);
-  439|  1.01k|            Ok((v, v > u32::MAX as u64, 8))
+  438|  1.00k|            let v = u64::from_be_bytes(data);
+  439|  1.00k|            Ok((v, v > u32::MAX as u64, 8))
   440|       |        }
   441|      3|        _ => Err(Error::InvalidMinorValue(minor)),
   442|       |    }
   443|   102k|}
-_RNvXs_NtNtCs1Y3mH2MRRlp_10hardy_cbor6decode4headNtB4_4HeadNtB6_8FromCbor9from_cbor:
-  166|   103k|    fn from_cbor(data: &[u8]) -> Result<(Self, bool, usize), Self::Error> {
-  167|   103k|        let mut tags = Tags::new();
-  168|   103k|        let (mut shortest, mut offset) = parse_tags(data, &mut tags)?;
+_RNvXs_NtNtCs5zRv9L7EKOy_10hardy_cbor6decode4headNtB4_4HeadNtB6_8FromCbor9from_cbor:
+  166|   102k|    fn from_cbor(data: &[u8]) -> Result<(Self, bool, usize), Self::Error> {
+  167|   102k|        let mut tags = Tags::new();
+  168|   102k|        let (mut shortest, mut offset) = parse_tags(data, &mut tags)?;
   169|       |
   170|       |        // Fast path: 9 bytes = 1 marker + at most 8 value bytes. All reads
   171|       |        // below are bounds-check-free. Majors 0-5 are handled in full here;
   172|       |        // majors 6 (unreachable post-parse_tags) and 7 (simple/float/break)
   173|       |        // fall through to the slow match below for their per-minor logic.
-  174|  97.9k|        let marker = if let Some(&[marker, b0, b1, b2, b3, b4, b5, b6, b7]) =
-  175|   103k|            data[offset..].first_chunk::<9>()
+  174|  97.1k|        let marker = if let Some(&[marker, b0, b1, b2, b3, b4, b5, b6, b7]) =
+  175|   102k|            data[offset..].first_chunk::<9>()
   176|       |        {
-  177|  97.9k|            offset += 1;
-  178|  97.9k|            let major = marker >> 5;
-  179|  97.9k|            let minor = marker & 0x1F;
+  177|  97.1k|            offset += 1;
+  178|  97.1k|            let major = marker >> 5;
+  179|  97.1k|            let minor = marker & 0x1F;
   180|       |
-  181|  97.9k|            if major <= 5 {
+  181|  97.1k|            if major <= 5 {
   182|       |                // Indef-length: minor 31, only valid for majors 2-5.
   183|       |                // For majors 0-1 with minor 31, fall through to
   184|       |                // parse_uint_minor_fast which returns InvalidMinorValue.
-  185|  74.0k|                if minor == 31 && major >= 2 {
-  186|  5.59k|                    let m = match major {
+  185|  73.5k|                if minor == 31 && major >= 2 {
+  186|  5.58k|                    let m = match major {
   187|  2.61k|                        2 => Marker::Bytes(None),
-  188|  1.05k|                        3 => Marker::Text(None),
-  189|    390|                        4 => Marker::Array(None),
+  188|  1.04k|                        3 => Marker::Text(None),
+  189|    388|                        4 => Marker::Array(None),
   190|  1.53k|                        5 => Marker::Map(None),
   191|      0|                        _ => unreachable!(),
   192|       |                    };
-  193|  5.59k|                    return Ok((Head { tags, marker: m }, shortest, offset));
-  194|  68.4k|                }
+  193|  5.58k|                    return Ok((Head { tags, marker: m }, shortest, offset));
+  194|  67.9k|                }
   195|       |
-  196|  68.4k|                let (v, s, len) = parse_uint_minor_fast(minor, [b0, b1, b2, b3, b4, b5, b6, b7])?;
-  197|  68.4k|                let m = match major {
-  198|  39.7k|                    0 => Marker::UnsignedInteger(v),
-  199|  10.4k|                    1 => Marker::NegativeInteger(v),
-  200|  5.13k|                    2 => Marker::Bytes(Some(v)),
-  201|  5.67k|                    3 => Marker::Text(Some(v)),
-  202|  3.98k|                    4 => Marker::Array(Some(v)),
-  203|  3.35k|                    5 => Marker::Map(Some(v)),
+  196|  67.9k|                let (v, s, len) = parse_uint_minor_fast(minor, [b0, b1, b2, b3, b4, b5, b6, b7])?;
+  197|  67.9k|                let m = match major {
+  198|  39.4k|                    0 => Marker::UnsignedInteger(v),
+  199|  10.3k|                    1 => Marker::NegativeInteger(v),
+  200|  5.12k|                    2 => Marker::Bytes(Some(v)),
+  201|  5.62k|                    3 => Marker::Text(Some(v)),
+  202|  3.96k|                    4 => Marker::Array(Some(v)),
+  203|  3.33k|                    5 => Marker::Map(Some(v)),
   204|      0|                    _ => unreachable!(),
   205|       |                };
-  206|  68.4k|                return Ok((Head { tags, marker: m }, shortest && s, offset + len));
-  207|  23.9k|            }
+  206|  67.9k|                return Ok((Head { tags, marker: m }, shortest && s, offset + len));
+  207|  23.6k|            }
   208|       |
   209|       |            // Major 6 or 7 — fall through to slow match.
-  210|  23.9k|            marker
+  210|  23.6k|            marker
   211|       |        } else {
-  212|  5.26k|            let Some(marker) = data.get(offset) else {
-  213|    555|                return Err(Error::NeedMoreData(1));
+  212|  5.25k|            let Some(marker) = data.get(offset) else {
+  213|    559|                return Err(Error::NeedMoreData(1));
   214|       |            };
-  215|  4.71k|            offset += 1;
-  216|  4.71k|            *marker
+  215|  4.69k|            offset += 1;
+  216|  4.69k|            *marker
   217|       |        };
-  218|  28.6k|        let data = &data[offset..];
+  218|  28.3k|        let data = &data[offset..];
   219|       |
-  220|  28.6k|        let (marker, shortest, len) = match (marker >> 5, marker & 0x1F) {
-  221|    601|            (0, minor) => parse_uint_minor(minor, data)
-  222|    601|                .map(|(v, s, len)| (Marker::UnsignedInteger(v), shortest && s, len))?,
-  223|    332|            (1, minor) => parse_uint_minor(minor, data)
-  224|    332|                .map(|(v, s, len)| (Marker::NegativeInteger(v), shortest && s, len))?,
-  225|    171|            (2, 31) => (Marker::Bytes(None), shortest, 0),
-  226|    459|            (2, minor) => {
+  220|  28.3k|        let (marker, shortest, len) = match (marker >> 5, marker & 0x1F) {
+  221|    587|            (0, minor) => parse_uint_minor(minor, data)
+  222|    587|                .map(|(v, s, len)| (Marker::UnsignedInteger(v), shortest && s, len))?,
+  223|    330|            (1, minor) => parse_uint_minor(minor, data)
+  224|    330|                .map(|(v, s, len)| (Marker::NegativeInteger(v), shortest && s, len))?,
+  225|    170|            (2, 31) => (Marker::Bytes(None), shortest, 0),
+  226|    457|            (2, minor) => {
   227|       |                /* Known length byte string */
-  228|    459|                parse_uint_minor(minor, data)
-  229|    459|                    .map(|(v, s, len)| (Marker::Bytes(Some(v)), shortest && s, len))?
+  228|    457|                parse_uint_minor(minor, data)
+  229|    457|                    .map(|(v, s, len)| (Marker::Bytes(Some(v)), shortest && s, len))?
   230|       |            }
   231|       |            (3, 31) => {
   232|       |                /* Indefinite length text string */
   233|    190|                (Marker::Text(None), shortest, 0)
   234|       |            }
-  235|    441|            (3, minor) => {
+  235|    440|            (3, minor) => {
   236|       |                /* Known length text string */
-  237|    441|                parse_uint_minor(minor, data)
-  238|    441|                    .map(|(v, s, len)| (Marker::Text(Some(v)), shortest && s, len))?
+  237|    440|                parse_uint_minor(minor, data)
+  238|    440|                    .map(|(v, s, len)| (Marker::Text(Some(v)), shortest && s, len))?
   239|       |            }
   240|       |            (4, 31) => {
   241|       |                /* Indefinite length array */
   242|     98|                (Marker::Array(None), shortest, 0)
   243|       |            }
-  244|    409|            (4, minor) => {
+  244|    410|            (4, minor) => {
   245|       |                /* Known length array */
-  246|    409|                parse_uint_minor(minor, data)
-  247|    409|                    .map(|(v, s, len)| (Marker::Array(Some(v)), shortest && s, len))?
+  246|    410|                parse_uint_minor(minor, data)
+  247|    410|                    .map(|(v, s, len)| (Marker::Array(Some(v)), shortest && s, len))?
   248|       |            }
   249|       |            (5, 31) => {
   250|       |                /* Indefinite length map */
-  251|    268|                (Marker::Map(None), shortest, 0)
+  251|    266|                (Marker::Map(None), shortest, 0)
   252|       |            }
   253|    562|            (5, minor) => {
   254|       |                /* Known length map */
@@ -804,33 +804,33 @@ _RNvXs_NtNtCs1Y3mH2MRRlp_10hardy_cbor6decode4headNtB4_4HeadNtB6_8FromCbor9from_c
   258|      0|            (6, _) => unreachable!("CBOR major type 6 (tags) consumed before dispatch"),
   259|       |            (7, 20) => {
   260|       |                /* False */
-  261|  3.51k|                (Marker::False, shortest, 0)
+  261|  3.48k|                (Marker::False, shortest, 0)
   262|       |            }
   263|       |            (7, 21) => {
   264|       |                /* True */
-  265|  3.98k|                (Marker::True, shortest, 0)
+  265|  3.97k|                (Marker::True, shortest, 0)
   266|       |            }
   267|       |            (7, 22) => {
   268|       |                /* Null */
-  269|  2.37k|                (Marker::Null, shortest, 0)
+  269|  2.36k|                (Marker::Null, shortest, 0)
   270|       |            }
   271|       |            (7, 23) => {
   272|       |                /* Undefined */
-  273|  4.16k|                (Marker::Undefined, shortest, 0)
+  273|  4.13k|                (Marker::Undefined, shortest, 0)
   274|       |            }
-  275|  1.57k|            (7, minor @ 0..=19) => {
+  275|  1.47k|            (7, minor @ 0..=19) => {
   276|       |                /* Unassigned simple type */
-  277|  1.56k|                (Marker::Simple(minor), shortest, 0)
+  277|  1.46k|                (Marker::Simple(minor), shortest, 0)
   278|       |            }
   279|       |            (7, 24) => {
   280|       |                /* Unassigned simple type */
-  281|    341|                let Some(v) = data.first() else {
+  281|    340|                let Some(v) = data.first() else {
   282|      4|                    return Err(Error::NeedMoreData(1));
   283|       |                };
-  284|    337|                if *v < 32 {
+  284|    336|                if *v < 32 {
   285|      1|                    return Err(Error::InvalidSimpleType(*v));
-  286|    336|                }
-  287|    336|                (Marker::Simple(*v), shortest, 1)
+  286|    335|                }
+  287|    335|                (Marker::Simple(*v), shortest, 1)
   288|       |            }
   289|       |            (7, 25) => {
   290|       |                /* FP16 */
@@ -839,9 +839,9 @@ _RNvXs_NtNtCs1Y3mH2MRRlp_10hardy_cbor6decode4headNtB4_4HeadNtB6_8FromCbor9from_c
   293|       |            }
   294|       |            (7, 26) => {
   295|       |                /* FP32 */
-  296|  4.19k|                let v = f32::from_be_bytes(to_array(data)?);
-  297|  4.17k|                if shortest {
-  298|  3.23k|                    match v.classify() {
+  296|  4.17k|                let v = f32::from_be_bytes(to_array(data)?);
+  297|  4.15k|                if shortest {
+  298|  3.21k|                    match v.classify() {
   299|       |                        core::num::FpCategory::Nan
   300|       |                        | core::num::FpCategory::Infinite
   301|    449|                        | core::num::FpCategory::Zero => {
@@ -849,32 +849,32 @@ _RNvXs_NtNtCs1Y3mH2MRRlp_10hardy_cbor6decode4headNtB4_4HeadNtB6_8FromCbor9from_c
   303|    449|                            shortest = false;
   304|    449|                        }
   305|       |                        core::num::FpCategory::Subnormal | core::num::FpCategory::Normal => {
-  306|  2.78k|                            if let Some(v16) = <half::f16 as num_traits::FromPrimitive>::from_f32(v)
-  307|  2.78k|                                && <half::f16 as num_traits::ToPrimitive>::to_f32(&v16) == Some(v)
-  308|    533|                            {
-  309|    533|                                shortest = false;
-  310|  2.25k|                            }
+  306|  2.77k|                            if let Some(v16) = <half::f16 as num_traits::FromPrimitive>::from_f32(v)
+  307|  2.77k|                                && <half::f16 as num_traits::ToPrimitive>::to_f32(&v16) == Some(v)
+  308|    528|                            {
+  309|    528|                                shortest = false;
+  310|  2.24k|                            }
   311|       |                        }
   312|       |                    }
-  313|    937|                }
-  314|  4.17k|                (Marker::Float(v.into()), shortest, 4)
+  313|    936|                }
+  314|  4.15k|                (Marker::Float(v.into()), shortest, 4)
   315|       |            }
   316|       |            (7, 27) => {
   317|       |                /* FP64 */
-  318|  3.16k|                let v = f64::from_be_bytes(to_array(data)?);
-  319|  3.14k|                if shortest {
-  320|  2.87k|                    match v.classify() {
+  318|  3.13k|                let v = f64::from_be_bytes(to_array(data)?);
+  319|  3.12k|                if shortest {
+  320|  2.84k|                    match v.classify() {
   321|       |                        core::num::FpCategory::Nan
   322|       |                        | core::num::FpCategory::Infinite
-  323|  1.06k|                        | core::num::FpCategory::Zero => {
-  324|  1.06k|                            // There is an FP16 representation that is shorter
-  325|  1.06k|                            shortest = false;
-  326|  1.06k|                        }
+  323|  1.04k|                        | core::num::FpCategory::Zero => {
+  324|  1.04k|                            // There is an FP16 representation that is shorter
+  325|  1.04k|                            shortest = false;
+  326|  1.04k|                        }
   327|       |                        core::num::FpCategory::Subnormal | core::num::FpCategory::Normal => {
-  328|  1.81k|                            if let Some(v32) = f32::from_f64(v) {
-  329|  1.81k|                                if v32.to_f64() == Some(v) {
+  328|  1.80k|                            if let Some(v32) = f32::from_f64(v) {
+  329|  1.80k|                                if v32.to_f64() == Some(v) {
   330|    195|                                    shortest = false;
-  331|  1.61k|                                }
+  331|  1.60k|                                }
   332|      0|                            } else if let Some(v16) =
   333|      0|                                <half::f16 as num_traits::FromPrimitive>::from_f64(v)
   334|      0|                                && <half::f16 as num_traits::ToPrimitive>::to_f64(&v16) == Some(v)
@@ -884,26 +884,38 @@ _RNvXs_NtNtCs1Y3mH2MRRlp_10hardy_cbor6decode4headNtB4_4HeadNtB6_8FromCbor9from_c
   338|       |                        }
   339|       |                    }
   340|    271|                }
-  341|  3.14k|                (Marker::Float(v), shortest, 8)
+  341|  3.12k|                (Marker::Float(v), shortest, 8)
   342|       |            }
-  343|     15|            (7, minor) => {
-  344|     15|                return Err(Error::InvalidSimpleType(minor));
+  343|     14|            (7, minor) => {
+  344|     14|                return Err(Error::InvalidSimpleType(minor));
   345|       |            }
   346|      0|            _ => unreachable!("CBOR major type is 3 bits, all values 0-7 handled above"),
   347|       |        };
-  348|  28.5k|        Ok((Head { tags, marker }, shortest, offset + len))
-  349|   103k|    }
+  348|  28.2k|        Ok((Head { tags, marker }, shortest, offset + len))
+  349|   102k|    }
 
-_RNvXsd_NtNtCs1Y3mH2MRRlp_10hardy_cbor6decode5implsTNtNtB7_4head4HeadbjENtB7_8FromCbor9from_cborB9_:
-  177|   103k|                fn from_cbor(data: &[u8]) -> Result<(Self, bool, usize), Self::Error> {
-  178|   103k|                    T::from_cbor(data).map(|(value, shortest, length)| ($map_expr(value, shortest, length), shortest, length))
-  179|   103k|                }
-_RNCNCNvXsd_NtNtCs1Y3mH2MRRlp_10hardy_cbor6decode5implsTNtNtBb_4head4HeadbjENtBb_8FromCbor9from_cbor00Bd_:
-  187|   102k|        value, shortest, length
-_RNCNvXsd_NtNtCs1Y3mH2MRRlp_10hardy_cbor6decode5implsTNtNtB9_4head4HeadbjENtB9_8FromCbor9from_cbor0Bb_:
+_RNCNCNvXsd_NtNtCs5zRv9L7EKOy_10hardy_cbor6decode5implsTNtNtBb_4head4HeadbjENtBb_8FromCbor9from_cbor00Bd_:
+  187|   101k|        value, shortest, length
+_RNCNvXsd_NtNtCs5zRv9L7EKOy_10hardy_cbor6decode5implsTNtNtB9_4head4HeadbjENtB9_8FromCbor9from_cbor0Bb_:
+  178|   101k|                    T::from_cbor(data).map(|(value, shortest, length)| ($map_expr(value, shortest, length), shortest, length))
+_RNvXsd_NtNtCs5zRv9L7EKOy_10hardy_cbor6decode5implsTNtNtB7_4head4HeadbjENtB7_8FromCbor9from_cborB9_:
+  177|   102k|                fn from_cbor(data: &[u8]) -> Result<(Self, bool, usize), Self::Error> {
   178|   102k|                    T::from_cbor(data).map(|(value, shortest, length)| ($map_expr(value, shortest, length), shortest, length))
+  179|   102k|                }
 
-_RINvNtCs1Y3mH2MRRlp_10hardy_cbor6decode11parse_valueuNCNvNvCs2vcoHZVlbbE_6decode1__19___libfuzzer_sys_run0NtB2_5ErrorEBV_:
+_RNvNtCs5zRv9L7EKOy_10hardy_cbor6decode13offset_extentCsb2OpNaVy73Y_6decode:
+  415|  1.23k|fn offset_extent(data: &[u8], offset: usize, len: u64) -> Result<Range<usize>, Error> {
+  416|  1.23k|    let end = usize::try_from(len)
+  417|  1.23k|        .ok()
+  418|  1.23k|        .and_then(|len| offset.checked_add(len))
+  419|  1.23k|        .ok_or(Error::TooBig)?;
+  420|  1.22k|    if end > data.len() {
+  421|      6|        Err(Error::NeedMoreData(end - data.len()))
+  422|       |    } else {
+  423|  1.22k|        Ok(offset..end)
+  424|       |    }
+  425|  1.23k|}
+_RINvNtCs5zRv9L7EKOy_10hardy_cbor6decode11parse_valueuNCNvNvCsb2OpNaVy73Y_6decode1__19___libfuzzer_sys_run0NtB2_5ErrorEBV_:
   437|  1.23k|pub fn parse_value<T, F, E>(data: &[u8], f: F) -> Result<(T, usize), E>
   438|  1.23k|where
   439|  1.23k|    F: FnOnce(Value, bool, &[u64]) -> Result<T, E>,
@@ -979,15 +991,15 @@ _RINvNtCs1Y3mH2MRRlp_10hardy_cbor6decode11parse_valueuNCNvNvCs2vcoHZVlbbE_6decod
   509|       |                }
   510|       |            }
   511|       |        }
-  512|    422|        Marker::Array(count) => {
-  513|    422|            let mut a = Array::try_new(data, count, &mut offset)?;
-  514|    422|            let r = f(Value::Array(&mut a), shortest, &marker.tags)?;
-  515|    422|            a.complete(r).map_err(Into::into)
+  512|    421|        Marker::Array(count) => {
+  513|    421|            let mut a = Array::try_new(data, count, &mut offset)?;
+  514|    421|            let r = f(Value::Array(&mut a), shortest, &marker.tags)?;
+  515|    421|            a.complete(r).map_err(Into::into)
   516|       |        }
-  517|    670|        Marker::Map(count) => {
-  518|    670|            let mut m = Map::try_new(data, count, &mut offset)?;
-  519|    669|            let r = f(Value::Map(&mut m), shortest, &marker.tags)?;
-  520|    669|            m.complete(r).map_err(Into::into)
+  517|    671|        Marker::Map(count) => {
+  518|    671|            let mut m = Map::try_new(data, count, &mut offset)?;
+  519|    670|            let r = f(Value::Map(&mut m), shortest, &marker.tags)?;
+  520|    670|            m.complete(r).map_err(Into::into)
   521|       |        }
   522|      1|        Marker::False => f(Value::False, shortest, &marker.tags),
   523|      1|        Marker::True => f(Value::True, shortest, &marker.tags),
@@ -998,69 +1010,57 @@ _RINvNtCs1Y3mH2MRRlp_10hardy_cbor6decode11parse_valueuNCNvNvCs2vcoHZVlbbE_6decod
   528|       |    }
   529|  1.15k|    .map(|r| (r, offset))
   530|  1.23k|}
-_RNCINvNtCs1Y3mH2MRRlp_10hardy_cbor6decode11parse_valueuNCNvNvCs2vcoHZVlbbE_6decode1__19___libfuzzer_sys_run0NtB4_5ErrorE0BX_:
+_RNCINvNtCs5zRv9L7EKOy_10hardy_cbor6decode11parse_valueuNCNvNvCsb2OpNaVy73Y_6decode1__19___libfuzzer_sys_run0NtB4_5ErrorE0BX_:
   529|     71|    .map(|r| (r, offset))
-_RNvNtCs1Y3mH2MRRlp_10hardy_cbor6decode13offset_extentCs2vcoHZVlbbE_6decode:
-  415|  1.23k|fn offset_extent(data: &[u8], offset: usize, len: u64) -> Result<Range<usize>, Error> {
-  416|  1.23k|    let end = usize::try_from(len)
-  417|  1.23k|        .ok()
-  418|  1.23k|        .and_then(|len| offset.checked_add(len))
-  419|  1.23k|        .ok_or(Error::TooBig)?;
-  420|  1.22k|    if end > data.len() {
-  421|      6|        Err(Error::NeedMoreData(end - data.len()))
-  422|       |    } else {
-  423|  1.22k|        Ok(offset..end)
-  424|       |    }
-  425|  1.23k|}
-_RINvNtCs1Y3mH2MRRlp_10hardy_cbor6decode11parse_valueNtNtB2_6series17SequenceDebugInfoNCINvMBQ_INtBQ_6SeriesKj1_E11parse_valueBO_NCINvBQ_18sequence_debug_fmtKB1I_Es1_0NtBQ_10DebugErrorE0B2E_EB4_:
-  437|  28.5k|pub fn parse_value<T, F, E>(data: &[u8], f: F) -> Result<(T, usize), E>
-  438|  28.5k|where
-  439|  28.5k|    F: FnOnce(Value, bool, &[u64]) -> Result<T, E>,
-  440|  28.5k|    E: From<Error>,
+_RINvNtCs5zRv9L7EKOy_10hardy_cbor6decode11parse_valueNtNtB2_6series17SequenceDebugInfoNCINvMBQ_INtBQ_6SeriesKj1_E11parse_valueBO_NCINvBQ_18sequence_debug_fmtKB1I_Es1_0NtBQ_10DebugErrorE0B2E_EB4_:
+  437|  28.1k|pub fn parse_value<T, F, E>(data: &[u8], f: F) -> Result<(T, usize), E>
+  438|  28.1k|where
+  439|  28.1k|    F: FnOnce(Value, bool, &[u64]) -> Result<T, E>,
+  440|  28.1k|    E: From<Error>,
   441|       |{
-  442|  28.5k|    let (marker, mut shortest, mut offset) = parse::<(Head, bool, usize)>(data)?;
-  443|  1.16k|    match marker.marker {
-  444|  10.0k|        Marker::UnsignedInteger(v) => f(Value::UnsignedInteger(v), shortest, &marker.tags),
-  445|  4.63k|        Marker::NegativeInteger(v) => f(Value::NegativeInteger(v), shortest, &marker.tags),
+  442|  28.1k|    let (marker, mut shortest, mut offset) = parse::<(Head, bool, usize)>(data)?;
+  443|  1.15k|    match marker.marker {
+  444|  9.84k|        Marker::UnsignedInteger(v) => f(Value::UnsignedInteger(v), shortest, &marker.tags),
+  445|  4.61k|        Marker::NegativeInteger(v) => f(Value::NegativeInteger(v), shortest, &marker.tags),
   446|    711|        Marker::Bytes(Some(len)) => {
   447|    711|            let extent = offset_extent(data, offset, len)?;
   448|    707|            offset = extent.end;
   449|    707|            f(Value::Bytes(extent), shortest, &marker.tags)
   450|       |        }
   451|       |        Marker::Bytes(None) => {
-  452|    449|            let mut chunks = Vec::new();
+  452|    447|            let mut chunks = Vec::new();
   453|       |            loop {
   454|       |                // Break stop code terminates the indefinite-length string.
   455|       |                // Detected directly because Head::from_cbor rejects 0xFF.
-  456|  1.06k|                if data.get(offset) == Some(&0xFF) {
-  457|    433|                    offset += 1;
-  458|    433|                    break f(Value::ByteStream(chunks), shortest, &marker.tags);
-  459|    629|                }
-  460|    621|                let (inner_marker, inner_shortest, len) =
-  461|    629|                    parse::<(Head, bool, usize)>(&data[offset..])?;
+  456|  1.05k|                if data.get(offset) == Some(&0xFF) {
+  457|    430|                    offset += 1;
+  458|    430|                    break f(Value::ByteStream(chunks), shortest, &marker.tags);
+  459|    627|                }
+  460|    619|                let (inner_marker, inner_shortest, len) =
+  461|    627|                    parse::<(Head, bool, usize)>(&data[offset..])?;
   462|       |
-  463|    621|                offset = offset.checked_add(len).ok_or(Error::TooBig)?;
+  463|    619|                offset = offset.checked_add(len).ok_or(Error::TooBig)?;
   464|       |
-  465|    617|                match inner_marker.marker {
-  466|    617|                    Marker::Bytes(Some(len)) if inner_marker.tags.is_empty() => {
-  467|    615|                        let extent = offset_extent(data, offset, len)?;
-  468|    613|                        offset = extent.end;
-  469|    613|                        chunks.push(extent);
-  470|    613|                        shortest &= inner_shortest;
+  465|    614|                match inner_marker.marker {
+  466|    614|                    Marker::Bytes(Some(len)) if inner_marker.tags.is_empty() => {
+  467|    612|                        let extent = offset_extent(data, offset, len)?;
+  468|    610|                        offset = extent.end;
+  469|    610|                        chunks.push(extent);
+  470|    610|                        shortest &= inner_shortest;
   471|       |                    }
   472|       |                    _ => {
-  473|      6|                        return Err(Error::InvalidChunk.into());
+  473|      7|                        return Err(Error::InvalidChunk.into());
   474|       |                    }
   475|       |                }
   476|       |            }
   477|       |        }
-  478|    830|        Marker::Text(Some(len)) => {
-  479|    830|            let extent = offset_extent(data, offset, len)?;
-  480|    826|            offset = extent.end;
-  481|    823|            f(
-  482|    826|                Value::Text(core::str::from_utf8(&data[extent]).map_err(Into::into)?),
-  483|    823|                shortest,
-  484|    823|                &marker.tags,
+  478|    831|        Marker::Text(Some(len)) => {
+  479|    831|            let extent = offset_extent(data, offset, len)?;
+  480|    827|            offset = extent.end;
+  481|    824|            f(
+  482|    827|                Value::Text(core::str::from_utf8(&data[extent]).map_err(Into::into)?),
+  483|    824|                shortest,
+  484|    824|                &marker.tags,
   485|       |            )
   486|       |        }
   487|       |        Marker::Text(None) => {
@@ -1070,10 +1070,10 @@ _RINvNtCs1Y3mH2MRRlp_10hardy_cbor6decode11parse_valueNtNtB2_6series17SequenceDeb
   491|    352|                    offset += 1;
   492|    352|                    break f(Value::TextStream(&chunks), shortest, &marker.tags);
   493|    741|                }
-  494|    737|                let (inner_marker, inner_shortest, len) =
+  494|    736|                let (inner_marker, inner_shortest, len) =
   495|    741|                    parse::<(Head, bool, usize)>(&data[offset..])?;
   496|       |
-  497|    737|                offset = offset.checked_add(len).ok_or(Error::TooBig)?;
+  497|    736|                offset = offset.checked_add(len).ok_or(Error::TooBig)?;
   498|       |
   499|    732|                match inner_marker.marker {
   500|    732|                    Marker::Text(Some(len)) if inner_marker.tags.is_empty() => {
@@ -1083,7 +1083,7 @@ _RINvNtCs1Y3mH2MRRlp_10hardy_cbor6decode11parse_valueNtNtB2_6series17SequenceDeb
   504|    728|                        shortest &= inner_shortest;
   505|       |                    }
   506|       |                    _ => {
-  507|      6|                        return Err(Error::InvalidChunk.into());
+  507|      5|                        return Err(Error::InvalidChunk.into());
   508|       |                    }
   509|       |                }
   510|       |            }
@@ -1093,55 +1093,55 @@ _RINvNtCs1Y3mH2MRRlp_10hardy_cbor6decode11parse_valueNtNtB2_6series17SequenceDeb
   514|  2.01k|            let r = f(Value::Array(&mut a), shortest, &marker.tags)?;
   515|  1.56k|            a.complete(r).map_err(Into::into)
   516|       |        }
-  517|  1.18k|        Marker::Map(count) => {
-  518|  1.18k|            let mut m = Map::try_new(data, count, &mut offset)?;
-  519|  1.18k|            let r = f(Value::Map(&mut m), shortest, &marker.tags)?;
-  520|    971|            m.complete(r).map_err(Into::into)
+  517|  1.17k|        Marker::Map(count) => {
+  518|  1.17k|            let mut m = Map::try_new(data, count, &mut offset)?;
+  519|  1.17k|            let r = f(Value::Map(&mut m), shortest, &marker.tags)?;
+  520|    967|            m.complete(r).map_err(Into::into)
   521|       |        }
-  522|  1.05k|        Marker::False => f(Value::False, shortest, &marker.tags),
-  523|    866|        Marker::True => f(Value::True, shortest, &marker.tags),
-  524|  1.10k|        Marker::Null => f(Value::Null, shortest, &marker.tags),
+  522|  1.04k|        Marker::False => f(Value::False, shortest, &marker.tags),
+  523|    860|        Marker::True => f(Value::True, shortest, &marker.tags),
+  524|  1.09k|        Marker::Null => f(Value::Null, shortest, &marker.tags),
   525|    598|        Marker::Undefined => f(Value::Undefined, shortest, &marker.tags),
-  526|    739|        Marker::Simple(v) => f(Value::Simple(v), shortest, &marker.tags),
-  527|  3.65k|        Marker::Float(v) => f(Value::Float(v), shortest, &marker.tags),
+  526|    640|        Marker::Simple(v) => f(Value::Simple(v), shortest, &marker.tags),
+  527|  3.63k|        Marker::Float(v) => f(Value::Float(v), shortest, &marker.tags),
   528|       |    }
-  529|  27.5k|    .map(|r| (r, offset))
-  530|  28.5k|}
-_RINvNtCs1Y3mH2MRRlp_10hardy_cbor6decode11parse_valueNtNtB2_6series17SequenceDebugInfoNCINvMBQ_INtBQ_6SeriesKj2_E11parse_valueBO_NCINvBQ_18sequence_debug_fmtKB1I_Es0_0NtBQ_10DebugErrorE0B2E_EB4_:
-  437|  33.1k|pub fn parse_value<T, F, E>(data: &[u8], f: F) -> Result<(T, usize), E>
-  438|  33.1k|where
-  439|  33.1k|    F: FnOnce(Value, bool, &[u64]) -> Result<T, E>,
-  440|  33.1k|    E: From<Error>,
+  529|  27.1k|    .map(|r| (r, offset))
+  530|  28.1k|}
+_RINvNtCs5zRv9L7EKOy_10hardy_cbor6decode11parse_valueNtNtB2_6series17SequenceDebugInfoNCINvMBQ_INtBQ_6SeriesKj2_E11parse_valueBO_NCINvBQ_18sequence_debug_fmtKB1I_Es0_0NtBQ_10DebugErrorE0B2E_EB4_:
+  437|  32.9k|pub fn parse_value<T, F, E>(data: &[u8], f: F) -> Result<(T, usize), E>
+  438|  32.9k|where
+  439|  32.9k|    F: FnOnce(Value, bool, &[u64]) -> Result<T, E>,
+  440|  32.9k|    E: From<Error>,
   441|       |{
-  442|  33.1k|    let (marker, mut shortest, mut offset) = parse::<(Head, bool, usize)>(data)?;
-  443|  2.31k|    match marker.marker {
+  442|  32.9k|    let (marker, mut shortest, mut offset) = parse::<(Head, bool, usize)>(data)?;
+  443|  2.30k|    match marker.marker {
   444|  15.1k|        Marker::UnsignedInteger(v) => f(Value::UnsignedInteger(v), shortest, &marker.tags),
-  445|  2.52k|        Marker::NegativeInteger(v) => f(Value::NegativeInteger(v), shortest, &marker.tags),
-  446|    935|        Marker::Bytes(Some(len)) => {
-  447|    935|            let extent = offset_extent(data, offset, len)?;
-  448|    929|            offset = extent.end;
-  449|    929|            f(Value::Bytes(extent), shortest, &marker.tags)
+  445|  2.50k|        Marker::NegativeInteger(v) => f(Value::NegativeInteger(v), shortest, &marker.tags),
+  446|    930|        Marker::Bytes(Some(len)) => {
+  447|    930|            let extent = offset_extent(data, offset, len)?;
+  448|    923|            offset = extent.end;
+  449|    923|            f(Value::Bytes(extent), shortest, &marker.tags)
   450|       |        }
   451|       |        Marker::Bytes(None) => {
   452|  1.37k|            let mut chunks = Vec::new();
   453|       |            loop {
   454|       |                // Break stop code terminates the indefinite-length string.
   455|       |                // Detected directly because Head::from_cbor rejects 0xFF.
-  456|  2.55k|                if data.get(offset) == Some(&0xFF) {
-  457|  1.36k|                    offset += 1;
-  458|  1.36k|                    break f(Value::ByteStream(chunks), shortest, &marker.tags);
-  459|  1.19k|                }
-  460|  1.18k|                let (inner_marker, inner_shortest, len) =
-  461|  1.19k|                    parse::<(Head, bool, usize)>(&data[offset..])?;
+  456|  2.54k|                if data.get(offset) == Some(&0xFF) {
+  457|  1.35k|                    offset += 1;
+  458|  1.35k|                    break f(Value::ByteStream(chunks), shortest, &marker.tags);
+  459|  1.18k|                }
+  460|  1.17k|                let (inner_marker, inner_shortest, len) =
+  461|  1.18k|                    parse::<(Head, bool, usize)>(&data[offset..])?;
   462|       |
-  463|  1.18k|                offset = offset.checked_add(len).ok_or(Error::TooBig)?;
+  463|  1.17k|                offset = offset.checked_add(len).ok_or(Error::TooBig)?;
   464|       |
   465|  1.17k|                match inner_marker.marker {
   466|  1.17k|                    Marker::Bytes(Some(len)) if inner_marker.tags.is_empty() => {
   467|  1.17k|                        let extent = offset_extent(data, offset, len)?;
-  468|  1.17k|                        offset = extent.end;
-  469|  1.17k|                        chunks.push(extent);
-  470|  1.17k|                        shortest &= inner_shortest;
+  468|  1.16k|                        offset = extent.end;
+  469|  1.16k|                        chunks.push(extent);
+  470|  1.16k|                        shortest &= inner_shortest;
   471|       |                    }
   472|       |                    _ => {
   473|      6|                        return Err(Error::InvalidChunk.into());
@@ -1149,33 +1149,33 @@ _RINvNtCs1Y3mH2MRRlp_10hardy_cbor6decode11parse_valueNtNtB2_6series17SequenceDeb
   475|       |                }
   476|       |            }
   477|       |        }
-  478|  1.18k|        Marker::Text(Some(len)) => {
-  479|  1.18k|            let extent = offset_extent(data, offset, len)?;
-  480|  1.18k|            offset = extent.end;
-  481|  1.18k|            f(
-  482|  1.18k|                Value::Text(core::str::from_utf8(&data[extent]).map_err(Into::into)?),
-  483|  1.18k|                shortest,
-  484|  1.18k|                &marker.tags,
+  478|  1.15k|        Marker::Text(Some(len)) => {
+  479|  1.15k|            let extent = offset_extent(data, offset, len)?;
+  480|  1.15k|            offset = extent.end;
+  481|  1.15k|            f(
+  482|  1.15k|                Value::Text(core::str::from_utf8(&data[extent]).map_err(Into::into)?),
+  483|  1.15k|                shortest,
+  484|  1.15k|                &marker.tags,
   485|       |            )
   486|       |        }
   487|       |        Marker::Text(None) => {
-  488|    432|            let mut chunks = Vec::new();
+  488|    429|            let mut chunks = Vec::new();
   489|       |            loop {
   490|  1.10k|                if data.get(offset) == Some(&0xFF) {
-  491|    415|                    offset += 1;
-  492|    415|                    break f(Value::TextStream(&chunks), shortest, &marker.tags);
-  493|    685|                }
-  494|    680|                let (inner_marker, inner_shortest, len) =
-  495|    685|                    parse::<(Head, bool, usize)>(&data[offset..])?;
+  491|    412|                    offset += 1;
+  492|    412|                    break f(Value::TextStream(&chunks), shortest, &marker.tags);
+  493|    688|                }
+  494|    683|                let (inner_marker, inner_shortest, len) =
+  495|    688|                    parse::<(Head, bool, usize)>(&data[offset..])?;
   496|       |
-  497|    680|                offset = offset.checked_add(len).ok_or(Error::TooBig)?;
+  497|    683|                offset = offset.checked_add(len).ok_or(Error::TooBig)?;
   498|       |
-  499|    674|                match inner_marker.marker {
-  500|    674|                    Marker::Text(Some(len)) if inner_marker.tags.is_empty() => {
-  501|    671|                        let extent = offset_extent(data, offset, len)?;
-  502|    669|                        offset = extent.end;
-  503|    669|                        chunks.push(core::str::from_utf8(&data[extent]).map_err(Into::into)?);
-  504|    668|                        shortest &= inner_shortest;
+  499|    677|                match inner_marker.marker {
+  500|    677|                    Marker::Text(Some(len)) if inner_marker.tags.is_empty() => {
+  501|    674|                        let extent = offset_extent(data, offset, len)?;
+  502|    672|                        offset = extent.end;
+  503|    672|                        chunks.push(core::str::from_utf8(&data[extent]).map_err(Into::into)?);
+  504|    671|                        shortest &= inner_shortest;
   505|       |                    }
   506|       |                    _ => {
   507|      9|                        return Err(Error::InvalidChunk.into());
@@ -1186,57 +1186,57 @@ _RINvNtCs1Y3mH2MRRlp_10hardy_cbor6decode11parse_valueNtNtB2_6series17SequenceDeb
   512|  1.05k|        Marker::Array(count) => {
   513|  1.05k|            let mut a = Array::try_new(data, count, &mut offset)?;
   514|  1.05k|            let r = f(Value::Array(&mut a), shortest, &marker.tags)?;
-  515|    992|            a.complete(r).map_err(Into::into)
+  515|    986|            a.complete(r).map_err(Into::into)
   516|       |        }
-  517|  1.83k|        Marker::Map(count) => {
-  518|  1.83k|            let mut m = Map::try_new(data, count, &mut offset)?;
-  519|  1.83k|            let r = f(Value::Map(&mut m), shortest, &marker.tags)?;
-  520|  1.36k|            m.complete(r).map_err(Into::into)
+  517|  1.82k|        Marker::Map(count) => {
+  518|  1.82k|            let mut m = Map::try_new(data, count, &mut offset)?;
+  519|  1.82k|            let r = f(Value::Map(&mut m), shortest, &marker.tags)?;
+  520|  1.35k|            m.complete(r).map_err(Into::into)
   521|       |        }
-  522|  1.19k|        Marker::False => f(Value::False, shortest, &marker.tags),
-  523|  1.58k|        Marker::True => f(Value::True, shortest, &marker.tags),
+  522|  1.18k|        Marker::False => f(Value::False, shortest, &marker.tags),
+  523|  1.57k|        Marker::True => f(Value::True, shortest, &marker.tags),
   524|    629|        Marker::Null => f(Value::Null, shortest, &marker.tags),
-  525|  1.80k|        Marker::Undefined => f(Value::Undefined, shortest, &marker.tags),
-  526|    559|        Marker::Simple(v) => f(Value::Simple(v), shortest, &marker.tags),
-  527|  2.73k|        Marker::Float(v) => f(Value::Float(v), shortest, &marker.tags),
+  525|  1.78k|        Marker::Undefined => f(Value::Undefined, shortest, &marker.tags),
+  526|    554|        Marker::Simple(v) => f(Value::Simple(v), shortest, &marker.tags),
+  527|  2.72k|        Marker::Float(v) => f(Value::Float(v), shortest, &marker.tags),
   528|       |    }
-  529|  32.4k|    .map(|r| (r, offset))
-  530|  33.1k|}
-_RINvNtCs1Y3mH2MRRlp_10hardy_cbor6decode11parse_valueNtNtB2_6series17SequenceDebugInfoNCINvMBQ_INtBQ_6SeriesKj2_E11parse_valueBO_NCINvBQ_18sequence_debug_fmtKB1I_Es_0NtBQ_10DebugErrorE0B2D_EB4_:
-  437|  34.2k|pub fn parse_value<T, F, E>(data: &[u8], f: F) -> Result<(T, usize), E>
-  438|  34.2k|where
-  439|  34.2k|    F: FnOnce(Value, bool, &[u64]) -> Result<T, E>,
-  440|  34.2k|    E: From<Error>,
+  529|  32.2k|    .map(|r| (r, offset))
+  530|  32.9k|}
+_RINvNtCs5zRv9L7EKOy_10hardy_cbor6decode11parse_valueNtNtB2_6series17SequenceDebugInfoNCINvMBQ_INtBQ_6SeriesKj2_E11parse_valueBO_NCINvBQ_18sequence_debug_fmtKB1I_Es_0NtBQ_10DebugErrorE0B2D_EB4_:
+  437|  34.1k|pub fn parse_value<T, F, E>(data: &[u8], f: F) -> Result<(T, usize), E>
+  438|  34.1k|where
+  439|  34.1k|    F: FnOnce(Value, bool, &[u64]) -> Result<T, E>,
+  440|  34.1k|    E: From<Error>,
   441|       |{
-  442|  34.2k|    let (marker, mut shortest, mut offset) = parse::<(Head, bool, usize)>(data)?;
+  442|  34.1k|    let (marker, mut shortest, mut offset) = parse::<(Head, bool, usize)>(data)?;
   443|  1.93k|    match marker.marker {
-  444|  15.1k|        Marker::UnsignedInteger(v) => f(Value::UnsignedInteger(v), shortest, &marker.tags),
-  445|  3.63k|        Marker::NegativeInteger(v) => f(Value::NegativeInteger(v), shortest, &marker.tags),
+  444|  15.0k|        Marker::UnsignedInteger(v) => f(Value::UnsignedInteger(v), shortest, &marker.tags),
+  445|  3.59k|        Marker::NegativeInteger(v) => f(Value::NegativeInteger(v), shortest, &marker.tags),
   446|  1.00k|        Marker::Bytes(Some(len)) => {
   447|  1.00k|            let extent = offset_extent(data, offset, len)?;
   448|    996|            offset = extent.end;
   449|    996|            f(Value::Bytes(extent), shortest, &marker.tags)
   450|       |        }
   451|       |        Marker::Bytes(None) => {
-  452|    932|            let mut chunks = Vec::new();
+  452|    931|            let mut chunks = Vec::new();
   453|       |            loop {
   454|       |                // Break stop code terminates the indefinite-length string.
   455|       |                // Detected directly because Head::from_cbor rejects 0xFF.
   456|  1.54k|                if data.get(offset) == Some(&0xFF) {
-  457|    910|                    offset += 1;
-  458|    910|                    break f(Value::ByteStream(chunks), shortest, &marker.tags);
-  459|    638|                }
-  460|    624|                let (inner_marker, inner_shortest, len) =
-  461|    638|                    parse::<(Head, bool, usize)>(&data[offset..])?;
+  457|    909|                    offset += 1;
+  458|    909|                    break f(Value::ByteStream(chunks), shortest, &marker.tags);
+  459|    637|                }
+  460|    623|                let (inner_marker, inner_shortest, len) =
+  461|    637|                    parse::<(Head, bool, usize)>(&data[offset..])?;
   462|       |
-  463|    624|                offset = offset.checked_add(len).ok_or(Error::TooBig)?;
+  463|    623|                offset = offset.checked_add(len).ok_or(Error::TooBig)?;
   464|       |
-  465|    619|                match inner_marker.marker {
-  466|    619|                    Marker::Bytes(Some(len)) if inner_marker.tags.is_empty() => {
-  467|    618|                        let extent = offset_extent(data, offset, len)?;
-  468|    616|                        offset = extent.end;
-  469|    616|                        chunks.push(extent);
-  470|    616|                        shortest &= inner_shortest;
+  465|    618|                match inner_marker.marker {
+  466|    618|                    Marker::Bytes(Some(len)) if inner_marker.tags.is_empty() => {
+  467|    617|                        let extent = offset_extent(data, offset, len)?;
+  468|    615|                        offset = extent.end;
+  469|    615|                        chunks.push(extent);
+  470|    615|                        shortest &= inner_shortest;
   471|       |                    }
   472|       |                    _ => {
   473|      6|                        return Err(Error::InvalidChunk.into());
@@ -1244,33 +1244,33 @@ _RINvNtCs1Y3mH2MRRlp_10hardy_cbor6decode11parse_valueNtNtB2_6series17SequenceDeb
   475|       |                }
   476|       |            }
   477|       |        }
-  478|  1.10k|        Marker::Text(Some(len)) => {
-  479|  1.10k|            let extent = offset_extent(data, offset, len)?;
-  480|  1.10k|            offset = extent.end;
-  481|  1.10k|            f(
-  482|  1.10k|                Value::Text(core::str::from_utf8(&data[extent]).map_err(Into::into)?),
-  483|  1.10k|                shortest,
-  484|  1.10k|                &marker.tags,
+  478|  1.08k|        Marker::Text(Some(len)) => {
+  479|  1.08k|            let extent = offset_extent(data, offset, len)?;
+  480|  1.08k|            offset = extent.end;
+  481|  1.08k|            f(
+  482|  1.08k|                Value::Text(core::str::from_utf8(&data[extent]).map_err(Into::into)?),
+  483|  1.08k|                shortest,
+  484|  1.08k|                &marker.tags,
   485|       |            )
   486|       |        }
   487|       |        Marker::Text(None) => {
-  488|    413|            let mut chunks = Vec::new();
+  488|    409|            let mut chunks = Vec::new();
   489|       |            loop {
-  490|  1.29k|                if data.get(offset) == Some(&0xFF) {
-  491|    398|                    offset += 1;
-  492|    398|                    break f(Value::TextStream(&chunks), shortest, &marker.tags);
-  493|    895|                }
-  494|    888|                let (inner_marker, inner_shortest, len) =
-  495|    895|                    parse::<(Head, bool, usize)>(&data[offset..])?;
+  490|  1.28k|                if data.get(offset) == Some(&0xFF) {
+  491|    394|                    offset += 1;
+  492|    394|                    break f(Value::TextStream(&chunks), shortest, &marker.tags);
+  493|    887|                }
+  494|    880|                let (inner_marker, inner_shortest, len) =
+  495|    887|                    parse::<(Head, bool, usize)>(&data[offset..])?;
   496|       |
-  497|    888|                offset = offset.checked_add(len).ok_or(Error::TooBig)?;
+  497|    880|                offset = offset.checked_add(len).ok_or(Error::TooBig)?;
   498|       |
-  499|    884|                match inner_marker.marker {
-  500|    884|                    Marker::Text(Some(len)) if inner_marker.tags.is_empty() => {
-  501|    883|                        let extent = offset_extent(data, offset, len)?;
-  502|    881|                        offset = extent.end;
-  503|    881|                        chunks.push(core::str::from_utf8(&data[extent]).map_err(Into::into)?);
-  504|    880|                        shortest &= inner_shortest;
+  499|    876|                match inner_marker.marker {
+  500|    876|                    Marker::Text(Some(len)) if inner_marker.tags.is_empty() => {
+  501|    875|                        let extent = offset_extent(data, offset, len)?;
+  502|    873|                        offset = extent.end;
+  503|    873|                        chunks.push(core::str::from_utf8(&data[extent]).map_err(Into::into)?);
+  504|    872|                        shortest &= inner_shortest;
   505|       |                    }
   506|       |                    _ => {
   507|      5|                        return Err(Error::InvalidChunk.into());
@@ -1278,173 +1278,173 @@ _RINvNtCs1Y3mH2MRRlp_10hardy_cbor6decode11parse_valueNtNtB2_6series17SequenceDeb
   509|       |                }
   510|       |            }
   511|       |        }
-  512|  1.37k|        Marker::Array(count) => {
-  513|  1.37k|            let mut a = Array::try_new(data, count, &mut offset)?;
-  514|  1.37k|            let r = f(Value::Array(&mut a), shortest, &marker.tags)?;
+  512|  1.36k|        Marker::Array(count) => {
+  513|  1.36k|            let mut a = Array::try_new(data, count, &mut offset)?;
+  514|  1.36k|            let r = f(Value::Array(&mut a), shortest, &marker.tags)?;
   515|  1.22k|            a.complete(r).map_err(Into::into)
   516|       |        }
-  517|  2.01k|        Marker::Map(count) => {
-  518|  2.01k|            let mut m = Map::try_new(data, count, &mut offset)?;
-  519|  2.01k|            let r = f(Value::Map(&mut m), shortest, &marker.tags)?;
+  517|  2.00k|        Marker::Map(count) => {
+  518|  2.00k|            let mut m = Map::try_new(data, count, &mut offset)?;
+  519|  2.00k|            let r = f(Value::Map(&mut m), shortest, &marker.tags)?;
   520|  1.36k|            m.complete(r).map_err(Into::into)
   521|       |        }
   522|  1.25k|        Marker::False => f(Value::False, shortest, &marker.tags),
-  523|  1.53k|        Marker::True => f(Value::True, shortest, &marker.tags),
-  524|    639|        Marker::Null => f(Value::Null, shortest, &marker.tags),
-  525|  1.76k|        Marker::Undefined => f(Value::Undefined, shortest, &marker.tags),
-  526|    596|        Marker::Simple(v) => f(Value::Simple(v), shortest, &marker.tags),
-  527|  2.67k|        Marker::Float(v) => f(Value::Float(v), shortest, &marker.tags),
+  523|  1.52k|        Marker::True => f(Value::True, shortest, &marker.tags),
+  524|    644|        Marker::Null => f(Value::Null, shortest, &marker.tags),
+  525|  1.74k|        Marker::Undefined => f(Value::Undefined, shortest, &marker.tags),
+  526|    598|        Marker::Simple(v) => f(Value::Simple(v), shortest, &marker.tags),
+  527|  2.65k|        Marker::Float(v) => f(Value::Float(v), shortest, &marker.tags),
   528|       |    }
-  529|  33.2k|    .map(|r| (r, offset))
-  530|  34.2k|}
-_RINvNtCs1Y3mH2MRRlp_10hardy_cbor6decode5parseTNtNtB2_4head4HeadbjEEB4_:
-  597|   103k|pub fn parse<T>(data: &[u8]) -> Result<T, T::Error>
-  598|   103k|where
-  599|   103k|    T: FromCbor,
-  600|   103k|    T::Error: From<self::Error>,
+  529|  33.0k|    .map(|r| (r, offset))
+  530|  34.1k|}
+_RINvNtCs5zRv9L7EKOy_10hardy_cbor6decode5parseTNtNtB2_4head4HeadbjEEB4_:
+  597|   102k|pub fn parse<T>(data: &[u8]) -> Result<T, T::Error>
+  598|   102k|where
+  599|   102k|    T: FromCbor,
+  600|   102k|    T::Error: From<self::Error>,
   601|       |{
-  602|   103k|    T::from_cbor(data).map(|v| v.0)
-  603|   103k|}
-_RNCINvNtCs1Y3mH2MRRlp_10hardy_cbor6decode11parse_valueNtNtB4_6series17SequenceDebugInfoNCINvMBS_INtBS_6SeriesKj1_E11parse_valueBQ_NCINvBS_18sequence_debug_fmtKB1K_Es1_0NtBS_10DebugErrorE0B2G_E0B6_:
-  529|  27.5k|    .map(|r| (r, offset))
-_RNCINvNtCs1Y3mH2MRRlp_10hardy_cbor6decode11parse_valueNtNtB4_6series17SequenceDebugInfoNCINvMBS_INtBS_6SeriesKj2_E11parse_valueBQ_NCINvBS_18sequence_debug_fmtKB1K_Es0_0NtBS_10DebugErrorE0B2G_E0B6_:
-  529|  32.4k|    .map(|r| (r, offset))
-_RNCINvNtCs1Y3mH2MRRlp_10hardy_cbor6decode11parse_valueNtNtB4_6series17SequenceDebugInfoNCINvMBS_INtBS_6SeriesKj2_E11parse_valueBQ_NCINvBS_18sequence_debug_fmtKB1K_Es_0NtBS_10DebugErrorE0B2F_E0B6_:
-  529|  33.2k|    .map(|r| (r, offset))
-_RNCNvNtCs1Y3mH2MRRlp_10hardy_cbor6decode13offset_extent0B5_:
+  602|   102k|    T::from_cbor(data).map(|v| v.0)
+  603|   102k|}
+_RNCINvNtCs5zRv9L7EKOy_10hardy_cbor6decode11parse_valueNtNtB4_6series17SequenceDebugInfoNCINvMBS_INtBS_6SeriesKj1_E11parse_valueBQ_NCINvBS_18sequence_debug_fmtKB1K_Es1_0NtBS_10DebugErrorE0B2G_E0B6_:
+  529|  27.1k|    .map(|r| (r, offset))
+_RNCINvNtCs5zRv9L7EKOy_10hardy_cbor6decode11parse_valueNtNtB4_6series17SequenceDebugInfoNCINvMBS_INtBS_6SeriesKj2_E11parse_valueBQ_NCINvBS_18sequence_debug_fmtKB1K_Es0_0NtBS_10DebugErrorE0B2G_E0B6_:
+  529|  32.2k|    .map(|r| (r, offset))
+_RNCINvNtCs5zRv9L7EKOy_10hardy_cbor6decode11parse_valueNtNtB4_6series17SequenceDebugInfoNCINvMBS_INtBS_6SeriesKj2_E11parse_valueBQ_NCINvBS_18sequence_debug_fmtKB1K_Es_0NtBS_10DebugErrorE0B2F_E0B6_:
+  529|  33.0k|    .map(|r| (r, offset))
+_RNCNvNtCs5zRv9L7EKOy_10hardy_cbor6decode13offset_extent0B5_:
   418|  11.6k|        .and_then(|len| offset.checked_add(len))
-_RNvNtCs1Y3mH2MRRlp_10hardy_cbor6decode13offset_extentB3_:
-  415|  10.4k|fn offset_extent(data: &[u8], offset: usize, len: u64) -> Result<Range<usize>, Error> {
-  416|  10.4k|    let end = usize::try_from(len)
-  417|  10.4k|        .ok()
-  418|  10.4k|        .and_then(|len| offset.checked_add(len))
-  419|  10.4k|        .ok_or(Error::TooBig)?;
-  420|  10.4k|    if end > data.len() {
-  421|     28|        Err(Error::NeedMoreData(end - data.len()))
+_RNvNtCs5zRv9L7EKOy_10hardy_cbor6decode13offset_extentB3_:
+  415|  10.3k|fn offset_extent(data: &[u8], offset: usize, len: u64) -> Result<Range<usize>, Error> {
+  416|  10.3k|    let end = usize::try_from(len)
+  417|  10.3k|        .ok()
+  418|  10.3k|        .and_then(|len| offset.checked_add(len))
+  419|  10.3k|        .ok_or(Error::TooBig)?;
+  420|  10.3k|    if end > data.len() {
+  421|     27|        Err(Error::NeedMoreData(end - data.len()))
   422|       |    } else {
-  423|  10.4k|        Ok(offset..end)
+  423|  10.3k|        Ok(offset..end)
   424|       |    }
-  425|  10.4k|}
-_RNvXs_NtCs1Y3mH2MRRlp_10hardy_cbor6decodeNtB4_5ValueNtNtCscPQnZwwd9T3_4core3fmt5Debug3fmt:
-  311|  86.9k|    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-  312|  86.9k|        match self {
-  313|  40.3k|            Value::UnsignedInteger(n) => write!(f, "{n:?}"),
+  425|  10.3k|}
+_RNvXs_NtCs5zRv9L7EKOy_10hardy_cbor6decodeNtB4_5ValueNtNtCsiGG3KM8TBTT_4core3fmt5Debug3fmt:
+  311|  86.2k|    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+  312|  86.2k|        match self {
+  313|  40.0k|            Value::UnsignedInteger(n) => write!(f, "{n:?}"),
   314|  10.7k|            Value::NegativeInteger(n) => write!(f, "-{n:?}"),
-  315|  2.63k|            Value::Bytes(b) => write!(f, "bytes[{b:?}]"),
-  316|  2.71k|            Value::ByteStream(b) => write!(f, "byte_stream{b:?}"),
-  317|  3.11k|            Value::Text(s) => write!(f, "{s:?}"),
-  318|  1.17k|            Value::TextStream(s) => write!(f, "{s:?}"),
-  319|    422|            Value::Array(a) => write!(f, "{a:?}"),
-  320|    669|            Value::Map(m) => write!(f, "{m:?}"),
-  321|  3.51k|            Value::False => f.write_str("false"),
-  322|  3.98k|            Value::True => f.write_str("true"),
-  323|  2.37k|            Value::Null => f.write_str("null"),
-  324|  4.16k|            Value::Undefined => f.write_str("undefined"),
-  325|  1.89k|            Value::Simple(v) => write!(f, "simple value {v}"),
-  326|  9.09k|            Value::Float(v) => write!(f, "{v:?}"),
+  315|  2.62k|            Value::Bytes(b) => write!(f, "bytes[{b:?}]"),
+  316|  2.70k|            Value::ByteStream(b) => write!(f, "byte_stream{b:?}"),
+  317|  3.06k|            Value::Text(s) => write!(f, "{s:?}"),
+  318|  1.16k|            Value::TextStream(s) => write!(f, "{s:?}"),
+  319|    421|            Value::Array(a) => write!(f, "{a:?}"),
+  320|    670|            Value::Map(m) => write!(f, "{m:?}"),
+  321|  3.48k|            Value::False => f.write_str("false"),
+  322|  3.96k|            Value::True => f.write_str("true"),
+  323|  2.36k|            Value::Null => f.write_str("null"),
+  324|  4.13k|            Value::Undefined => f.write_str("undefined"),
+  325|  1.79k|            Value::Simple(v) => write!(f, "simple value {v}"),
+  326|  9.04k|            Value::Float(v) => write!(f, "{v:?}"),
   327|       |        }
-  328|  86.9k|    }
+  328|  86.2k|    }
 
-_RINvMNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6seriesINtB3_6SeriesKj1_E8completeuECs2vcoHZVlbbE_6decode:
-  103|    422|    pub(super) fn complete<T>(mut self, t: T) -> Result<T, Error> {
-  104|    422|        if !self.at_end()? {
-  105|    419|            return Err(Error::AdditionalItems);
+_RINvMNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6seriesINtB3_6SeriesKj1_E8completeuECsb2OpNaVy73Y_6decode:
+  103|    421|    pub(super) fn complete<T>(mut self, t: T) -> Result<T, Error> {
+  104|    421|        if !self.at_end()? {
+  105|    418|            return Err(Error::AdditionalItems);
   106|      2|        }
   107|      2|        Ok(t)
-  108|    422|    }
-_RINvMNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6seriesINtB3_6SeriesKj2_E8completeuECs2vcoHZVlbbE_6decode:
-  103|    669|    pub(super) fn complete<T>(mut self, t: T) -> Result<T, Error> {
-  104|    669|        if !self.at_end()? {
-  105|    665|            return Err(Error::AdditionalItems);
+  108|    421|    }
+_RINvMNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6seriesINtB3_6SeriesKj2_E8completeuECsb2OpNaVy73Y_6decode:
+  103|    670|    pub(super) fn complete<T>(mut self, t: T) -> Result<T, Error> {
+  104|    670|        if !self.at_end()? {
+  105|    666|            return Err(Error::AdditionalItems);
   106|      2|        }
   107|      2|        Ok(t)
-  108|    669|    }
-_RINvMNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6seriesINtB3_6SeriesKj1_E11parse_valueNtB3_17SequenceDebugInfoNCINvB3_18sequence_debug_fmtKBZ_Es1_0NtB3_10DebugErrorEB7_:
-  167|  28.5k|    pub fn parse_value<T, F, E>(&mut self, f: F) -> Result<T, E>
-  168|  28.5k|    where
-  169|  28.5k|        F: FnOnce(Value, bool, &[u64]) -> Result<T, E>,
-  170|  28.5k|        E: From<Error>,
+  108|    670|    }
+_RINvMNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6seriesINtB3_6SeriesKj1_E11parse_valueNtB3_17SequenceDebugInfoNCINvB3_18sequence_debug_fmtKBZ_Es1_0NtB3_10DebugErrorEB7_:
+  167|  28.1k|    pub fn parse_value<T, F, E>(&mut self, f: F) -> Result<T, E>
+  168|  28.1k|    where
+  169|  28.1k|        F: FnOnce(Value, bool, &[u64]) -> Result<T, E>,
+  170|  28.1k|        E: From<Error>,
   171|       |    {
   172|       |        // Check for end of array
-  173|  28.5k|        if self.at_end()? {
+  173|  28.1k|        if self.at_end()? {
   174|      0|            Err(Error::NoMoreItems.into())
   175|       |        } else {
   176|       |            // Parse sub-item
-  177|  28.5k|            let (value, len) = parse_value(&self.data[*self.offset..], |value, shortest, tags| {
+  177|  28.1k|            let (value, len) = parse_value(&self.data[*self.offset..], |value, shortest, tags| {
   178|       |                f(value, shortest, tags)
-  179|    954|            })?;
-  180|  27.5k|            self.parsed += 1;
-  181|  27.5k|            *self.offset += len;
-  182|  27.5k|            Ok(value)
+  179|    953|            })?;
+  180|  27.1k|            self.parsed += 1;
+  181|  27.1k|            *self.offset += len;
+  182|  27.1k|            Ok(value)
   183|       |        }
-  184|  28.5k|    }
-_RINvMNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6seriesINtB3_6SeriesKj1_E8completeNtB3_17SequenceDebugInfoEB7_:
-  103|  3.78k|    pub(super) fn complete<T>(mut self, t: T) -> Result<T, Error> {
-  104|  3.78k|        if !self.at_end()? {
+  184|  28.1k|    }
+_RINvMNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6seriesINtB3_6SeriesKj1_E8completeNtB3_17SequenceDebugInfoEB7_:
+  103|  3.76k|    pub(super) fn complete<T>(mut self, t: T) -> Result<T, Error> {
+  104|  3.76k|        if !self.at_end()? {
   105|      0|            return Err(Error::AdditionalItems);
-  106|  3.78k|        }
-  107|  3.78k|        Ok(t)
-  108|  3.78k|    }
-_RINvMNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6seriesINtB3_6SeriesKj2_E11parse_valueNtB3_17SequenceDebugInfoNCINvB3_18sequence_debug_fmtKBZ_Es0_0NtB3_10DebugErrorEB7_:
-  167|  33.2k|    pub fn parse_value<T, F, E>(&mut self, f: F) -> Result<T, E>
-  168|  33.2k|    where
-  169|  33.2k|        F: FnOnce(Value, bool, &[u64]) -> Result<T, E>,
-  170|  33.2k|        E: From<Error>,
+  106|  3.76k|        }
+  107|  3.76k|        Ok(t)
+  108|  3.76k|    }
+_RINvMNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6seriesINtB3_6SeriesKj2_E11parse_valueNtB3_17SequenceDebugInfoNCINvB3_18sequence_debug_fmtKBZ_Es0_0NtB3_10DebugErrorEB7_:
+  167|  33.0k|    pub fn parse_value<T, F, E>(&mut self, f: F) -> Result<T, E>
+  168|  33.0k|    where
+  169|  33.0k|        F: FnOnce(Value, bool, &[u64]) -> Result<T, E>,
+  170|  33.0k|        E: From<Error>,
   171|       |    {
   172|       |        // Check for end of array
-  173|  33.2k|        if self.at_end()? {
+  173|  33.0k|        if self.at_end()? {
   174|      0|            Err(Error::NoMoreItems.into())
   175|       |        } else {
   176|       |            // Parse sub-item
-  177|  33.1k|            let (value, len) = parse_value(&self.data[*self.offset..], |value, shortest, tags| {
+  177|  32.9k|            let (value, len) = parse_value(&self.data[*self.offset..], |value, shortest, tags| {
   178|       |                f(value, shortest, tags)
   179|    706|            })?;
-  180|  32.4k|            self.parsed += 1;
-  181|  32.4k|            *self.offset += len;
-  182|  32.4k|            Ok(value)
+  180|  32.2k|            self.parsed += 1;
+  181|  32.2k|            *self.offset += len;
+  182|  32.2k|            Ok(value)
   183|       |        }
-  184|  33.2k|    }
-_RINvMNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6seriesINtB3_6SeriesKj2_E11parse_valueNtB3_17SequenceDebugInfoNCINvB3_18sequence_debug_fmtKBZ_Es_0NtB3_10DebugErrorEB7_:
-  167|  34.2k|    pub fn parse_value<T, F, E>(&mut self, f: F) -> Result<T, E>
-  168|  34.2k|    where
-  169|  34.2k|        F: FnOnce(Value, bool, &[u64]) -> Result<T, E>,
-  170|  34.2k|        E: From<Error>,
+  184|  33.0k|    }
+_RINvMNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6seriesINtB3_6SeriesKj2_E11parse_valueNtB3_17SequenceDebugInfoNCINvB3_18sequence_debug_fmtKBZ_Es_0NtB3_10DebugErrorEB7_:
+  167|  34.1k|    pub fn parse_value<T, F, E>(&mut self, f: F) -> Result<T, E>
+  168|  34.1k|    where
+  169|  34.1k|        F: FnOnce(Value, bool, &[u64]) -> Result<T, E>,
+  170|  34.1k|        E: From<Error>,
   171|       |    {
   172|       |        // Check for end of array
-  173|  34.2k|        if self.at_end()? {
+  173|  34.1k|        if self.at_end()? {
   174|      0|            Err(Error::NoMoreItems.into())
   175|       |        } else {
   176|       |            // Parse sub-item
-  177|  34.2k|            let (value, len) = parse_value(&self.data[*self.offset..], |value, shortest, tags| {
+  177|  34.1k|            let (value, len) = parse_value(&self.data[*self.offset..], |value, shortest, tags| {
   178|       |                f(value, shortest, tags)
   179|  1.03k|            })?;
-  180|  33.2k|            self.parsed += 1;
-  181|  33.2k|            *self.offset += len;
-  182|  33.2k|            Ok(value)
+  180|  33.0k|            self.parsed += 1;
+  181|  33.0k|            *self.offset += len;
+  182|  33.0k|            Ok(value)
   183|       |        }
-  184|  34.2k|    }
-_RINvMNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6seriesINtB3_6SeriesKj2_E8completeNtB3_17SequenceDebugInfoEB7_:
-  103|  3.70k|    pub(super) fn complete<T>(mut self, t: T) -> Result<T, Error> {
-  104|  3.70k|        if !self.at_end()? {
+  184|  34.1k|    }
+_RINvMNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6seriesINtB3_6SeriesKj2_E8completeNtB3_17SequenceDebugInfoEB7_:
+  103|  3.68k|    pub(super) fn complete<T>(mut self, t: T) -> Result<T, Error> {
+  104|  3.68k|        if !self.at_end()? {
   105|      0|            return Err(Error::AdditionalItems);
-  106|  3.70k|        }
-  107|  3.70k|        Ok(t)
-  108|  3.70k|    }
-_RINvNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6series18sequence_debug_fmtKj1_EB6_:
-  337|  4.87k|fn sequence_debug_fmt<const D: usize>(
-  338|  4.87k|    sequence: &mut Series<'_, D>,
-  339|  4.87k|    max_recursion: usize,
-  340|  4.87k|) -> Result<SequenceDebugInfo, DebugError> {
-  341|  4.87k|    if max_recursion == 0 {
+  106|  3.68k|        }
+  107|  3.68k|        Ok(t)
+  108|  3.68k|    }
+_RINvNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6series18sequence_debug_fmtKj1_EB6_:
+  337|  4.85k|fn sequence_debug_fmt<const D: usize>(
+  338|  4.85k|    sequence: &mut Series<'_, D>,
+  339|  4.85k|    max_recursion: usize,
+  340|  4.85k|) -> Result<SequenceDebugInfo, DebugError> {
+  341|  4.85k|    if max_recursion == 0 {
   342|      6|        return Err(Error::MaxRecursion.into());
-  343|  4.86k|    }
+  343|  4.84k|    }
   344|       |    // `resumed` is only true at the top-level Debug call when the original
   345|       |    // had already parsed items before Debug ran — nested calls always start
   346|       |    // with `parsed == 0` because nested Series are freshly constructed by
   347|       |    // parse_value. Use it to emit a leading `...` marker so the reader can
   348|       |    // see this rendering does not start at item zero.
-  349|  4.86k|    let resumed = sequence.parsed > 0;
-  350|  4.86k|    if D == 2 {
+  349|  4.84k|    let resumed = sequence.parsed > 0;
+  350|  4.84k|    if D == 2 {
   351|      0|        let mut items = Vec::new();
   352|       |
   353|      0|        if resumed {
@@ -1515,48 +1515,48 @@ _RINvNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6series18sequence_debug_fmtKj1_EB6_:
   418|       |        }
   419|      0|        Ok(SequenceDebugInfo::Map(items))
   420|       |    } else {
-  421|  4.86k|        let mut items = Vec::new();
-  422|  4.86k|        if resumed {
+  421|  4.84k|        let mut items = Vec::new();
+  422|  4.84k|        if resumed {
   423|      0|            // Partial-drain marker: signals the rendering doesn't start at
   424|      0|            // item zero. Renders as `[..., item, item]`.
   425|      0|            items.push(SequenceDebugInfo::Unknown);
-  426|  4.86k|        }
-  427|  32.4k|        while !sequence.at_end()? {
-  428|  28.5k|            match sequence.parse_value(|value, shortest, tags| {
+  426|  4.84k|        }
+  427|  32.0k|        while !sequence.at_end()? {
+  428|  28.1k|            match sequence.parse_value(|value, shortest, tags| {
   429|       |                debug_fmt(value, shortest, tags, max_recursion - 1)
   430|       |            }) {
-  431|  27.5k|                Ok(item) => items.push(item),
-  432|    954|                Err(e) => {
-  433|    954|                    let item = match e {
-  434|    326|                        DebugError::Decode(e) => SequenceDebugInfo::Value(format!("<Error: {e}>")),
+  431|  27.1k|                Ok(item) => items.push(item),
+  432|    953|                Err(e) => {
+  433|    953|                    let item = match e {
+  434|    325|                        DebugError::Decode(e) => SequenceDebugInfo::Value(format!("<Error: {e}>")),
   435|    628|                        DebugError::Rollup(item) => item,
   436|       |                    };
-  437|    954|                    items.push(item);
-  438|    954|                    return Err(DebugError::Rollup(SequenceDebugInfo::Array(items)));
+  437|    953|                    items.push(item);
+  438|    953|                    return Err(DebugError::Rollup(SequenceDebugInfo::Array(items)));
   439|       |                }
   440|       |            }
   441|       |        }
-  442|  3.80k|        Ok(SequenceDebugInfo::Array(items))
+  442|  3.78k|        Ok(SequenceDebugInfo::Array(items))
   443|       |    }
-  444|  4.87k|}
-_RINvNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6series18sequence_debug_fmtKj2_EB6_:
-  337|  5.69k|fn sequence_debug_fmt<const D: usize>(
-  338|  5.69k|    sequence: &mut Series<'_, D>,
-  339|  5.69k|    max_recursion: usize,
-  340|  5.69k|) -> Result<SequenceDebugInfo, DebugError> {
-  341|  5.69k|    if max_recursion == 0 {
-  342|     12|        return Err(Error::MaxRecursion.into());
-  343|  5.68k|    }
+  444|  4.85k|}
+_RINvNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6series18sequence_debug_fmtKj2_EB6_:
+  337|  5.67k|fn sequence_debug_fmt<const D: usize>(
+  338|  5.67k|    sequence: &mut Series<'_, D>,
+  339|  5.67k|    max_recursion: usize,
+  340|  5.67k|) -> Result<SequenceDebugInfo, DebugError> {
+  341|  5.67k|    if max_recursion == 0 {
+  342|     13|        return Err(Error::MaxRecursion.into());
+  343|  5.66k|    }
   344|       |    // `resumed` is only true at the top-level Debug call when the original
   345|       |    // had already parsed items before Debug ran — nested calls always start
   346|       |    // with `parsed == 0` because nested Series are freshly constructed by
   347|       |    // parse_value. Use it to emit a leading `...` marker so the reader can
   348|       |    // see this rendering does not start at item zero.
-  349|  5.68k|    let resumed = sequence.parsed > 0;
-  350|  5.68k|    if D == 2 {
-  351|  5.68k|        let mut items = Vec::new();
+  349|  5.66k|    let resumed = sequence.parsed > 0;
+  350|  5.66k|    if D == 2 {
+  351|  5.66k|        let mut items = Vec::new();
   352|       |
-  353|  5.68k|        if resumed {
+  353|  5.66k|        if resumed {
   354|      0|            if !sequence.parsed.is_multiple_of(2) {
   355|       |                // Odd parity: a key was consumed but its value wasn't.
   356|       |                // The next item on the wire is the dangling value; pair
@@ -1589,40 +1589,40 @@ _RINvNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6series18sequence_debug_fmtKj2_EB6_:
   383|      0|                // rendering doesn't cover the whole map.
   384|      0|                items.push((SequenceDebugInfo::Unknown, SequenceDebugInfo::Unknown));
   385|      0|            }
-  386|  5.68k|        }
+  386|  5.66k|        }
   387|       |
-  388|  38.1k|        while !sequence.at_end()? {
-  389|  34.2k|            match sequence.parse_value(|value, shortest, tags| {
+  388|  37.9k|        while !sequence.at_end()? {
+  389|  34.1k|            match sequence.parse_value(|value, shortest, tags| {
   390|       |                debug_fmt(value, shortest, tags, max_recursion - 1)
   391|       |            }) {
   392|  1.03k|                Err(e) => {
   393|  1.03k|                    let item = match e {
-  394|    274|                        DebugError::Decode(e) => SequenceDebugInfo::Value(format!("<Error: {e}>")),
-  395|    760|                        DebugError::Rollup(item) => item,
+  394|    277|                        DebugError::Decode(e) => SequenceDebugInfo::Value(format!("<Error: {e}>")),
+  395|    758|                        DebugError::Rollup(item) => item,
   396|       |                    };
   397|  1.03k|                    items.push((item, SequenceDebugInfo::Unknown));
   398|  1.03k|                    return Err(DebugError::Rollup(SequenceDebugInfo::Map(items)));
   399|       |                }
-  400|  33.2k|                Ok(key) => {
-  401|  33.2k|                    match sequence.parse_value(|value, shortest, tags| {
+  400|  33.0k|                Ok(key) => {
+  401|  33.0k|                    match sequence.parse_value(|value, shortest, tags| {
   402|       |                        debug_fmt(value, shortest, tags, max_recursion - 1)
   403|       |                    }) {
-  404|  32.4k|                        Ok(value) => items.push((key, value)),
-  405|    798|                        Err(e) => {
-  406|    798|                            let item = match e {
-  407|    283|                                DebugError::Decode(e) => {
-  408|    283|                                    SequenceDebugInfo::Value(format!("<Error: {e}>"))
+  404|  32.2k|                        Ok(value) => items.push((key, value)),
+  405|    799|                        Err(e) => {
+  406|    799|                            let item = match e {
+  407|    282|                                DebugError::Decode(e) => {
+  408|    282|                                    SequenceDebugInfo::Value(format!("<Error: {e}>"))
   409|       |                                }
-  410|    515|                                DebugError::Rollup(item) => item,
+  410|    517|                                DebugError::Rollup(item) => item,
   411|       |                            };
-  412|    798|                            items.push((key, item));
-  413|    798|                            return Err(DebugError::Rollup(SequenceDebugInfo::Map(items)));
+  412|    799|                            items.push((key, item));
+  413|    799|                            return Err(DebugError::Rollup(SequenceDebugInfo::Map(items)));
   414|       |                        }
   415|       |                    }
   416|       |                }
   417|       |            }
   418|       |        }
-  419|  3.71k|        Ok(SequenceDebugInfo::Map(items))
+  419|  3.69k|        Ok(SequenceDebugInfo::Map(items))
   420|       |    } else {
   421|      0|        let mut items = Vec::new();
   422|      0|        if resumed {
@@ -1647,143 +1647,143 @@ _RINvNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6series18sequence_debug_fmtKj2_EB6_:
   441|       |        }
   442|      0|        Ok(SequenceDebugInfo::Array(items))
   443|       |    }
-  444|  5.69k|}
-_RNCINvMNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6seriesINtB5_6SeriesKj1_E11parse_valueNtB5_17SequenceDebugInfoNCINvB5_18sequence_debug_fmtKB11_Es1_0NtB5_10DebugErrorE0B9_:
-  177|  28.2k|            let (value, len) = parse_value(&self.data[*self.offset..], |value, shortest, tags| {
-  178|  28.2k|                f(value, shortest, tags)
-  179|  28.2k|            })?;
-_RNCINvMNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6seriesINtB5_6SeriesKj2_E11parse_valueNtB5_17SequenceDebugInfoNCINvB5_18sequence_debug_fmtKB11_Es0_0NtB5_10DebugErrorE0B9_:
-  177|  32.9k|            let (value, len) = parse_value(&self.data[*self.offset..], |value, shortest, tags| {
-  178|  32.9k|                f(value, shortest, tags)
-  179|  32.9k|            })?;
-_RNCINvMNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6seriesINtB5_6SeriesKj2_E11parse_valueNtB5_17SequenceDebugInfoNCINvB5_18sequence_debug_fmtKB11_Es_0NtB5_10DebugErrorE0B9_:
-  177|  34.0k|            let (value, len) = parse_value(&self.data[*self.offset..], |value, shortest, tags| {
-  178|  34.0k|                f(value, shortest, tags)
-  179|  34.0k|            })?;
-_RNCINvNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6series18sequence_debug_fmtKj1_Es1_0B8_:
-  428|  28.2k|            match sequence.parse_value(|value, shortest, tags| {
-  429|  28.2k|                debug_fmt(value, shortest, tags, max_recursion - 1)
-  430|  28.2k|            }) {
-_RNCINvNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6series18sequence_debug_fmtKj2_Es0_0B8_:
-  401|  32.9k|                    match sequence.parse_value(|value, shortest, tags| {
-  402|  32.9k|                        debug_fmt(value, shortest, tags, max_recursion - 1)
-  403|  32.9k|                    }) {
-_RNCINvNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6series18sequence_debug_fmtKj2_Es_0B8_:
-  389|  34.0k|            match sequence.parse_value(|value, shortest, tags| {
-  390|  34.0k|                debug_fmt(value, shortest, tags, max_recursion - 1)
-  391|  34.0k|            }) {
-_RNCNCNvMNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6seriesINtB6_6SeriesKj1_E7try_new00Ba_:
-   43|  4.38k|                    .and_then(|c| c.checked_mul(D.max(1)))
-_RNCNCNvMNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6seriesINtB6_6SeriesKj2_E7try_new00Ba_:
-   43|  3.90k|                    .and_then(|c| c.checked_mul(D.max(1)))
-_RNCNvMNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6seriesINtB4_6SeriesKj1_E7try_new0B8_:
-   40|  4.38k|            .map(|c| {
-   41|  4.38k|                usize::try_from(c)
-   42|  4.38k|                    .ok()
-   43|  4.38k|                    .and_then(|c| c.checked_mul(D.max(1)))
-   44|  4.38k|                    .ok_or(Error::TooBig)
-   45|  4.38k|            })
-_RNCNvMNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6seriesINtB4_6SeriesKj2_E7try_new0B8_:
-   40|  3.90k|            .map(|c| {
-   41|  3.90k|                usize::try_from(c)
-   42|  3.90k|                    .ok()
-   43|  3.90k|                    .and_then(|c| c.checked_mul(D.max(1)))
-   44|  3.90k|                    .ok_or(Error::TooBig)
-   45|  3.90k|            })
-_RNvMNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6seriesINtB2_6SeriesKj1_E3newB6_:
-   19|  4.87k|    pub(super) fn new(data: &'a [u8], count: Option<usize>, offset: &'a mut usize) -> Self {
-   20|  4.87k|        Self {
-   21|  4.87k|            data,
-   22|  4.87k|            count,
-   23|  4.87k|            offset,
-   24|  4.87k|            parsed: 0,
-   25|  4.87k|        }
-   26|  4.87k|    }
-_RNvMNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6seriesINtB2_6SeriesKj1_E6at_endB6_:
-   76|  65.1k|    pub fn at_end(&mut self) -> Result<bool, Error> {
-   77|  65.1k|        if let Some(count) = self.count {
-   78|  43.0k|            Ok(self.parsed >= count)
-   79|  22.1k|        } else if D == 0 && *self.offset == self.data.len() {
+  444|  5.67k|}
+_RNCINvMNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6seriesINtB5_6SeriesKj1_E11parse_valueNtB5_17SequenceDebugInfoNCINvB5_18sequence_debug_fmtKB11_Es1_0NtB5_10DebugErrorE0B9_:
+  177|  27.8k|            let (value, len) = parse_value(&self.data[*self.offset..], |value, shortest, tags| {
+  178|  27.8k|                f(value, shortest, tags)
+  179|  27.8k|            })?;
+_RNCINvMNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6seriesINtB5_6SeriesKj2_E11parse_valueNtB5_17SequenceDebugInfoNCINvB5_18sequence_debug_fmtKB11_Es0_0NtB5_10DebugErrorE0B9_:
+  177|  32.8k|            let (value, len) = parse_value(&self.data[*self.offset..], |value, shortest, tags| {
+  178|  32.8k|                f(value, shortest, tags)
+  179|  32.8k|            })?;
+_RNCINvMNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6seriesINtB5_6SeriesKj2_E11parse_valueNtB5_17SequenceDebugInfoNCINvB5_18sequence_debug_fmtKB11_Es_0NtB5_10DebugErrorE0B9_:
+  177|  33.8k|            let (value, len) = parse_value(&self.data[*self.offset..], |value, shortest, tags| {
+  178|  33.8k|                f(value, shortest, tags)
+  179|  33.8k|            })?;
+_RNCINvNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6series18sequence_debug_fmtKj1_Es1_0B8_:
+  428|  27.8k|            match sequence.parse_value(|value, shortest, tags| {
+  429|  27.8k|                debug_fmt(value, shortest, tags, max_recursion - 1)
+  430|  27.8k|            }) {
+_RNCINvNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6series18sequence_debug_fmtKj2_Es0_0B8_:
+  401|  32.8k|                    match sequence.parse_value(|value, shortest, tags| {
+  402|  32.8k|                        debug_fmt(value, shortest, tags, max_recursion - 1)
+  403|  32.8k|                    }) {
+_RNCINvNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6series18sequence_debug_fmtKj2_Es_0B8_:
+  389|  33.8k|            match sequence.parse_value(|value, shortest, tags| {
+  390|  33.8k|                debug_fmt(value, shortest, tags, max_recursion - 1)
+  391|  33.8k|            }) {
+_RNCNCNvMNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6seriesINtB6_6SeriesKj1_E7try_new00Ba_:
+   43|  4.36k|                    .and_then(|c| c.checked_mul(D.max(1)))
+_RNCNCNvMNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6seriesINtB6_6SeriesKj2_E7try_new00Ba_:
+   43|  3.88k|                    .and_then(|c| c.checked_mul(D.max(1)))
+_RNCNvMNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6seriesINtB4_6SeriesKj1_E7try_new0B8_:
+   40|  4.36k|            .map(|c| {
+   41|  4.36k|                usize::try_from(c)
+   42|  4.36k|                    .ok()
+   43|  4.36k|                    .and_then(|c| c.checked_mul(D.max(1)))
+   44|  4.36k|                    .ok_or(Error::TooBig)
+   45|  4.36k|            })
+_RNCNvMNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6seriesINtB4_6SeriesKj2_E7try_new0B8_:
+   40|  3.88k|            .map(|c| {
+   41|  3.88k|                usize::try_from(c)
+   42|  3.88k|                    .ok()
+   43|  3.88k|                    .and_then(|c| c.checked_mul(D.max(1)))
+   44|  3.88k|                    .ok_or(Error::TooBig)
+   45|  3.88k|            })
+_RNvMNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6seriesINtB2_6SeriesKj1_E3newB6_:
+   19|  4.85k|    pub(super) fn new(data: &'a [u8], count: Option<usize>, offset: &'a mut usize) -> Self {
+   20|  4.85k|        Self {
+   21|  4.85k|            data,
+   22|  4.85k|            count,
+   23|  4.85k|            offset,
+   24|  4.85k|            parsed: 0,
+   25|  4.85k|        }
+   26|  4.85k|    }
+_RNvMNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6seriesINtB2_6SeriesKj1_E6at_endB6_:
+   76|  64.3k|    pub fn at_end(&mut self) -> Result<bool, Error> {
+   77|  64.3k|        if let Some(count) = self.count {
+   78|  42.6k|            Ok(self.parsed >= count)
+   79|  21.7k|        } else if D == 0 && *self.offset == self.data.len() {
    80|      0|            self.count = Some(self.parsed);
    81|      0|            Ok(true)
-   82|  22.1k|        } else if *self.offset >= self.data.len() {
+   82|  21.7k|        } else if *self.offset >= self.data.len() {
    83|    106|            Err(Error::NeedMoreData(*self.offset + 1 - self.data.len()))
-   84|  22.0k|        } else if D > 0 && self.data[*self.offset] == 0xFF {
-   85|    247|            if !self.parsed.is_multiple_of(D) {
+   84|  21.6k|        } else if D > 0 && self.data[*self.offset] == 0xFF {
+   85|    246|            if !self.parsed.is_multiple_of(D) {
    86|      0|                Err(Error::PartialMap)
    87|       |            } else {
-   88|    247|                *self.offset += 1;
-   89|    247|                self.count = Some(self.parsed);
-   90|    247|                Ok(true)
+   88|    246|                *self.offset += 1;
+   89|    246|                self.count = Some(self.parsed);
+   90|    246|                Ok(true)
    91|       |            }
    92|       |        } else {
-   93|  21.8k|            Ok(false)
+   93|  21.3k|            Ok(false)
    94|       |        }
-   95|  65.1k|    }
-_RNvMNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6seriesINtB2_6SeriesKj1_E7try_newB6_:
-   34|  4.87k|    pub(super) fn try_new(
-   35|  4.87k|        data: &'a [u8],
-   36|  4.87k|        count: Option<u64>,
-   37|  4.87k|        offset: &'a mut usize,
-   38|  4.87k|    ) -> Result<Self, Error> {
-   39|  4.87k|        let count = count
-   40|  4.87k|            .map(|c| {
+   95|  64.3k|    }
+_RNvMNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6seriesINtB2_6SeriesKj1_E7try_newB6_:
+   34|  4.85k|    pub(super) fn try_new(
+   35|  4.85k|        data: &'a [u8],
+   36|  4.85k|        count: Option<u64>,
+   37|  4.85k|        offset: &'a mut usize,
+   38|  4.85k|    ) -> Result<Self, Error> {
+   39|  4.85k|        let count = count
+   40|  4.85k|            .map(|c| {
    41|       |                usize::try_from(c)
    42|       |                    .ok()
    43|       |                    .and_then(|c| c.checked_mul(D.max(1)))
    44|       |                    .ok_or(Error::TooBig)
    45|       |            })
-   46|  4.87k|            .transpose()?;
-   47|  4.87k|        Ok(Self::new(data, count, offset))
-   48|  4.87k|    }
-_RNvMNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6seriesINtB2_6SeriesKj2_E3newB6_:
-   19|  5.69k|    pub(super) fn new(data: &'a [u8], count: Option<usize>, offset: &'a mut usize) -> Self {
-   20|  5.69k|        Self {
-   21|  5.69k|            data,
-   22|  5.69k|            count,
-   23|  5.69k|            offset,
-   24|  5.69k|            parsed: 0,
-   25|  5.69k|        }
-   26|  5.69k|    }
-_RNvMNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6seriesINtB2_6SeriesKj2_E6at_endB6_:
-   76|   110k|    pub fn at_end(&mut self) -> Result<bool, Error> {
-   77|   110k|        if let Some(count) = self.count {
-   78|  64.6k|            Ok(self.parsed >= count)
+   46|  4.85k|            .transpose()?;
+   47|  4.85k|        Ok(Self::new(data, count, offset))
+   48|  4.85k|    }
+_RNvMNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6seriesINtB2_6SeriesKj2_E3newB6_:
+   19|  5.67k|    pub(super) fn new(data: &'a [u8], count: Option<usize>, offset: &'a mut usize) -> Self {
+   20|  5.67k|        Self {
+   21|  5.67k|            data,
+   22|  5.67k|            count,
+   23|  5.67k|            offset,
+   24|  5.67k|            parsed: 0,
+   25|  5.67k|        }
+   26|  5.67k|    }
+_RNvMNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6seriesINtB2_6SeriesKj2_E6at_endB6_:
+   76|   109k|    pub fn at_end(&mut self) -> Result<bool, Error> {
+   77|   109k|        if let Some(count) = self.count {
+   78|  64.0k|            Ok(self.parsed >= count)
    79|  45.3k|        } else if D == 0 && *self.offset == self.data.len() {
    80|      0|            self.count = Some(self.parsed);
    81|      0|            Ok(true)
    82|  45.3k|        } else if *self.offset >= self.data.len() {
-   83|    224|            Err(Error::NeedMoreData(*self.offset + 1 - self.data.len()))
-   84|  45.0k|        } else if D > 0 && self.data[*self.offset] == 0xFF {
-   85|  1.00k|            if !self.parsed.is_multiple_of(D) {
+   83|    222|            Err(Error::NeedMoreData(*self.offset + 1 - self.data.len()))
+   84|  45.1k|        } else if D > 0 && self.data[*self.offset] == 0xFF {
+   85|    996|            if !self.parsed.is_multiple_of(D) {
    86|      5|                Err(Error::PartialMap)
    87|       |            } else {
-   88|    996|                *self.offset += 1;
-   89|    996|                self.count = Some(self.parsed);
-   90|    996|                Ok(true)
+   88|    991|                *self.offset += 1;
+   89|    991|                self.count = Some(self.parsed);
+   90|    991|                Ok(true)
    91|       |            }
    92|       |        } else {
-   93|  44.0k|            Ok(false)
+   93|  44.1k|            Ok(false)
    94|       |        }
-   95|   110k|    }
-_RNvMNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6seriesINtB2_6SeriesKj2_E7try_newB6_:
-   34|  5.70k|    pub(super) fn try_new(
-   35|  5.70k|        data: &'a [u8],
-   36|  5.70k|        count: Option<u64>,
-   37|  5.70k|        offset: &'a mut usize,
-   38|  5.70k|    ) -> Result<Self, Error> {
-   39|  5.70k|        let count = count
-   40|  5.70k|            .map(|c| {
+   95|   109k|    }
+_RNvMNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6seriesINtB2_6SeriesKj2_E7try_newB6_:
+   34|  5.68k|    pub(super) fn try_new(
+   35|  5.68k|        data: &'a [u8],
+   36|  5.68k|        count: Option<u64>,
+   37|  5.68k|        offset: &'a mut usize,
+   38|  5.68k|    ) -> Result<Self, Error> {
+   39|  5.68k|        let count = count
+   40|  5.68k|            .map(|c| {
    41|       |                usize::try_from(c)
    42|       |                    .ok()
    43|       |                    .and_then(|c| c.checked_mul(D.max(1)))
    44|       |                    .ok_or(Error::TooBig)
    45|       |            })
-   46|  5.70k|            .transpose()?;
-   47|  5.69k|        Ok(Self::new(data, count, offset))
-   48|  5.70k|    }
-_RNvXs0_NtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6seriesINtB5_6SeriesKj1_ENtNtCscPQnZwwd9T3_4core3fmt5Debug3fmtB9_:
-  447|    422|    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+   46|  5.68k|            .transpose()?;
+   47|  5.67k|        Ok(Self::new(data, count, offset))
+   48|  5.68k|    }
+_RNvXs0_NtNtCs5zRv9L7EKOy_10hardy_cbor6decode6seriesINtB5_6SeriesKj1_ENtNtCsiGG3KM8TBTT_4core3fmt5Debug3fmtB9_:
+  447|    421|    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
   448|       |        // Debug needs to advance through the remaining items to format them,
   449|       |        // but `fmt` takes `&self` and can't mutate `*self.offset`. Build a
   450|       |        // throwaway `Series` that walks the same logical position without
@@ -1799,22 +1799,22 @@ _RNvXs0_NtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6seriesINtB5_6SeriesKj1_ENtNtCscPQn
   460|       |        //     working as the clone advances `parsed`. Carrying `count`
   461|       |        //     without `parsed` (or vice versa) would either over- or
   462|       |        //     under-count and read past the end or stop early.
-  463|    422|        let mut offset = 0;
-  464|    422|        let mut self_cloned = Series::<D> {
-  465|    422|            data: &self.data[*self.offset..],
-  466|    422|            count: self.count,
-  467|    422|            offset: &mut offset,
-  468|    422|            parsed: self.parsed,
-  469|    422|        };
+  463|    421|        let mut offset = 0;
+  464|    421|        let mut self_cloned = Series::<D> {
+  465|    421|            data: &self.data[*self.offset..],
+  466|    421|            count: self.count,
+  467|    421|            offset: &mut offset,
+  468|    421|            parsed: self.parsed,
+  469|    421|        };
   470|       |
-  471|    422|        match sequence_debug_fmt(&mut self_cloned, 16) {
+  471|    421|        match sequence_debug_fmt(&mut self_cloned, 16) {
   472|     22|            Ok(s) => write!(f, "{s:?}"),
-  473|    327|            Err(DebugError::Rollup(s)) => write!(f, "{s:?}"),
+  473|    326|            Err(DebugError::Rollup(s)) => write!(f, "{s:?}"),
   474|     73|            Err(DebugError::Decode(e)) => write!(f, "<Error: {e}>"),
   475|       |        }
-  476|    422|    }
-_RNvXs0_NtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6seriesINtB5_6SeriesKj2_ENtNtCscPQnZwwd9T3_4core3fmt5Debug3fmtB9_:
-  447|    669|    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+  476|    421|    }
+_RNvXs0_NtNtCs5zRv9L7EKOy_10hardy_cbor6decode6seriesINtB5_6SeriesKj2_ENtNtCsiGG3KM8TBTT_4core3fmt5Debug3fmtB9_:
+  447|    670|    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
   448|       |        // Debug needs to advance through the remaining items to format them,
   449|       |        // but `fmt` takes `&self` and can't mutate `*self.offset`. Build a
   450|       |        // throwaway `Series` that walks the same logical position without
@@ -1830,46 +1830,46 @@ _RNvXs0_NtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6seriesINtB5_6SeriesKj2_ENtNtCscPQn
   460|       |        //     working as the clone advances `parsed`. Carrying `count`
   461|       |        //     without `parsed` (or vice versa) would either over- or
   462|       |        //     under-count and read past the end or stop early.
-  463|    669|        let mut offset = 0;
-  464|    669|        let mut self_cloned = Series::<D> {
-  465|    669|            data: &self.data[*self.offset..],
-  466|    669|            count: self.count,
-  467|    669|            offset: &mut offset,
-  468|    669|            parsed: self.parsed,
-  469|    669|        };
+  463|    670|        let mut offset = 0;
+  464|    670|        let mut self_cloned = Series::<D> {
+  465|    670|            data: &self.data[*self.offset..],
+  466|    670|            count: self.count,
+  467|    670|            offset: &mut offset,
+  468|    670|            parsed: self.parsed,
+  469|    670|        };
   470|       |
-  471|    669|        match sequence_debug_fmt(&mut self_cloned, 16) {
+  471|    670|        match sequence_debug_fmt(&mut self_cloned, 16) {
   472|     15|            Ok(s) => write!(f, "{s:?}"),
-  473|    556|            Err(DebugError::Rollup(s)) => write!(f, "{s:?}"),
-  474|     98|            Err(DebugError::Decode(e)) => write!(f, "<Error: {e}>"),
+  473|    558|            Err(DebugError::Rollup(s)) => write!(f, "{s:?}"),
+  474|     97|            Err(DebugError::Decode(e)) => write!(f, "<Error: {e}>"),
   475|       |        }
-  476|    669|    }
-_RNvNtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6series9debug_fmt:
-  324|  95.2k|fn debug_fmt(
-  325|  95.2k|    value: Value,
-  326|  95.2k|    _shortest: bool,
-  327|  95.2k|    _tags: &[u64],
-  328|  95.2k|    max_recursion: usize,
-  329|  95.2k|) -> Result<SequenceDebugInfo, DebugError> {
-  330|  95.2k|    match value {
-  331|  4.45k|        Value::Array(a) => sequence_debug_fmt(a, max_recursion),
-  332|  5.02k|        Value::Map(m) => sequence_debug_fmt(m, max_recursion),
-  333|  85.7k|        value => Ok(SequenceDebugInfo::Value(format!("{value:?}"))),
+  476|    670|    }
+_RNvNtNtCs5zRv9L7EKOy_10hardy_cbor6decode6series9debug_fmt:
+  324|  94.5k|fn debug_fmt(
+  325|  94.5k|    value: Value,
+  326|  94.5k|    _shortest: bool,
+  327|  94.5k|    _tags: &[u64],
+  328|  94.5k|    max_recursion: usize,
+  329|  94.5k|) -> Result<SequenceDebugInfo, DebugError> {
+  330|  94.5k|    match value {
+  331|  4.43k|        Value::Array(a) => sequence_debug_fmt(a, max_recursion),
+  332|  5.00k|        Value::Map(m) => sequence_debug_fmt(m, max_recursion),
+  333|  85.0k|        value => Ok(SequenceDebugInfo::Value(format!("{value:?}"))),
   334|       |    }
-  335|  95.2k|}
-_RNvXs_NtNtCs1Y3mH2MRRlp_10hardy_cbor6decode6seriesNtB4_17SequenceDebugInfoNtNtCscPQnZwwd9T3_4core3fmt5Debug3fmt:
-  299|  83.9k|    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-  300|  83.9k|        match self {
+  335|  94.5k|}
+_RNvXs_NtNtCs5zRv9L7EKOy_10hardy_cbor6decode6seriesNtB4_17SequenceDebugInfoNtNtCsiGG3KM8TBTT_4core3fmt5Debug3fmt:
+  299|  83.7k|    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+  300|  83.7k|        match self {
   301|  1.03k|            Self::Unknown => f.write_str("..."),
-  302|  73.2k|            Self::Value(s) => f.write_str(s),
-  303|  4.30k|            Self::Array(items) => f.debug_list().entries(items).finish(),
-  304|  5.27k|            Self::Map(items) => {
-  305|  5.27k|                let mut m = f.debug_map();
+  302|  73.1k|            Self::Value(s) => f.write_str(s),
+  303|  4.32k|            Self::Array(items) => f.debug_list().entries(items).finish(),
+  304|  5.26k|            Self::Map(items) => {
+  305|  5.26k|                let mut m = f.debug_map();
   306|  29.7k|                for (k, v) in items {
   307|  29.7k|                    m.entry(k, v);
   308|  29.7k|                }
-  309|  5.27k|                m.finish()
+  309|  5.26k|                m.finish()
   310|       |            }
   311|       |        }
-  312|  83.9k|    }
+  312|  83.7k|    }
 
