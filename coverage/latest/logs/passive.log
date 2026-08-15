@@ -2,17 +2,17 @@ WARNING: Failed to find function "__sanitizer_acquire_crash_state".
 WARNING: Failed to find function "__sanitizer_print_stack_trace".
 WARNING: Failed to find function "__sanitizer_set_death_callback".
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 2350971458
-MERGE-OUTER: 446 files, 0 in the initial corpus, 0 processed earlier
+INFO: Seed: 1002886374
+MERGE-OUTER: 443 files, 0 in the initial corpus, 0 processed earlier
 MERGE-OUTER: attempt 1
 WARNING: Failed to find function "__sanitizer_acquire_crash_state".
 WARNING: Failed to find function "__sanitizer_print_stack_trace".
 WARNING: Failed to find function "__sanitizer_set_death_callback".
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 2350982050
+INFO: Seed: 1002895489
 INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 1048576 bytes
-MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge455.txt'
-MERGE-INNER: 446 total files; 0 processed earlier; will process 446 files now
+MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge579.txt'
+MERGE-INNER: 443 total files; 0 processed earlier; will process 443 files now
 #1	pulse  exec/s: 0 rss: 30Mb
 #2	pulse  exec/s: 0 rss: 30Mb
 #4	pulse  exec/s: 0 rss: 30Mb
@@ -22,8 +22,8 @@ MERGE-INNER: 446 total files; 0 processed earlier; will process 446 files now
 #64	pulse  exec/s: 0 rss: 30Mb
 #128	pulse  exec/s: 128 rss: 30Mb
 #256	pulse  exec/s: 85 rss: 30Mb
-#446	DONE   exec/s: 63 rss: 30Mb
-==460== ERROR: libFuzzer: deadly signal
+#443	DONE   exec/s: 63 rss: 30Mb
+==588== ERROR: libFuzzer: deadly signal
 NOTE: libFuzzer has rudimentary signal handlers.
       Combine libFuzzer with AddressSanitizer or similar for better crash reports.
 SUMMARY: libFuzzer: deadly signal
@@ -37,18 +37,18 @@ WARNING: Failed to find function "__sanitizer_acquire_crash_state".
 WARNING: Failed to find function "__sanitizer_print_stack_trace".
 WARNING: Failed to find function "__sanitizer_set_death_callback".
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 2358278445
+INFO: Seed: 1010507955
 INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 1048576 bytes
-MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge455.txt'
-MERGE-INNER: 446 total files; 446 processed earlier; will process 0 files now
+MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge579.txt'
+MERGE-INNER: 443 total files; 443 processed earlier; will process 0 files now
 #0	DONE   exec/s: 0 rss: 27Mb
 LLVM Profile Error: Invalid profile data to merge
-LLVM Profile Error: Profile Merging of file /github/workspace/cifuzz-coverage/dumps/passive.13871705459014198880_0.profraw failed: File exists
-LLVM Profile Error: Failed to write file "/github/workspace/cifuzz-coverage/dumps/passive.13871705459014198880_0.profraw": File exists
+LLVM Profile Error: Profile Merging of file /github/workspace/cifuzz-coverage/dumps/passive.5973020004687892017_0.profraw failed: File exists
+LLVM Profile Error: Failed to write file "/github/workspace/cifuzz-coverage/dumps/passive.5973020004687892017_0.profraw": File exists
 MERGE-OUTER: successful in 2 attempt(s)
-MERGE-OUTER: the control file has 49382 bytes
+MERGE-OUTER: the control file has 49044 bytes
 MERGE-OUTER: consumed 0Mb (27Mb rss) to parse the control file
 MERGE-OUTER: 0 new files with 0 new features added; 0 new coverage edges
 LLVM Profile Error: Invalid profile data to merge
-LLVM Profile Error: Profile Merging of file /github/workspace/cifuzz-coverage/dumps/passive.13871705459014198880_0.profraw failed: File exists
-LLVM Profile Error: Failed to write file "/github/workspace/cifuzz-coverage/dumps/passive.13871705459014198880_0.profraw": File exists
+LLVM Profile Error: Profile Merging of file /github/workspace/cifuzz-coverage/dumps/passive.5973020004687892017_0.profraw failed: File exists
+LLVM Profile Error: Failed to write file "/github/workspace/cifuzz-coverage/dumps/passive.5973020004687892017_0.profraw": File exists
