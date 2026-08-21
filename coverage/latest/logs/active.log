@@ -2,17 +2,17 @@ WARNING: Failed to find function "__sanitizer_acquire_crash_state".
 WARNING: Failed to find function "__sanitizer_print_stack_trace".
 WARNING: Failed to find function "__sanitizer_set_death_callback".
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3638416602
-MERGE-OUTER: 475 files, 0 in the initial corpus, 0 processed earlier
+INFO: Seed: 4167556957
+MERGE-OUTER: 472 files, 0 in the initial corpus, 0 processed earlier
 MERGE-OUTER: attempt 1
 WARNING: Failed to find function "__sanitizer_acquire_crash_state".
 WARNING: Failed to find function "__sanitizer_print_stack_trace".
 WARNING: Failed to find function "__sanitizer_set_death_callback".
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3638425103
+INFO: Seed: 4167564917
 INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 1048576 bytes
 MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge386.txt'
-MERGE-INNER: 475 total files; 0 processed earlier; will process 475 files now
+MERGE-INNER: 472 total files; 0 processed earlier; will process 472 files now
 #1	pulse  exec/s: 0 rss: 29Mb
 #2	pulse  exec/s: 0 rss: 29Mb
 #4	pulse  exec/s: 0 rss: 29Mb
@@ -22,7 +22,7 @@ MERGE-INNER: 475 total files; 0 processed earlier; will process 475 files now
 #64	pulse  exec/s: 0 rss: 29Mb
 #128	pulse  exec/s: 0 rss: 30Mb
 #256	pulse  exec/s: 0 rss: 30Mb
-#475	DONE   exec/s: 158 rss: 30Mb
+#472	DONE   exec/s: 236 rss: 30Mb
 ==389== ERROR: libFuzzer: deadly signal
 NOTE: libFuzzer has rudimentary signal handlers.
       Combine libFuzzer with AddressSanitizer or similar for better crash reports.
@@ -37,18 +37,18 @@ WARNING: Failed to find function "__sanitizer_acquire_crash_state".
 WARNING: Failed to find function "__sanitizer_print_stack_trace".
 WARNING: Failed to find function "__sanitizer_set_death_callback".
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3641806165
+INFO: Seed: 4169914410
 INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 1048576 bytes
 MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge386.txt'
-MERGE-INNER: 475 total files; 475 processed earlier; will process 0 files now
+MERGE-INNER: 472 total files; 472 processed earlier; will process 0 files now
 #0	DONE   exec/s: 0 rss: 27Mb
 LLVM Profile Error: Invalid profile data to merge
-LLVM Profile Error: Profile Merging of file /github/workspace/cifuzz-coverage/dumps/active.4200110748553458488_0.profraw failed: File exists
-LLVM Profile Error: Failed to write file "/github/workspace/cifuzz-coverage/dumps/active.4200110748553458488_0.profraw": File exists
+LLVM Profile Error: Profile Merging of file /github/workspace/cifuzz-coverage/dumps/active.8982753259319965213_0.profraw failed: File exists
+LLVM Profile Error: Failed to write file "/github/workspace/cifuzz-coverage/dumps/active.8982753259319965213_0.profraw": File exists
 MERGE-OUTER: successful in 2 attempt(s)
-MERGE-OUTER: the control file has 52196 bytes
+MERGE-OUTER: the control file has 51860 bytes
 MERGE-OUTER: consumed 0Mb (27Mb rss) to parse the control file
 MERGE-OUTER: 0 new files with 0 new features added; 0 new coverage edges
 LLVM Profile Error: Invalid profile data to merge
-LLVM Profile Error: Profile Merging of file /github/workspace/cifuzz-coverage/dumps/active.4200110748553458488_0.profraw failed: File exists
-LLVM Profile Error: Failed to write file "/github/workspace/cifuzz-coverage/dumps/active.4200110748553458488_0.profraw": File exists
+LLVM Profile Error: Profile Merging of file /github/workspace/cifuzz-coverage/dumps/active.8982753259319965213_0.profraw failed: File exists
+LLVM Profile Error: Failed to write file "/github/workspace/cifuzz-coverage/dumps/active.8982753259319965213_0.profraw": File exists
