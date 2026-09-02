@@ -6,3 +6,4 @@ random_bundles
 passive
 decode
 eid_cbor
+streaming
