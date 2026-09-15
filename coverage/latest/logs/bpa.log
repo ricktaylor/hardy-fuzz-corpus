@@ -2,22 +2,22 @@ WARNING: Failed to find function "__sanitizer_acquire_crash_state".
 WARNING: Failed to find function "__sanitizer_print_stack_trace".
 WARNING: Failed to find function "__sanitizer_set_death_callback".
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3310504750
-MERGE-OUTER: 1090 files, 0 in the initial corpus, 0 processed earlier
+INFO: Seed: 3569997113
+MERGE-OUTER: 1084 files, 0 in the initial corpus, 0 processed earlier
 MERGE-OUTER: attempt 1
 WARNING: Failed to find function "__sanitizer_acquire_crash_state".
 WARNING: Failed to find function "__sanitizer_print_stack_trace".
 WARNING: Failed to find function "__sanitizer_set_death_callback".
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3310516799
+INFO: Seed: 3570008795
 INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 1048576 bytes
-MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge479.txt'
-MERGE-INNER: 1090 total files; 0 processed earlier; will process 1090 files now
-[2m2026-09-14T04:21:40.480794Z[0m [33m WARN[0m [2mhardy_bpa::storage::bundle_mem[0m[2m:[0m Using in-memory bundle storage (capacity 1048576 bytes): stored bundles will NOT survive a restart
-[2m2026-09-14T04:21:40.480841Z[0m [33m WARN[0m [2mhardy_bpa::storage::metadata_mem[0m[2m:[0m Using in-memory metadata storage (max 256 bundles): bundle metadata will NOT survive a restart
-[2m2026-09-14T04:21:40.480912Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher[0m[2m:[0m Bundle status reports are enabled
-[2m2026-09-14T04:21:40.481701Z[0m [32m INFO[0m [2mhardy_bpa::cla::registry[0m[2m:[0m Registered CLA: fuzz
-[2m2026-09-14T04:21:40.481846Z[0m [32m INFO[0m [2mhardy_bpa::routing::rib[0m[2m:[0m Registered new routing agent: fuzz
+MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge476.txt'
+MERGE-INNER: 1084 total files; 0 processed earlier; will process 1084 files now
+[2m2026-09-15T04:17:39.318965Z[0m [33m WARN[0m [2mhardy_bpa::storage::bundle_mem[0m[2m:[0m Using in-memory bundle storage (capacity 1048576 bytes): stored bundles will NOT survive a restart
+[2m2026-09-15T04:17:39.319028Z[0m [33m WARN[0m [2mhardy_bpa::storage::metadata_mem[0m[2m:[0m Using in-memory metadata storage (max 256 bundles): bundle metadata will NOT survive a restart
+[2m2026-09-15T04:17:39.319132Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher[0m[2m:[0m Bundle status reports are enabled
+[2m2026-09-15T04:17:39.320178Z[0m [32m INFO[0m [2mhardy_bpa::cla::registry[0m[2m:[0m Registered CLA: fuzz
+[2m2026-09-15T04:17:39.320401Z[0m [32m INFO[0m [2mhardy_bpa::routing::rib[0m[2m:[0m Registered new routing agent: fuzz
 #1	pulse  exec/s: 0 rss: 41Mb
 #2	pulse  exec/s: 0 rss: 41Mb
 #4	pulse  exec/s: 0 rss: 41Mb
@@ -25,19 +25,28 @@ MERGE-INNER: 1090 total files; 0 processed earlier; will process 1090 files now
 #16	pulse  exec/s: 0 rss: 41Mb
 #32	pulse  exec/s: 0 rss: 41Mb
 #64	pulse  exec/s: 0 rss: 42Mb
-#128	pulse  exec/s: 0 rss: 42Mb
-#256	pulse  exec/s: 0 rss: 42Mb
-#512	pulse  exec/s: 0 rss: 42Mb
-[2m2026-09-14T04:21:40.681403Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
-[2m2026-09-14T04:21:40.786907Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
+#128	pulse  exec/s: 0 rss: 43Mb
+#256	pulse  exec/s: 0 rss: 43Mb
+#512	pulse  exec/s: 0 rss: 43Mb
+[2m2026-09-15T04:17:39.557094Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
+[2m2026-09-15T04:17:39.595183Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
+[2m2026-09-15T04:17:39.614400Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
+[2m2026-09-15T04:17:39.615998Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
+[2m2026-09-15T04:17:39.616168Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
+[2m2026-09-15T04:17:39.616443Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
+[2m2026-09-15T04:17:39.616687Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
 #1024	pulse  exec/s: 0 rss: 43Mb
-[2m2026-09-14T04:21:40.814855Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
-[2m2026-09-14T04:21:40.816803Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
-[2m2026-09-14T04:21:40.817117Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
-[2m2026-09-14T04:21:40.825014Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
-[2m2026-09-14T04:21:40.825212Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
-#1090	DONE   exec/s: 0 rss: 43Mb
+[2m2026-09-15T04:17:39.633782Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
+[2m2026-09-15T04:17:39.635918Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
+[2m2026-09-15T04:17:39.636100Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
+[2m2026-09-15T04:17:39.639367Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
+[2m2026-09-15T04:17:39.639548Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
+#1084	DONE   exec/s: 0 rss: 43Mb
+[2m2026-09-15T04:17:39.640429Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
+[2m2026-09-15T04:17:39.644037Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
+[2m2026-09-15T04:17:39.644355Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
+[2m2026-09-15T04:17:39.644741Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
 MERGE-OUTER: successful in 1 attempt(s)
-MERGE-OUTER: the control file has 116623 bytes
+MERGE-OUTER: the control file has 115980 bytes
 MERGE-OUTER: consumed 0Mb (28Mb rss) to parse the control file
 MERGE-OUTER: 0 new files with 0 new features added; 0 new coverage edges
