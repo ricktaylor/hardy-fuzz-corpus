@@ -2,23 +2,23 @@ WARNING: Failed to find function "__sanitizer_acquire_crash_state".
 WARNING: Failed to find function "__sanitizer_print_stack_trace".
 WARNING: Failed to find function "__sanitizer_set_death_callback".
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 2025240239
-MERGE-OUTER: 1173 files, 0 in the initial corpus, 0 processed earlier
+INFO: Seed: 2634395942
+MERGE-OUTER: 761 files, 0 in the initial corpus, 0 processed earlier
 MERGE-OUTER: attempt 1
 WARNING: Failed to find function "__sanitizer_acquire_crash_state".
 WARNING: Failed to find function "__sanitizer_print_stack_trace".
 WARNING: Failed to find function "__sanitizer_set_death_callback".
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 2025255309
+INFO: Seed: 2634405736
 INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 1048576 bytes
-MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge643.txt'
-MERGE-INNER: 1173 total files; 0 processed earlier; will process 1173 files now
-[2m2026-10-07T04:23:05.078175Z[0m [33m WARN[0m [2mhardy_bpa::storage::bundle_mem[0m[2m:[0m Using in-memory bundle storage (capacity 1048576 bytes): stored bundles will NOT survive a restart
-[2m2026-10-07T04:23:05.078217Z[0m [33m WARN[0m [2mhardy_bpa::storage::metadata_mem[0m[2m:[0m Using in-memory metadata storage (max 256 bundles): bundle metadata will NOT survive a restart
-[2m2026-10-07T04:23:05.078369Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher[0m[2m:[0m Bundle status reports are enabled
-[2m2026-10-07T04:23:05.079185Z[0m [32m INFO[0m [2mhardy_bpa::cla::registry[0m[2m:[0m Registered CLA: fuzz
-[2m2026-10-07T04:23:05.079357Z[0m [32m INFO[0m [2mhardy_bpa::routing::rib[0m[2m:[0m Registered new routing agent: fuzz
-#1	pulse  exec/s: 0 rss: 41Mb
+MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge639.txt'
+MERGE-INNER: 761 total files; 0 processed earlier; will process 761 files now
+[2m2026-10-08T04:24:53.574506Z[0m [33m WARN[0m [2mhardy_bpa::storage::bundle_mem[0m[2m:[0m Using in-memory bundle storage (capacity 1048576 bytes): stored bundles will NOT survive a restart
+[2m2026-10-08T04:24:53.574593Z[0m [33m WARN[0m [2mhardy_bpa::storage::metadata_mem[0m[2m:[0m Using in-memory metadata storage (max 256 bundles): bundle metadata will NOT survive a restart
+[2m2026-10-08T04:24:53.574727Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher[0m[2m:[0m Bundle status reports are enabled
+[2m2026-10-08T04:24:53.575655Z[0m [32m INFO[0m [2mhardy_bpa::cla::registry[0m[2m:[0m Registered CLA: fuzz
+[2m2026-10-08T04:24:53.575838Z[0m [32m INFO[0m [2mhardy_bpa::routing::rib[0m[2m:[0m Registered new routing agent: fuzz
+#1	pulse  exec/s: 0 rss: 40Mb
 #2	pulse  exec/s: 0 rss: 41Mb
 #4	pulse  exec/s: 0 rss: 41Mb
 #8	pulse  exec/s: 0 rss: 41Mb
@@ -26,26 +26,40 @@ MERGE-INNER: 1173 total files; 0 processed earlier; will process 1173 files now
 #32	pulse  exec/s: 0 rss: 42Mb
 #64	pulse  exec/s: 0 rss: 42Mb
 #128	pulse  exec/s: 0 rss: 42Mb
-#256	pulse  exec/s: 0 rss: 42Mb
+#256	pulse  exec/s: 0 rss: 43Mb
 #512	pulse  exec/s: 0 rss: 43Mb
-[2m2026-10-07T04:23:05.292951Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
-#1024	pulse  exec/s: 0 rss: 43Mb
-[2m2026-10-07T04:23:05.297176Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
-[2m2026-10-07T04:23:05.300211Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
-[2m2026-10-07T04:23:05.301848Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
-[2m2026-10-07T04:23:05.325690Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
-[2m2026-10-07T04:23:05.328836Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
-[2m2026-10-07T04:23:05.328995Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
-[2m2026-10-07T04:23:05.329144Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
-[2m2026-10-07T04:23:05.329295Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
-[2m2026-10-07T04:23:05.329438Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
-[2m2026-10-07T04:23:05.329597Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
-[2m2026-10-07T04:23:05.330396Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
-[2m2026-10-07T04:23:05.331122Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
-[2m2026-10-07T04:23:05.331276Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
-#1173	DONE   exec/s: 0 rss: 43Mb
-[2m2026-10-07T04:23:05.331427Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher::forward[0m[2m:[0m Failed to update extension blocks: Failed to parse primary block: Bundle violates RFC 9171 canonical CBOR encoding requirements
-MERGE-OUTER: successful in 1 attempt(s)
-MERGE-OUTER: the control file has 125783 bytes
+#761	DONE   exec/s: 0 rss: 43Mb
+[2m2026-10-08T04:24:53.763645Z[0m [31mERROR[0m [2mexpect[0m[2m:[0m /src/hardy/bpa/src/dispatcher/forward.rs:267:14: The per-hop rewrite's bytes do not decode: InvalidField { field: "primary block", source: NotCanonical }
+
+thread 'tokio-rt-worker' (650) panicked at /src/hardy/bpa/src/dispatcher/forward.rs:267:14:
+The per-hop rewrite's bytes do not decode: InvalidField { field: "primary block", source: NotCanonical }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+==645== ERROR: libFuzzer: deadly signal
+NOTE: libFuzzer has rudimentary signal handlers.
+      Combine libFuzzer with AddressSanitizer or similar for better crash reports.
+SUMMARY: libFuzzer: deadly signal
+MS: 0 ; base unit: 0000000000000000000000000000000000000000
+
+
+artifact_prefix='./'; Test unit written to ./crash-da39a3ee5e6b4b0d3255bfef95601890afd80709
+Base64: 
+MERGE-OUTER: attempt 2
+WARNING: Failed to find function "__sanitizer_acquire_crash_state".
+WARNING: Failed to find function "__sanitizer_print_stack_trace".
+WARNING: Failed to find function "__sanitizer_set_death_callback".
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 2634606905
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 1048576 bytes
+MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge639.txt'
+MERGE-INNER: 761 total files; 761 processed earlier; will process 0 files now
+#0	DONE   exec/s: 0 rss: 28Mb
+LLVM Profile Warning: Unable to merge profile data: source profile file is not compatible.
+LLVM Profile Error: Profile Merging of file /github/workspace/cifuzz-coverage/dumps/bpa.5049546013300954653_0.profraw failed: File exists
+LLVM Profile Error: Failed to write file "/github/workspace/cifuzz-coverage/dumps/bpa.5049546013300954653_0.profraw": File exists
+MERGE-OUTER: successful in 2 attempt(s)
+MERGE-OUTER: the control file has 81155 bytes
 MERGE-OUTER: consumed 0Mb (28Mb rss) to parse the control file
 MERGE-OUTER: 0 new files with 0 new features added; 0 new coverage edges
+LLVM Profile Warning: Unable to merge profile data: source profile file is not compatible.
+LLVM Profile Error: Profile Merging of file /github/workspace/cifuzz-coverage/dumps/bpa.5049546013300954653_0.profraw failed: File exists
+LLVM Profile Error: Failed to write file "/github/workspace/cifuzz-coverage/dumps/bpa.5049546013300954653_0.profraw": File exists
