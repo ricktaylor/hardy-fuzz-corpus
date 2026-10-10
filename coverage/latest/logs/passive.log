@@ -2,28 +2,28 @@ WARNING: Failed to find function "__sanitizer_acquire_crash_state".
 WARNING: Failed to find function "__sanitizer_print_stack_trace".
 WARNING: Failed to find function "__sanitizer_set_death_callback".
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3103468610
-MERGE-OUTER: 462 files, 0 in the initial corpus, 0 processed earlier
+INFO: Seed: 3563662091
+MERGE-OUTER: 456 files, 0 in the initial corpus, 0 processed earlier
 MERGE-OUTER: attempt 1
 WARNING: Failed to find function "__sanitizer_acquire_crash_state".
 WARNING: Failed to find function "__sanitizer_print_stack_trace".
 WARNING: Failed to find function "__sanitizer_set_death_callback".
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3103478482
+INFO: Seed: 3563672594
 INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 1048576 bytes
-MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge524.txt'
-MERGE-INNER: 462 total files; 0 processed earlier; will process 462 files now
+MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge505.txt'
+MERGE-INNER: 456 total files; 0 processed earlier; will process 456 files now
 #1	pulse  exec/s: 0 rss: 29Mb
 #2	pulse  exec/s: 0 rss: 29Mb
 #4	pulse  exec/s: 0 rss: 29Mb
-#8	pulse  exec/s: 0 rss: 29Mb
-#16	pulse  exec/s: 0 rss: 29Mb
-#32	pulse  exec/s: 0 rss: 29Mb
-#64	pulse  exec/s: 0 rss: 29Mb
+#8	pulse  exec/s: 0 rss: 30Mb
+#16	pulse  exec/s: 0 rss: 30Mb
+#32	pulse  exec/s: 0 rss: 30Mb
+#64	pulse  exec/s: 0 rss: 30Mb
 #128	pulse  exec/s: 128 rss: 30Mb
 #256	pulse  exec/s: 85 rss: 30Mb
-#462	DONE   exec/s: 66 rss: 30Mb
-==527== ERROR: libFuzzer: deadly signal
+#456	DONE   exec/s: 65 rss: 30Mb
+==509== ERROR: libFuzzer: deadly signal
 NOTE: libFuzzer has rudimentary signal handlers.
       Combine libFuzzer with AddressSanitizer or similar for better crash reports.
 SUMMARY: libFuzzer: deadly signal
@@ -37,18 +37,18 @@ WARNING: Failed to find function "__sanitizer_acquire_crash_state".
 WARNING: Failed to find function "__sanitizer_print_stack_trace".
 WARNING: Failed to find function "__sanitizer_set_death_callback".
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3111330618
+INFO: Seed: 3571343968
 INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 1048576 bytes
-MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge524.txt'
-MERGE-INNER: 462 total files; 462 processed earlier; will process 0 files now
+MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge505.txt'
+MERGE-INNER: 456 total files; 456 processed earlier; will process 0 files now
 #0	DONE   exec/s: 0 rss: 27Mb
 LLVM Profile Error: Invalid profile data to merge
-LLVM Profile Error: Profile Merging of file /github/workspace/cifuzz-coverage/dumps/passive.12018849573056060607_0.profraw failed: File exists
-LLVM Profile Error: Failed to write file "/github/workspace/cifuzz-coverage/dumps/passive.12018849573056060607_0.profraw": File exists
+LLVM Profile Error: Profile Merging of file /github/workspace/cifuzz-coverage/dumps/passive.6870785294446831730_0.profraw failed: File exists
+LLVM Profile Error: Failed to write file "/github/workspace/cifuzz-coverage/dumps/passive.6870785294446831730_0.profraw": File exists
 MERGE-OUTER: successful in 2 attempt(s)
-MERGE-OUTER: the control file has 51158 bytes
+MERGE-OUTER: the control file has 50486 bytes
 MERGE-OUTER: consumed 0Mb (27Mb rss) to parse the control file
 MERGE-OUTER: 0 new files with 0 new features added; 0 new coverage edges
 LLVM Profile Error: Invalid profile data to merge
-LLVM Profile Error: Profile Merging of file /github/workspace/cifuzz-coverage/dumps/passive.12018849573056060607_0.profraw failed: File exists
-LLVM Profile Error: Failed to write file "/github/workspace/cifuzz-coverage/dumps/passive.12018849573056060607_0.profraw": File exists
+LLVM Profile Error: Profile Merging of file /github/workspace/cifuzz-coverage/dumps/passive.6870785294446831730_0.profraw failed: File exists
+LLVM Profile Error: Failed to write file "/github/workspace/cifuzz-coverage/dumps/passive.6870785294446831730_0.profraw": File exists
