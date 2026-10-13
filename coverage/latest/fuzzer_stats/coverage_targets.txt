@@ -1,7 +1,9 @@
 eid_cbor
 eid_str
+send
 eid_pattern_str
 passive
+receive
 random_bundles
 streaming
 bpa
