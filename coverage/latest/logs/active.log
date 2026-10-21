@@ -2,16 +2,16 @@ WARNING: Failed to find function "__sanitizer_acquire_crash_state".
 WARNING: Failed to find function "__sanitizer_print_stack_trace".
 WARNING: Failed to find function "__sanitizer_set_death_callback".
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 4086393840
+INFO: Seed: 200931717
 MERGE-OUTER: 502 files, 0 in the initial corpus, 0 processed earlier
 MERGE-OUTER: attempt 1
 WARNING: Failed to find function "__sanitizer_acquire_crash_state".
 WARNING: Failed to find function "__sanitizer_print_stack_trace".
 WARNING: Failed to find function "__sanitizer_set_death_callback".
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 4086407182
+INFO: Seed: 200947275
 INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 1048576 bytes
-MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge643.txt'
+MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge642.txt'
 MERGE-INNER: 502 total files; 0 processed earlier; will process 502 files now
 #1	pulse  exec/s: 0 rss: 30Mb
 #2	pulse  exec/s: 0 rss: 30Mb
@@ -22,8 +22,8 @@ MERGE-INNER: 502 total files; 0 processed earlier; will process 502 files now
 #64	pulse  exec/s: 0 rss: 30Mb
 #128	pulse  exec/s: 0 rss: 31Mb
 #256	pulse  exec/s: 0 rss: 31Mb
-#502	DONE   exec/s: 251 rss: 31Mb
-==646== ERROR: libFuzzer: deadly signal
+#502	DONE   exec/s: 502 rss: 31Mb
+==645== ERROR: libFuzzer: deadly signal
 NOTE: libFuzzer has rudimentary signal handlers.
       Combine libFuzzer with AddressSanitizer or similar for better crash reports.
 SUMMARY: libFuzzer: deadly signal
@@ -37,18 +37,18 @@ WARNING: Failed to find function "__sanitizer_acquire_crash_state".
 WARNING: Failed to find function "__sanitizer_print_stack_trace".
 WARNING: Failed to find function "__sanitizer_set_death_callback".
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 4088954627
+INFO: Seed: 202911598
 INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 1048576 bytes
-MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge643.txt'
+MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge642.txt'
 MERGE-INNER: 502 total files; 502 processed earlier; will process 0 files now
 #0	DONE   exec/s: 0 rss: 27Mb
 LLVM Profile Error: Invalid profile data to merge
-LLVM Profile Error: Profile Merging of file /github/workspace/cifuzz-coverage/dumps/active.4960566885763903553_0.profraw failed: File exists
-LLVM Profile Error: Failed to write file "/github/workspace/cifuzz-coverage/dumps/active.4960566885763903553_0.profraw": File exists
+LLVM Profile Error: Profile Merging of file /github/workspace/cifuzz-coverage/dumps/active.5811939322475593020_0.profraw failed: File exists
+LLVM Profile Error: Failed to write file "/github/workspace/cifuzz-coverage/dumps/active.5811939322475593020_0.profraw": File exists
 MERGE-OUTER: successful in 2 attempt(s)
-MERGE-OUTER: the control file has 55195 bytes
+MERGE-OUTER: the control file has 55193 bytes
 MERGE-OUTER: consumed 0Mb (27Mb rss) to parse the control file
 MERGE-OUTER: 0 new files with 0 new features added; 0 new coverage edges
 LLVM Profile Error: Invalid profile data to merge
-LLVM Profile Error: Profile Merging of file /github/workspace/cifuzz-coverage/dumps/active.4960566885763903553_0.profraw failed: File exists
-LLVM Profile Error: Failed to write file "/github/workspace/cifuzz-coverage/dumps/active.4960566885763903553_0.profraw": File exists
+LLVM Profile Error: Profile Merging of file /github/workspace/cifuzz-coverage/dumps/active.5811939322475593020_0.profraw failed: File exists
+LLVM Profile Error: Failed to write file "/github/workspace/cifuzz-coverage/dumps/active.5811939322475593020_0.profraw": File exists
