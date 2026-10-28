@@ -2,34 +2,70 @@ WARNING: Failed to find function "__sanitizer_acquire_crash_state".
 WARNING: Failed to find function "__sanitizer_print_stack_trace".
 WARNING: Failed to find function "__sanitizer_set_death_callback".
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3264834026
-MERGE-OUTER: 595 files, 0 in the initial corpus, 0 processed earlier
+INFO: Seed: 3319256806
+MERGE-OUTER: 602 files, 0 in the initial corpus, 0 processed earlier
 MERGE-OUTER: attempt 1
 WARNING: Failed to find function "__sanitizer_acquire_crash_state".
 WARNING: Failed to find function "__sanitizer_print_stack_trace".
 WARNING: Failed to find function "__sanitizer_set_death_callback".
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 3264848623
+INFO: Seed: 3319272627
 INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 1048576 bytes
-MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge1002.txt'
-MERGE-INNER: 595 total files; 0 processed earlier; will process 595 files now
-[2m2026-10-27T04:20:01.529950Z[0m [33m WARN[0m [2mhardy_bpa::storage::bundle_mem[0m[2m:[0m Using in-memory bundle storage (capacity 1048576 bytes): stored bundles will NOT survive a restart
-[2m2026-10-27T04:20:01.529998Z[0m [33m WARN[0m [2mhardy_bpa::storage::metadata_mem[0m[2m:[0m Using in-memory metadata storage (max 256 bundles): bundle metadata will NOT survive a restart
-[2m2026-10-27T04:20:01.530104Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher[0m[2m:[0m Bundle status reports are enabled
-[2m2026-10-27T04:20:01.530800Z[0m [32m INFO[0m [2mhardy_bpa::cla::registry[0m[2m:[0m Registered CLA: fuzz
-[2m2026-10-27T04:20:01.530994Z[0m [32m INFO[0m [2mhardy_bpa::routing::rib[0m[2m:[0m Registered new routing agent: fuzz
+MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge1020.txt'
+MERGE-INNER: 602 total files; 0 processed earlier; will process 602 files now
+[2m2026-10-28T04:12:35.300094Z[0m [33m WARN[0m [2mhardy_bpa::storage::bundle_mem[0m[2m:[0m Using in-memory bundle storage (capacity 1048576 bytes): stored bundles will NOT survive a restart
+[2m2026-10-28T04:12:35.300149Z[0m [33m WARN[0m [2mhardy_bpa::storage::metadata_mem[0m[2m:[0m Using in-memory metadata storage (max 256 bundles): bundle metadata will NOT survive a restart
+[2m2026-10-28T04:12:35.300241Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher[0m[2m:[0m Bundle status reports are enabled
+[2m2026-10-28T04:12:35.301080Z[0m [32m INFO[0m [2mhardy_bpa::cla::registry[0m[2m:[0m Registered CLA: fuzz
+[2m2026-10-28T04:12:35.301237Z[0m [32m INFO[0m [2mhardy_bpa::routing::rib[0m[2m:[0m Registered new routing agent: fuzz
 #1	pulse  exec/s: 0 rss: 41Mb
-#2	pulse  exec/s: 0 rss: 41Mb
-#4	pulse  exec/s: 0 rss: 41Mb
-#8	pulse  exec/s: 0 rss: 41Mb
-#16	pulse  exec/s: 0 rss: 41Mb
+#2	pulse  exec/s: 0 rss: 42Mb
+#4	pulse  exec/s: 0 rss: 42Mb
+#8	pulse  exec/s: 0 rss: 42Mb
+#16	pulse  exec/s: 0 rss: 42Mb
 #32	pulse  exec/s: 0 rss: 42Mb
 #64	pulse  exec/s: 0 rss: 42Mb
 #128	pulse  exec/s: 0 rss: 42Mb
-#256	pulse  exec/s: 0 rss: 42Mb
+#256	pulse  exec/s: 0 rss: 43Mb
 #512	pulse  exec/s: 0 rss: 43Mb
-#595	DONE   exec/s: 0 rss: 43Mb
-MERGE-OUTER: successful in 1 attempt(s)
-MERGE-OUTER: the control file has 63382 bytes
+[2m2026-10-28T04:12:35.396740Z[0m [31mERROR[0m [2mexpect[0m[2m:[0m /src/hardy/bpa/src/dispatcher/forward.rs:272:14: The per-hop rewrite's bytes do not decode: InvalidField { field: "primary block", source: NotCanonical }
+
+thread 'tokio-rt-worker' (1027) panicked at /src/hardy/bpa/src/dispatcher/forward.rs:272:14:
+The per-hop rewrite's bytes do not decode: InvalidField { field: "primary block", source: NotCanonical }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+==1023== ERROR: libFuzzer: deadly signal
+NOTE: libFuzzer has rudimentary signal handlers.
+      Combine libFuzzer with AddressSanitizer or similar for better crash reports.
+SUMMARY: libFuzzer: deadly signal
+MS: 0 ; base unit: 0000000000000000000000000000000000000000
+0x0,0xe3,0x3f,0x7a,0x85,0x9f,0x8f,0x9f,0xc7,0x7,0x8f,0x7,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xd9,0xfa,0x8f,0xdd,0xc0,0x2b,0x3b,
+\000\343?z\205\237\217\237\307\007\217\007\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\000\004\000\000\000\377\377\377\377\377\377\377\377\377\377\377\377
+artifact_prefix='./'; Test unit written to ./crash-21384b3110118696f001a11832a8cab10ce6370a
+Base64: IhAl1gACmAAxEv8A/////////////////////////////////////////////////////////////////////////////////////////////////////w==
+MERGE-OUTER: attempt 2
+WARNING: Failed to find function "__sanitizer_acquire_crash_state".
+WARNING: Failed to find function "__sanitizer_print_stack_trace".
+WARNING: Failed to find function "__sanitizer_set_death_callback".
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3319388732
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 1048576 bytes
+MERGE-INNER: using the control file '/tmp/libFuzzerTemp.Merge1020.txt'
+MERGE-INNER: '/github/workspace/cifuzz-corpus/bpa/ebcbb6fc8ec91781243b32b676cd9f401341e354' caused a failure at the previous merge step
+MERGE-INNER: 602 total files; 521 processed earlier; will process 81 files now
+[2m2026-10-28T04:12:35.416169Z[0m [33m WARN[0m [2mhardy_bpa::storage::bundle_mem[0m[2m:[0m Using in-memory bundle storage (capacity 1048576 bytes): stored bundles will NOT survive a restart
+[2m2026-10-28T04:12:35.416218Z[0m [33m WARN[0m [2mhardy_bpa::storage::metadata_mem[0m[2m:[0m Using in-memory metadata storage (max 256 bundles): bundle metadata will NOT survive a restart
+[2m2026-10-28T04:12:35.416302Z[0m [33m WARN[0m [2mhardy_bpa::dispatcher[0m[2m:[0m Bundle status reports are enabled
+[2m2026-10-28T04:12:35.417171Z[0m [32m INFO[0m [2mhardy_bpa::cla::registry[0m[2m:[0m Registered CLA: fuzz
+[2m2026-10-28T04:12:35.417309Z[0m [32m INFO[0m [2mhardy_bpa::routing::rib[0m[2m:[0m Registered new routing agent: fuzz
+#1	pulse  exec/s: 0 rss: 41Mb
+#2	pulse  exec/s: 0 rss: 41Mb
+#4	pulse  exec/s: 0 rss: 42Mb
+#8	pulse  exec/s: 0 rss: 42Mb
+#16	pulse  exec/s: 0 rss: 42Mb
+#32	pulse  exec/s: 0 rss: 43Mb
+#64	pulse  exec/s: 0 rss: 43Mb
+#81	DONE   exec/s: 0 rss: 43Mb
+MERGE-OUTER: successful in 2 attempt(s)
+MERGE-OUTER: the control file has 64094 bytes
 MERGE-OUTER: consumed 0Mb (28Mb rss) to parse the control file
 MERGE-OUTER: 0 new files with 0 new features added; 0 new coverage edges
