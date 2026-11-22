@@ -1,11 +1,11 @@
 send
-eid_cbor
+passive
+decode
 bpa
 receive
-random_bundles
 eid_str
 active
-decode
 streaming
 eid_pattern_str
-passive
+eid_cbor
+random_bundles
